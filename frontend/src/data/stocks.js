@@ -1,0 +1,4753 @@
+export default {
+    "status": {
+        "timestamp": "2022-05-24T18:02:59.642Z",
+        "error_code": 0,
+        "error_message": null,
+        "elapsed": 37,
+        "credit_count": 1,
+        "notice": null,
+        "total_count": 10057
+    },
+    "data": [
+        {
+            "id": 1,
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "slug": "bitcoin",
+            "num_market_pairs": 9463,
+            "date_added": "2013-04-28T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "pow",
+                "sha-256",
+                "store-of-value",
+                "state-channel",
+                "coinbase-ventures-portfolio",
+                "three-arrows-capital-portfolio",
+                "polychain-capital-portfolio",
+                "binance-labs-portfolio",
+                "blockchain-capital-portfolio",
+                "boostvc-portfolio",
+                "cms-holdings-portfolio",
+                "dcg-portfolio",
+                "dragonfly-capital-portfolio",
+                "electric-capital-portfolio",
+                "fabric-ventures-portfolio",
+                "framework-ventures-portfolio",
+                "galaxy-digital-portfolio",
+                "huobi-capital-portfolio",
+                "alameda-research-portfolio",
+                "a16z-portfolio",
+                "1confirmation-portfolio",
+                "winklevoss-capital-portfolio",
+                "usv-portfolio",
+                "placeholder-ventures-portfolio",
+                "pantera-capital-portfolio",
+                "multicoin-capital-portfolio",
+                "paradigm-portfolio"
+            ],
+            "max_supply": 21000000,
+            "circulating_supply": 19048368,
+            "total_supply": 19048368,
+            "platform": null,
+            "cmc_rank": 1,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 29329.35427229242,
+                    "volume_24h": 29372075383.136406,
+                    "volume_change_24h": 12.551,
+                    "percent_change_1h": 0.10203957,
+                    "percent_change_24h": -2.47547269,
+                    "percent_change_7d": -2.50748078,
+                    "percent_change_30d": -25.61884979,
+                    "percent_change_60d": -33.80966473,
+                    "percent_change_90d": -23.14888446,
+                    "market_cap": 558676333380.9983,
+                    "market_cap_dominance": 44.5293,
+                    "fully_diluted_market_cap": 615916439718.14,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1027,
+            "name": "Ethereum",
+            "symbol": "ETH",
+            "slug": "ethereum",
+            "num_market_pairs": 5727,
+            "date_added": "2015-08-07T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "pow",
+                "smart-contracts",
+                "ethereum-ecosystem",
+                "coinbase-ventures-portfolio",
+                "three-arrows-capital-portfolio",
+                "polychain-capital-portfolio",
+                "binance-labs-portfolio",
+                "blockchain-capital-portfolio",
+                "boostvc-portfolio",
+                "cms-holdings-portfolio",
+                "dcg-portfolio",
+                "dragonfly-capital-portfolio",
+                "electric-capital-portfolio",
+                "fabric-ventures-portfolio",
+                "framework-ventures-portfolio",
+                "hashkey-capital-portfolio",
+                "kenetic-capital-portfolio",
+                "huobi-capital-portfolio",
+                "alameda-research-portfolio",
+                "a16z-portfolio",
+                "1confirmation-portfolio",
+                "winklevoss-capital-portfolio",
+                "usv-portfolio",
+                "placeholder-ventures-portfolio",
+                "pantera-capital-portfolio",
+                "multicoin-capital-portfolio",
+                "paradigm-portfolio",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": null,
+            "circulating_supply": 120906704.874,
+            "total_supply": 120906704.874,
+            "platform": null,
+            "cmc_rank": 2,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1956.203386683182,
+                    "volume_24h": 14757769223.84198,
+                    "volume_change_24h": 3.2145,
+                    "percent_change_1h": -0.0814138,
+                    "percent_change_24h": -4.5878143,
+                    "percent_change_7d": -4.94216891,
+                    "percent_change_30d": -33.11682579,
+                    "percent_change_60d": -36.94014359,
+                    "percent_change_90d": -26.78427138,
+                    "market_cap": 236518105547.2228,
+                    "market_cap_dominance": 18.8517,
+                    "fully_diluted_market_cap": 236518105547.22,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 825,
+            "name": "Tether",
+            "symbol": "USDT",
+            "slug": "tether",
+            "num_market_pairs": 33806,
+            "date_added": "2015-02-25T00:00:00.000Z",
+            "tags": [
+                "payments",
+                "stablecoin",
+                "asset-backed-stablecoin",
+                "avalanche-ecosystem",
+                "solana-ecosystem",
+                "arbitrum-ecosytem",
+                "moonriver-ecosystem",
+                "injective-ecosystem",
+                "bnb-chain",
+                "usd-stablecoin"
+            ],
+            "max_supply": null,
+            "circulating_supply": 73275094968.46666,
+            "total_supply": 79713622661.98135,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+            },
+            "cmc_rank": 3,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.9991203632702768,
+                    "volume_24h": 54996222277.57225,
+                    "volume_change_24h": 9.5466,
+                    "percent_change_1h": 0.01148804,
+                    "percent_change_24h": 0.01020191,
+                    "percent_change_7d": 0.02634947,
+                    "percent_change_30d": -0.11645693,
+                    "percent_change_60d": -0.131672,
+                    "percent_change_90d": -0.14586578,
+                    "market_cap": 73210639503.55844,
+                    "market_cap_dominance": 5.845,
+                    "fully_diluted_market_cap": 79643503631.63,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3408,
+            "name": "USD Coin",
+            "symbol": "USDC",
+            "slug": "usd-coin",
+            "num_market_pairs": 4040,
+            "date_added": "2018-10-08T00:00:00.000Z",
+            "tags": [
+                "medium-of-exchange",
+                "stablecoin",
+                "asset-backed-stablecoin",
+                "fantom-ecosystem",
+                "arbitrum-ecosytem",
+                "moonriver-ecosystem",
+                "bnb-chain",
+                "usd-stablecoin"
+            ],
+            "max_supply": null,
+            "circulating_supply": 53252960178.19195,
+            "total_supply": 53252960178.19195,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+            },
+            "cmc_rank": 4,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.0001155551797407,
+                    "volume_24h": 5136037510.325585,
+                    "volume_change_24h": 6.1724,
+                    "percent_change_1h": -0.00313757,
+                    "percent_change_24h": 0.0030827,
+                    "percent_change_7d": -0.00816474,
+                    "percent_change_30d": 0.00235149,
+                    "percent_change_60d": 0.01797543,
+                    "percent_change_90d": 0.01614139,
+                    "market_cap": 53259113833.577065,
+                    "market_cap_dominance": 4.245,
+                    "fully_diluted_market_cap": 53259113833.58,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1839,
+            "name": "BNB",
+            "symbol": "BNB",
+            "slug": "bnb",
+            "num_market_pairs": 865,
+            "date_added": "2017-07-25T00:00:00.000Z",
+            "tags": [
+                "marketplace",
+                "centralized-exchange",
+                "payments",
+                "smart-contracts",
+                "alameda-research-portfolio",
+                "multicoin-capital-portfolio",
+                "moonriver-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": 165116760,
+            "circulating_supply": 163276974.63,
+            "total_supply": 163276974.63,
+            "platform": null,
+            "cmc_rank": 5,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 322.26017148173605,
+                    "volume_24h": 2146601470.1018085,
+                    "volume_change_24h": 10.4273,
+                    "percent_change_1h": -0.00597978,
+                    "percent_change_24h": -3.29879018,
+                    "percent_change_7d": 6.72735061,
+                    "percent_change_30d": -19.28217903,
+                    "percent_change_60d": -21.23034911,
+                    "percent_change_90d": -14.46617975,
+                    "market_cap": 52617665843.28287,
+                    "market_cap_dominance": 4.1939,
+                    "fully_diluted_market_cap": 53210555392.11,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 52,
+            "name": "XRP",
+            "symbol": "XRP",
+            "slug": "xrp",
+            "num_market_pairs": 725,
+            "date_added": "2013-08-04T00:00:00.000Z",
+            "tags": [
+                "medium-of-exchange",
+                "enterprise-solutions",
+                "binance-chain",
+                "arrington-xrp-capital-portfolio",
+                "galaxy-digital-portfolio",
+                "a16z-portfolio",
+                "pantera-capital-portfolio"
+            ],
+            "max_supply": 100000000000,
+            "circulating_supply": 48343101197,
+            "total_supply": 99989535142,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe"
+            },
+            "cmc_rank": 6,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.40331391298486224,
+                    "volume_24h": 1589967439.4289734,
+                    "volume_change_24h": 39.838,
+                    "percent_change_1h": 0.01972935,
+                    "percent_change_24h": -3.80875301,
+                    "percent_change_7d": -5.86261786,
+                    "percent_change_30d": -42.34008336,
+                    "percent_change_60d": -51.11511921,
+                    "percent_change_90d": -43.88474916,
+                    "market_cap": 19497445309.585247,
+                    "market_cap_dominance": 1.5548,
+                    "fully_diluted_market_cap": 40331391298.49,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4687,
+            "name": "Binance USD",
+            "symbol": "BUSD",
+            "slug": "binance-usd",
+            "num_market_pairs": 3746,
+            "date_added": "2019-09-20T00:00:00.000Z",
+            "tags": [
+                "stablecoin",
+                "asset-backed-stablecoin",
+                "binance-chain",
+                "harmony-ecosystem",
+                "moonriver-ecosystem",
+                "bnb-chain",
+                "usd-stablecoin"
+            ],
+            "max_supply": null,
+            "circulating_supply": 18323709015.719254,
+            "total_supply": 18323709015.719254,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "BUSD-BD1"
+            },
+            "cmc_rank": 7,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.0010251934293004,
+                    "volume_24h": 5695828587.420735,
+                    "volume_change_24h": -14.7253,
+                    "percent_change_1h": 0.21645704,
+                    "percent_change_24h": 0.02214731,
+                    "percent_change_7d": -0.11058754,
+                    "percent_change_30d": 0.17914383,
+                    "percent_change_60d": -0.01642453,
+                    "percent_change_90d": 0.09622788,
+                    "market_cap": 18342494361.80258,
+                    "market_cap_dominance": 1.462,
+                    "fully_diluted_market_cap": 18342494361.8,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2010,
+            "name": "Cardano",
+            "symbol": "ADA",
+            "slug": "cardano",
+            "num_market_pairs": 446,
+            "date_added": "2017-10-01T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "dpos",
+                "pos",
+                "platform",
+                "research",
+                "smart-contracts",
+                "staking",
+                "cardano-ecosystem",
+                "cardano",
+                "bnb-chain"
+            ],
+            "max_supply": 45000000000,
+            "circulating_supply": 33739028515.755,
+            "total_supply": 34277702081.605,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47"
+            },
+            "cmc_rank": 8,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.5113147339540899,
+                    "volume_24h": 806493929.9254891,
+                    "volume_change_24h": 35.3358,
+                    "percent_change_1h": -0.85880531,
+                    "percent_change_24h": -6.58743739,
+                    "percent_change_7d": -9.73655891,
+                    "percent_change_30d": -42.06359351,
+                    "percent_change_60d": -53.175113,
+                    "percent_change_90d": -45.0421682,
+                    "market_cap": 17251262389.40272,
+                    "market_cap_dominance": 1.3773,
+                    "fully_diluted_market_cap": 23009163027.93,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 5426,
+            "name": "Solana",
+            "symbol": "SOL",
+            "slug": "solana",
+            "num_market_pairs": 317,
+            "date_added": "2020-04-10T00:00:00.000Z",
+            "tags": [
+                "pos",
+                "platform",
+                "solana-ecosystem",
+                "cms-holdings-portfolio",
+                "kenetic-capital-portfolio",
+                "alameda-research-portfolio",
+                "multicoin-capital-portfolio",
+                "okex-blockdream-ventures-portfolio"
+            ],
+            "max_supply": null,
+            "circulating_supply": 339268431.5804518,
+            "total_supply": 511616946.142289,
+            "platform": null,
+            "cmc_rank": 9,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 49.393676061855636,
+                    "volume_24h": 1733349768.789082,
+                    "volume_change_24h": 23.5721,
+                    "percent_change_1h": -0.34502351,
+                    "percent_change_24h": -6.76365634,
+                    "percent_change_7d": -10.05215642,
+                    "percent_change_30d": -50.22282137,
+                    "percent_change_60d": -49.46006305,
+                    "percent_change_90d": -44.5590301,
+                    "market_cap": 16757715007.498669,
+                    "market_cap_dominance": 1.3363,
+                    "fully_diluted_market_cap": 25270641705.51,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 74,
+            "name": "Dogecoin",
+            "symbol": "DOGE",
+            "slug": "dogecoin",
+            "num_market_pairs": 476,
+            "date_added": "2013-12-15T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "pow",
+                "scrypt",
+                "medium-of-exchange",
+                "memes",
+                "payments",
+                "doggone-doggerel",
+                "bnb-chain"
+            ],
+            "max_supply": null,
+            "circulating_supply": 132670764299.89409,
+            "total_supply": 132670764299.89409,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0xba2ae424d960c26247dd6c32edc70b295c744c43"
+            },
+            "cmc_rank": 10,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.08260827676821848,
+                    "volume_24h": 526612250.6769642,
+                    "volume_change_24h": 24.1784,
+                    "percent_change_1h": -0.05769827,
+                    "percent_change_24h": -4.62925965,
+                    "percent_change_7d": -7.13868059,
+                    "percent_change_30d": -37.32875747,
+                    "percent_change_60d": -36.37951938,
+                    "percent_change_90d": -37.23021224,
+                    "market_cap": 10959703216.336731,
+                    "market_cap_dominance": 0.8735,
+                    "fully_diluted_market_cap": 10959703216.34,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 6636,
+            "name": "Polkadot",
+            "symbol": "DOT",
+            "slug": "polkadot-new",
+            "num_market_pairs": 344,
+            "date_added": "2020-08-19T00:00:00.000Z",
+            "tags": [
+                "substrate",
+                "polkadot",
+                "binance-chain",
+                "polkadot-ecosystem",
+                "three-arrows-capital-portfolio",
+                "polychain-capital-portfolio",
+                "arrington-xrp-capital-portfolio",
+                "blockchain-capital-portfolio",
+                "boostvc-portfolio",
+                "cms-holdings-portfolio",
+                "coinfund-portfolio",
+                "fabric-ventures-portfolio",
+                "fenbushi-capital-portfolio",
+                "hashkey-capital-portfolio",
+                "kenetic-capital-portfolio",
+                "1confirmation-portfolio",
+                "placeholder-ventures-portfolio",
+                "pantera-capital-portfolio",
+                "exnetwork-capital-portfolio",
+                "web3",
+                "spartan-group",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": null,
+            "circulating_supply": 987579314.957085,
+            "total_supply": 1103303471.382273,
+            "platform": {
+                "id": 2502,
+                "name": "Huobi Token",
+                "symbol": "HT",
+                "slug": "huobi-token",
+                "token_address": "0xa2c49cee16a5e5bdefde931107dc1fae9f7773e3"
+            },
+            "cmc_rank": 11,
+            "self_reported_circulating_supply": 904869778,
+            "self_reported_market_cap": 9037716711.691679,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 9.987864476662496,
+                    "volume_24h": 822331498.2904189,
+                    "volume_change_24h": 24.8499,
+                    "percent_change_1h": 0.30171613,
+                    "percent_change_24h": -4.94579074,
+                    "percent_change_7d": -7.52338977,
+                    "percent_change_30d": -44.98304477,
+                    "percent_change_60d": -51.18265944,
+                    "percent_change_90d": -40.6840912,
+                    "market_cap": 9863808357.746552,
+                    "market_cap_dominance": 0.7861,
+                    "fully_diluted_market_cap": 11019645548.8,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3717,
+            "name": "Wrapped Bitcoin",
+            "symbol": "WBTC",
+            "slug": "wrapped-bitcoin",
+            "num_market_pairs": 433,
+            "date_added": "2019-01-30T00:00:00.000Z",
+            "tags": [
+                "medium-of-exchange",
+                "defi",
+                "wrapped-tokens",
+                "fantom-ecosystem",
+                "arbitrum-ecosytem",
+                "moonriver-ecosystem"
+            ],
+            "max_supply": null,
+            "circulating_supply": 276602.93000986,
+            "total_supply": 276602.93000986,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
+            },
+            "cmc_rank": 12,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 29318.853356261796,
+                    "volume_24h": 220566334.25408587,
+                    "volume_change_24h": 23.2072,
+                    "percent_change_1h": 0.07975369,
+                    "percent_change_24h": -2.69085716,
+                    "percent_change_7d": -2.62877971,
+                    "percent_change_30d": -25.59407123,
+                    "percent_change_60d": -33.68661448,
+                    "percent_change_90d": -23.3775873,
+                    "market_cap": 8109680742.871431,
+                    "market_cap_dominance": 0.6475,
+                    "fully_diluted_market_cap": 8109680742.87,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1958,
+            "name": "TRON",
+            "symbol": "TRX",
+            "slug": "tron",
+            "num_market_pairs": 607,
+            "date_added": "2017-09-13T00:00:00.000Z",
+            "tags": [
+                "media",
+                "payments",
+                "tron-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": null,
+            "circulating_supply": 94634450566.12903,
+            "total_supply": 94634475914.91043,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x85eac5ac2f758618dfa09bdbe0cf174e7d574d5b"
+            },
+            "cmc_rank": 13,
+            "self_reported_circulating_supply": 71659659264,
+            "self_reported_market_cap": 5895390391.428479,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.08226930538016351,
+                    "volume_24h": 1603723684.2959642,
+                    "volume_change_24h": 39.8208,
+                    "percent_change_1h": 0.59390108,
+                    "percent_change_24h": 1.31119181,
+                    "percent_change_7d": 16.46054227,
+                    "percent_change_30d": 25.60313041,
+                    "percent_change_60d": 27.94420847,
+                    "percent_change_90d": 30.71704002,
+                    "market_cap": 7785510513.108857,
+                    "market_cap_dominance": 0.6205,
+                    "fully_diluted_market_cap": 7785512598.54,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 5805,
+            "name": "Avalanche",
+            "symbol": "AVAX",
+            "slug": "avalanche",
+            "num_market_pairs": 255,
+            "date_added": "2020-07-13T00:00:00.000Z",
+            "tags": [
+                "defi",
+                "smart-contracts",
+                "polychain-capital-portfolio",
+                "avalanche-ecosystem",
+                "cms-holdings-portfolio",
+                "dragonfly-capital-portfolio",
+                "moonriver-ecosystem",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": null,
+            "circulating_supply": 269342972.50250864,
+            "total_supply": 402778772.50250864,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x1ce0c2827e2ef14d5c4f29a091d735a204794041"
+            },
+            "cmc_rank": 14,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 28.322446222652143,
+                    "volume_24h": 790264607.7035104,
+                    "volume_change_24h": 12.1024,
+                    "percent_change_1h": -0.41124547,
+                    "percent_change_24h": -10.89502562,
+                    "percent_change_7d": -14.75298463,
+                    "percent_change_30d": -60.39717009,
+                    "percent_change_60d": -66.10732911,
+                    "percent_change_90d": -63.73508529,
+                    "market_cap": 7628451854.151576,
+                    "market_cap_dominance": 0.609,
+                    "fully_diluted_market_cap": 11407680123.83,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4943,
+            "name": "Dai",
+            "symbol": "DAI",
+            "slug": "multi-collateral-dai",
+            "num_market_pairs": 976,
+            "date_added": "2019-11-22T00:00:00.000Z",
+            "tags": [
+                "defi",
+                "stablecoin",
+                "ethereum-ecosystem",
+                "avalanche-ecosystem",
+                "polygon-ecosystem",
+                "fantom-ecosystem",
+                "arbitrum-ecosytem",
+                "harmony-ecosystem",
+                "moonriver-ecosystem",
+                "bnb-chain",
+                "usd-stablecoin"
+            ],
+            "max_supply": null,
+            "circulating_supply": 6569695496.873146,
+            "total_supply": 6569695496.873146,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x6b175474e89094c44da98b954eedeac495271d0f"
+            },
+            "cmc_rank": 15,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.000529588807343,
+                    "volume_24h": 323914741.7830287,
+                    "volume_change_24h": 30.5745,
+                    "percent_change_1h": 0.00548726,
+                    "percent_change_24h": 0.03908001,
+                    "percent_change_7d": 0.03093013,
+                    "percent_change_30d": 0.18542876,
+                    "percent_change_60d": 0.13386632,
+                    "percent_change_90d": 0.12708816,
+                    "market_cap": 6573174734.075942,
+                    "market_cap_dominance": 0.5239,
+                    "fully_diluted_market_cap": 6573174734.08,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 5994,
+            "name": "Shiba Inu",
+            "symbol": "SHIB",
+            "slug": "shiba-inu",
+            "num_market_pairs": 351,
+            "date_added": "2020-08-01T00:00:00.000Z",
+            "tags": [
+                "memes",
+                "ethereum-ecosystem",
+                "doggone-doggerel"
+            ],
+            "max_supply": null,
+            "circulating_supply": 549063278876301.94,
+            "total_supply": 589735030408322.8,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce"
+            },
+            "cmc_rank": 16,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.000011633737176394926,
+                    "volume_24h": 422808632.04760647,
+                    "volume_change_24h": -32.8675,
+                    "percent_change_1h": 0.20310025,
+                    "percent_change_24h": -4.63527137,
+                    "percent_change_7d": -5.66204949,
+                    "percent_change_30d": -50.92947753,
+                    "percent_change_60d": -51.49815786,
+                    "percent_change_90d": -55.58756768,
+                    "market_cap": 6387657879.656528,
+                    "market_cap_dominance": 0.5091,
+                    "fully_diluted_market_cap": 6860822347.48,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3890,
+            "name": "Polygon",
+            "symbol": "MATIC",
+            "slug": "polygon",
+            "num_market_pairs": 392,
+            "date_added": "2019-04-28T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "enterprise-solutions",
+                "scaling",
+                "state-channel",
+                "coinbase-ventures-portfolio",
+                "binance-launchpad",
+                "binance-labs-portfolio",
+                "polygon-ecosystem",
+                "moonriver-ecosystem",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": 10000000000,
+            "circulating_supply": 7950866566.62,
+            "total_supply": 10000000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
+            },
+            "cmc_rank": 17,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.6359418268020234,
+                    "volume_24h": 529988786.8540499,
+                    "volume_change_24h": 16.8749,
+                    "percent_change_1h": -0.17777681,
+                    "percent_change_24h": -7.38750716,
+                    "percent_change_7d": -9.89957701,
+                    "percent_change_30d": -52.49521366,
+                    "percent_change_60d": -59.66213694,
+                    "percent_change_90d": -58.47329371,
+                    "market_cap": 5056288609.035454,
+                    "market_cap_dominance": 0.403,
+                    "fully_diluted_market_cap": 6359418268.02,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "name": "Litecoin",
+            "symbol": "LTC",
+            "slug": "litecoin",
+            "num_market_pairs": 775,
+            "date_added": "2013-04-28T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "pow",
+                "scrypt",
+                "medium-of-exchange",
+                "binance-chain",
+                "bnb-chain"
+            ],
+            "max_supply": 84000000,
+            "circulating_supply": 70356268.77791464,
+            "total_supply": 84000000,
+            "platform": {
+                "id": 2502,
+                "name": "Huobi Token",
+                "symbol": "HT",
+                "slug": "huobi-token",
+                "token_address": "0xecb56cf772b5c9a6907fb7d32387da2fcbfb63b4"
+            },
+            "cmc_rank": 18,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 69.36814715793177,
+                    "volume_24h": 684798987.8231363,
+                    "volume_change_24h": 10.7903,
+                    "percent_change_1h": -0.19513613,
+                    "percent_change_24h": -4.06551215,
+                    "percent_change_7d": -4.51596766,
+                    "percent_change_30d": -33.39437892,
+                    "percent_change_60d": -43.51287201,
+                    "percent_change_90d": -36.23855858,
+                    "market_cap": 4880484006.069384,
+                    "market_cap_dominance": 0.389,
+                    "fully_diluted_market_cap": 5826924361.27,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3635,
+            "name": "Cronos",
+            "symbol": "CRO",
+            "slug": "cronos",
+            "num_market_pairs": 136,
+            "date_added": "2018-12-14T00:00:00.000Z",
+            "tags": [
+                "medium-of-exchange",
+                "cosmos-ecosystem",
+                "centralized-exchange",
+                "mobile",
+                "payments"
+            ],
+            "max_supply": 30263013692,
+            "circulating_supply": 25263013692,
+            "total_supply": 30263013692,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b"
+            },
+            "cmc_rank": 19,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.18540229290351126,
+                    "volume_24h": 40742723.9369513,
+                    "volume_change_24h": -0.5385,
+                    "percent_change_1h": -0.13653729,
+                    "percent_change_24h": -6.18940953,
+                    "percent_change_7d": -5.89498273,
+                    "percent_change_30d": -53.62043495,
+                    "percent_change_60d": -59.07609684,
+                    "percent_change_90d": -55.10274465,
+                    "market_cap": 4683820664.149599,
+                    "market_cap_dominance": 0.3735,
+                    "fully_diluted_market_cap": 5610832128.67,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3957,
+            "name": "UNUS SED LEO",
+            "symbol": "LEO",
+            "slug": "unus-sed-leo",
+            "num_market_pairs": 19,
+            "date_added": "2019-05-21T00:00:00.000Z",
+            "tags": [
+                "marketplace",
+                "centralized-exchange",
+                "discount-token",
+                "payments",
+                "kenetic-capital-portfolio",
+                "alameda-research-portfolio"
+            ],
+            "max_supply": null,
+            "circulating_supply": 953954130,
+            "total_supply": 985239504,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x2af5d2ad76741191d15dfe7bf6ac92d4bd912ca3"
+            },
+            "cmc_rank": 20,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 4.882010730502246,
+                    "volume_24h": 5958717.44990228,
+                    "volume_change_24h": -8.5123,
+                    "percent_change_1h": 0.05917662,
+                    "percent_change_24h": -0.41861368,
+                    "percent_change_7d": -1.42984487,
+                    "percent_change_30d": -16.2701225,
+                    "percent_change_60d": -18.2605679,
+                    "percent_change_90d": -19.98385434,
+                    "market_cap": 4657214299.066935,
+                    "market_cap_dominance": 0.3712,
+                    "fully_diluted_market_cap": 4809949830.64,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4195,
+            "name": "FTX Token",
+            "symbol": "FTT",
+            "slug": "ftx-token",
+            "num_market_pairs": 125,
+            "date_added": "2019-07-31T00:00:00.000Z",
+            "tags": [
+                "marketplace",
+                "centralized-exchange",
+                "derivatives",
+                "cms-holdings-portfolio",
+                "kenetic-capital-portfolio",
+                "alameda-research-portfolio",
+                "pantera-capital-portfolio",
+                "exnetwork-capital-portfolio"
+            ],
+            "max_supply": 352170015,
+            "circulating_supply": 136304475.71874374,
+            "total_supply": 332173811.7859715,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "FTT-F11"
+            },
+            "cmc_rank": 21,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 29.435497607296394,
+                    "volume_24h": 75346246.08092561,
+                    "volume_change_24h": 47.808,
+                    "percent_change_1h": 0.24487089,
+                    "percent_change_24h": -3.69131618,
+                    "percent_change_7d": -7.47053312,
+                    "percent_change_30d": -27.62757055,
+                    "percent_change_60d": -40.77464782,
+                    "percent_change_90d": -30.12620925,
+                    "market_cap": 4012190068.8828707,
+                    "market_cap_dominance": 0.3198,
+                    "fully_diluted_market_cap": 10366299633.89,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 6535,
+            "name": "NEAR Protocol",
+            "symbol": "NEAR",
+            "slug": "near-protocol",
+            "num_market_pairs": 144,
+            "date_added": "2020-08-11T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "staking",
+                "coinbase-ventures-portfolio",
+                "arrington-xrp-capital-portfolio",
+                "coinfund-portfolio",
+                "electric-capital-portfolio",
+                "fabric-ventures-portfolio",
+                "kenetic-capital-portfolio",
+                "near-protocol-ecosystem",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": 1000000000,
+            "circulating_supply": 697065899,
+            "total_supply": 1000000000,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x1fa4a73a3f0133f0025378af00236f3abdee5d63"
+            },
+            "cmc_rank": 22,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 5.700491748417371,
+                    "volume_24h": 400511266.5395645,
+                    "volume_change_24h": 6.0626,
+                    "percent_change_1h": -0.72026122,
+                    "percent_change_24h": -9.21977128,
+                    "percent_change_7d": -13.64330016,
+                    "percent_change_30d": -62.1668801,
+                    "percent_change_60d": -53.53120933,
+                    "percent_change_90d": -36.77581894,
+                    "market_cap": 3973618405.352637,
+                    "market_cap_dominance": 0.3167,
+                    "fully_diluted_market_cap": 5700491748.42,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 7083,
+            "name": "Uniswap",
+            "symbol": "UNI",
+            "slug": "uniswap",
+            "num_market_pairs": 368,
+            "date_added": "2020-09-17T00:00:00.000Z",
+            "tags": [
+                "decentralized-exchange",
+                "defi",
+                "dao",
+                "yield-farming",
+                "amm",
+                "coinbase-ventures-portfolio",
+                "three-arrows-capital-portfolio",
+                "governance",
+                "blockchain-capital-portfolio",
+                "defiance-capital-portfolio",
+                "alameda-research-portfolio",
+                "a16z-portfolio",
+                "pantera-capital-portfolio",
+                "parafi-capital",
+                "paradigm-portfolio",
+                "arbitrum-ecosytem",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": 1000000000,
+            "circulating_supply": 718886023.5891192,
+            "total_supply": 1000000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+            },
+            "cmc_rank": 23,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 5.452133045240837,
+                    "volume_24h": 225947732.05318215,
+                    "volume_change_24h": 7.8301,
+                    "percent_change_1h": -0.8112863,
+                    "percent_change_24h": -6.466243,
+                    "percent_change_7d": 4.86121375,
+                    "percent_change_30d": -37.68600241,
+                    "percent_change_60d": -48.41330097,
+                    "percent_change_90d": -40.04100541,
+                    "market_cap": 3919462244.9720206,
+                    "market_cap_dominance": 0.3124,
+                    "fully_diluted_market_cap": 5452133045.24,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1831,
+            "name": "Bitcoin Cash",
+            "symbol": "BCH",
+            "slug": "bitcoin-cash",
+            "num_market_pairs": 598,
+            "date_added": "2017-07-23T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "pow",
+                "sha-256",
+                "marketplace",
+                "medium-of-exchange",
+                "store-of-value",
+                "enterprise-solutions",
+                "payments",
+                "binance-chain",
+                "bnb-chain"
+            ],
+            "max_supply": 21000000,
+            "circulating_supply": 19072037.5,
+            "total_supply": 19072037.5,
+            "platform": {
+                "id": 2502,
+                "name": "Huobi Token",
+                "symbol": "HT",
+                "slug": "huobi-token",
+                "token_address": "0xef3cebd77e0c52cb6f60875d9306397b5caca375"
+            },
+            "cmc_rank": 24,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 191.75584120380842,
+                    "volume_24h": 2516411833.2395506,
+                    "volume_change_24h": -12.582,
+                    "percent_change_1h": -0.27859141,
+                    "percent_change_24h": -4.49729158,
+                    "percent_change_7d": -5.33390295,
+                    "percent_change_30d": -38.04415343,
+                    "percent_change_60d": -46.4164064,
+                    "percent_change_90d": -35.54048514,
+                    "market_cap": 3657174594.283079,
+                    "market_cap_dominance": 0.292,
+                    "fully_diluted_market_cap": 4026872665.28,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 328,
+            "name": "Monero",
+            "symbol": "XMR",
+            "slug": "monero",
+            "num_market_pairs": 180,
+            "date_added": "2014-05-21T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "pow",
+                "medium-of-exchange",
+                "privacy",
+                "ringct",
+                "boostvc-portfolio",
+                "electric-capital-portfolio",
+                "galaxy-digital-portfolio"
+            ],
+            "max_supply": null,
+            "circulating_supply": 18125457.96443189,
+            "total_supply": 18125457.96443189,
+            "platform": {
+                "id": 5604,
+                "name": "Secret",
+                "symbol": "SCRT",
+                "slug": "secret",
+                "token_address": "secret19ungtd2c7srftqdwgq0dspwvrw63dhu79qxv88"
+            },
+            "cmc_rank": 25,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 192.86685808158916,
+                    "volume_24h": 210239916.3326009,
+                    "volume_change_24h": -17.4139,
+                    "percent_change_1h": 0.19326642,
+                    "percent_change_24h": -0.27221361,
+                    "percent_change_7d": 11.96787188,
+                    "percent_change_30d": -23.62888591,
+                    "percent_change_60d": -3.83191979,
+                    "percent_change_90d": 26.32752794,
+                    "market_cap": 3495800128.889895,
+                    "market_cap_dominance": 0.2786,
+                    "fully_diluted_market_cap": 3495800128.89,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1975,
+            "name": "Chainlink",
+            "symbol": "LINK",
+            "slug": "chainlink",
+            "num_market_pairs": 645,
+            "date_added": "2017-09-20T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "defi",
+                "oracles",
+                "smart-contracts",
+                "substrate",
+                "polkadot",
+                "polkadot-ecosystem",
+                "avalanche-ecosystem",
+                "solana-ecosystem",
+                "framework-ventures-portfolio",
+                "polygon-ecosystem",
+                "fantom-ecosystem",
+                "cardano-ecosystem",
+                "web3",
+                "near-protocol-ecosystem",
+                "arbitrum-ecosytem",
+                "cardano",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": 1000000000,
+            "circulating_supply": 467009549.5205637,
+            "total_supply": 1000000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x514910771af9ca656af840dff83e8264ecf986ca"
+            },
+            "cmc_rank": 26,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 7.032575899698506,
+                    "volume_24h": 387945569.21874577,
+                    "volume_change_24h": 16.9974,
+                    "percent_change_1h": -0.25312963,
+                    "percent_change_24h": -6.55782951,
+                    "percent_change_7d": -6.63845898,
+                    "percent_change_30d": -47.05594594,
+                    "percent_change_60d": -54.90879727,
+                    "percent_change_90d": -50.46052048,
+                    "market_cap": 3284280102.8873725,
+                    "market_cap_dominance": 0.2622,
+                    "fully_diluted_market_cap": 7032575899.7,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 512,
+            "name": "Stellar",
+            "symbol": "XLM",
+            "slug": "stellar",
+            "num_market_pairs": 426,
+            "date_added": "2014-08-05T00:00:00.000Z",
+            "tags": [
+                "medium-of-exchange",
+                "enterprise-solutions",
+                "decentralized-exchange",
+                "smart-contracts",
+                "hashkey-capital-portfolio"
+            ],
+            "max_supply": 50001806812,
+            "circulating_supply": 24853757256.068848,
+            "total_supply": 50001787807.4989,
+            "platform": null,
+            "cmc_rank": 27,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.1287271726042806,
+                    "volume_24h": 161113708.90715736,
+                    "volume_change_24h": -2.9382,
+                    "percent_change_1h": 0.20830999,
+                    "percent_change_24h": -4.68841457,
+                    "percent_change_7d": -5.69453547,
+                    "percent_change_30d": -32.19931832,
+                    "percent_change_60d": -39.40234356,
+                    "percent_change_90d": -31.85556596,
+                    "market_cap": 3199353900.166866,
+                    "market_cap_dominance": 0.255,
+                    "fully_diluted_market_cap": 6436591216.01,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1321,
+            "name": "Ethereum Classic",
+            "symbol": "ETC",
+            "slug": "ethereum-classic",
+            "num_market_pairs": 308,
+            "date_added": "2016-07-24T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "pow",
+                "ethash",
+                "platform",
+                "smart-contracts",
+                "dcg-portfolio",
+                "bnb-chain"
+            ],
+            "max_supply": 210700000,
+            "circulating_supply": 134929930.34747612,
+            "total_supply": 210700000,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x3d6545b08693dae087e957cb1180ee38b9e3c25e"
+            },
+            "cmc_rank": 28,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 23.212387751577452,
+                    "volume_24h": 769415645.5934885,
+                    "volume_change_24h": -7.8023,
+                    "percent_change_1h": -0.75783733,
+                    "percent_change_24h": -0.60164068,
+                    "percent_change_7d": 9.16247122,
+                    "percent_change_30d": -31.55019868,
+                    "percent_change_60d": -49.84650012,
+                    "percent_change_90d": -15.57165506,
+                    "market_cap": 3132045862.518954,
+                    "market_cap_dominance": 0.2496,
+                    "fully_diluted_market_cap": 4890850099.26,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3794,
+            "name": "Cosmos",
+            "symbol": "ATOM",
+            "slug": "cosmos",
+            "num_market_pairs": 281,
+            "date_added": "2019-03-14T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "cosmos-ecosystem",
+                "content-creation",
+                "interoperability",
+                "binance-chain",
+                "polychain-capital-portfolio",
+                "dragonfly-capital-portfolio",
+                "hashkey-capital-portfolio",
+                "1confirmation-portfolio",
+                "paradigm-portfolio",
+                "exnetwork-capital-portfolio",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": null,
+            "circulating_supply": 286370297,
+            "total_supply": 0,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x0eb3a705fc54725037cc9e008bdede697f62f335"
+            },
+            "cmc_rank": 29,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 10.79614736601683,
+                    "volume_24h": 314809074.8398944,
+                    "volume_change_24h": 5.5086,
+                    "percent_change_1h": -0.16411057,
+                    "percent_change_24h": -10.35674742,
+                    "percent_change_7d": -3.47798325,
+                    "percent_change_30d": -51.75136473,
+                    "percent_change_60d": -61.47963095,
+                    "percent_change_90d": -59.29258896,
+                    "market_cap": 3091695927.6620073,
+                    "market_cap_dominance": 0.2468,
+                    "fully_diluted_market_cap": 0,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4558,
+            "name": "Flow",
+            "symbol": "FLOW",
+            "slug": "flow",
+            "num_market_pairs": 72,
+            "date_added": "2021-01-27T00:00:00.000Z",
+            "tags": [
+                "collectibles-nfts",
+                "coinbase-ventures-portfolio",
+                "coinfund-portfolio",
+                "dcg-portfolio",
+                "ledgerprime-portfolio",
+                "a16z-portfolio",
+                "animoca-brands-portfolio"
+            ],
+            "max_supply": null,
+            "circulating_supply": 1036200000,
+            "total_supply": 1373338337,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x5c147e74D63B1D31AA3Fd78Eb229B65161983B2b"
+            },
+            "cmc_rank": 30,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 2.661568496477995,
+                    "volume_24h": 61344335.61497725,
+                    "volume_change_24h": 10.7362,
+                    "percent_change_1h": 0.3454741,
+                    "percent_change_24h": -8.83828049,
+                    "percent_change_7d": -7.91684177,
+                    "percent_change_30d": -51.14097915,
+                    "percent_change_60d": -58.00101722,
+                    "percent_change_90d": -52.85328728,
+                    "market_cap": 2757917276.0504985,
+                    "market_cap_dominance": 0.2198,
+                    "fully_diluted_market_cap": 3655234052.76,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4030,
+            "name": "Algorand",
+            "symbol": "ALGO",
+            "slug": "algorand",
+            "num_market_pairs": 220,
+            "date_added": "2019-06-20T00:00:00.000Z",
+            "tags": [
+                "pos",
+                "platform",
+                "research",
+                "smart-contracts",
+                "arrington-xrp-capital-portfolio",
+                "kenetic-capital-portfolio",
+                "usv-portfolio",
+                "multicoin-capital-portfolio",
+                "exnetwork-capital-portfolio"
+            ],
+            "max_supply": 10000000000,
+            "circulating_supply": 6813255722.584974,
+            "total_supply": 7220426601.754953,
+            "platform": null,
+            "cmc_rank": 31,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.4038243855555185,
+                    "volume_24h": 144054384.21035856,
+                    "volume_change_24h": -3.2736,
+                    "percent_change_1h": -0.11442588,
+                    "percent_change_24h": -8.90783606,
+                    "percent_change_7d": -16.31779199,
+                    "percent_change_30d": -42.37944599,
+                    "percent_change_60d": -55.39191188,
+                    "percent_change_90d": -50.75529689,
+                    "market_cap": 2751358805.805497,
+                    "market_cap_dominance": 0.2193,
+                    "fully_diluted_market_cap": 4038243855.56,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 18876,
+            "name": "ApeCoin",
+            "symbol": "APE",
+            "slug": "apecoin-ape",
+            "num_market_pairs": 146,
+            "date_added": "2022-03-17T12:26:36.000Z",
+            "tags": [
+                "collectibles-nfts",
+                "content-creation",
+                "gaming",
+                "entertainment",
+                "dao",
+                "governance",
+                "metaverse",
+                "animoca-brands-portfolio"
+            ],
+            "max_supply": 1000000000,
+            "circulating_supply": 292187500,
+            "total_supply": 1000000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x4d224452801aced8b2f0aebe155379bb5d594381"
+            },
+            "cmc_rank": 32,
+            "self_reported_circulating_supply": 292187500,
+            "self_reported_market_cap": 2126149543.4041932,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 7.276661538923442,
+                    "volume_24h": 571329962.5590973,
+                    "volume_change_24h": 14.4468,
+                    "percent_change_1h": 0.79838219,
+                    "percent_change_24h": -11.8010685,
+                    "percent_change_7d": -14.17188638,
+                    "percent_change_30d": -56.79659171,
+                    "percent_change_60d": -42.42224,
+                    "percent_change_90d": 627.37764287,
+                    "market_cap": 2126149543.4041932,
+                    "market_cap_dominance": 0.1694,
+                    "fully_diluted_market_cap": 7276661538.92,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4642,
+            "name": "Hedera",
+            "symbol": "HBAR",
+            "slug": "hedera",
+            "num_market_pairs": 100,
+            "date_added": "2019-09-17T00:00:00.000Z",
+            "tags": [
+                "dag",
+                "marketplace",
+                "enterprise-solutions",
+                "payments",
+                "dcg-portfolio"
+            ],
+            "max_supply": 50000000000,
+            "circulating_supply": 20741406793.008232,
+            "total_supply": 50000000000,
+            "platform": null,
+            "cmc_rank": 33,
+            "self_reported_circulating_supply": 19389577881,
+            "self_reported_market_cap": 1884914610.1069627,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.09721277181356307,
+                    "volume_24h": 51382600.93951212,
+                    "volume_change_24h": 77.7724,
+                    "percent_change_1h": -0.45309653,
+                    "percent_change_24h": -7.28045999,
+                    "percent_change_7d": -5.28069549,
+                    "percent_change_30d": -47.46522474,
+                    "percent_change_60d": -55.99505203,
+                    "percent_change_90d": -58.18082213,
+                    "market_cap": 2016329645.6609962,
+                    "market_cap_dominance": 0.1607,
+                    "fully_diluted_market_cap": 4860638590.68,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 6892,
+            "name": "Elrond",
+            "symbol": "EGLD",
+            "slug": "elrond-egld",
+            "num_market_pairs": 97,
+            "date_added": "2020-09-04T00:00:00.000Z",
+            "tags": [
+                "binance-launchpad",
+                "binance-labs-portfolio",
+                "electric-capital-portfolio",
+                "exnetwork-capital-portfolio",
+                "elrond-ecosystem",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": 31415926,
+            "circulating_supply": 21978006.37969936,
+            "total_supply": 23016298,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0xbf7c81fff98bbe61b40ed186e4afd6ddd01337fe"
+            },
+            "cmc_rank": 34,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 90.76597259432239,
+                    "volume_24h": 59078015.89113683,
+                    "volume_change_24h": 44.2339,
+                    "percent_change_1h": 0.41912691,
+                    "percent_change_24h": -1.22416879,
+                    "percent_change_7d": -7.95597471,
+                    "percent_change_30d": -40.15142355,
+                    "percent_change_60d": -49.92443571,
+                    "percent_change_90d": -41.15700462,
+                    "market_cap": 1994855124.737635,
+                    "market_cap_dominance": 0.159,
+                    "fully_diluted_market_cap": 2851497078.34,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3077,
+            "name": "VeChain",
+            "symbol": "VET",
+            "slug": "vechain",
+            "num_market_pairs": 185,
+            "date_added": "2017-08-22T00:00:00.000Z",
+            "tags": [
+                "logistics",
+                "data-provenance",
+                "iot",
+                "smart-contracts",
+                "fenbushi-capital-portfolio"
+            ],
+            "max_supply": 86712634466,
+            "circulating_supply": 64315576989,
+            "total_supply": 86712634466,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x6FDcdfef7c496407cCb0cEC90f9C5Aaa1Cc8D888"
+            },
+            "cmc_rank": 35,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.030859166675355213,
+                    "volume_24h": 189830176.03286245,
+                    "volume_change_24h": -14.148,
+                    "percent_change_1h": -0.40303129,
+                    "percent_change_24h": -7.9644803,
+                    "percent_change_7d": -2.79855823,
+                    "percent_change_30d": -44.79434096,
+                    "percent_change_60d": -44.59119041,
+                    "percent_change_90d": -35.63843724,
+                    "market_cap": 1984725110.1251915,
+                    "market_cap_dominance": 0.1582,
+                    "fully_diluted_market_cap": 2675879639.85,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1966,
+            "name": "Decentraland",
+            "symbol": "MANA",
+            "slug": "decentraland",
+            "num_market_pairs": 271,
+            "date_added": "2017-09-17T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "collectibles-nfts",
+                "gaming",
+                "payments",
+                "metaverse",
+                "boostvc-portfolio",
+                "dcg-portfolio",
+                "fabric-ventures-portfolio",
+                "kenetic-capital-portfolio",
+                "polygon-ecosystem",
+                "play-to-earn"
+            ],
+            "max_supply": null,
+            "circulating_supply": 1844083205.022486,
+            "total_supply": 2193661727.320146,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942"
+            },
+            "cmc_rank": 36,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.0056584164356668,
+                    "volume_24h": 286068086.252068,
+                    "volume_change_24h": -5.4728,
+                    "percent_change_1h": -0.64612613,
+                    "percent_change_24h": -9.00213247,
+                    "percent_change_7d": -14.58134237,
+                    "percent_change_30d": -49.11360457,
+                    "percent_change_60d": -61.26235895,
+                    "percent_change_90d": -62.47377312,
+                    "market_cap": 1854517795.7385223,
+                    "market_cap_dominance": 0.1478,
+                    "fully_diluted_market_cap": 2206074378.89,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2011,
+            "name": "Tezos",
+            "symbol": "XTZ",
+            "slug": "tezos",
+            "num_market_pairs": 215,
+            "date_added": "2017-10-06T00:00:00.000Z",
+            "tags": [
+                "pos",
+                "platform",
+                "enterprise-solutions",
+                "collectibles-nfts",
+                "defi",
+                "smart-contracts",
+                "polychain-capital-portfolio",
+                "boostvc-portfolio",
+                "winklevoss-capital-portfolio"
+            ],
+            "max_supply": null,
+            "circulating_supply": 895648587.624107,
+            "total_supply": 917216760.297931,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x16939ef78684453bfdfb47825f8a5f714f12623a"
+            },
+            "cmc_rank": 37,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 2.05939332907131,
+                    "volume_24h": 181718963.77698553,
+                    "volume_change_24h": 110.1385,
+                    "percent_change_1h": 0.71494137,
+                    "percent_change_24h": 2.5664154,
+                    "percent_change_7d": 14.14695386,
+                    "percent_change_30d": -30.29488939,
+                    "percent_change_60d": -41.58503075,
+                    "percent_change_90d": -34.11992598,
+                    "market_cap": 1844492726.5452263,
+                    "market_cap_dominance": 0.147,
+                    "fully_diluted_market_cap": 1888910077.47,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 8916,
+            "name": "Internet Computer",
+            "symbol": "ICP",
+            "slug": "internet-computer",
+            "num_market_pairs": 115,
+            "date_added": "2021-03-23T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "distributed-computing",
+                "polychain-capital-portfolio",
+                "exnetwork-capital-portfolio"
+            ],
+            "max_supply": null,
+            "circulating_supply": 233876780.07555616,
+            "total_supply": 481920067.05054635,
+            "platform": null,
+            "cmc_rank": 38,
+            "self_reported_circulating_supply": 233895580.43147653,
+            "self_reported_market_cap": 1784397809.6849086,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 7.6290360270731,
+                    "volume_24h": 88244048.54889327,
+                    "volume_change_24h": -2.4586,
+                    "percent_change_1h": -0.61414423,
+                    "percent_change_24h": -8.72412113,
+                    "percent_change_7d": -8.05719146,
+                    "percent_change_30d": -52.68399931,
+                    "percent_change_60d": -59.45990226,
+                    "percent_change_90d": -57.45210839,
+                    "market_cap": 1784254381.0922701,
+                    "market_cap_dominance": 0.1425,
+                    "fully_diluted_market_cap": 3676585553.7,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2280,
+            "name": "Filecoin",
+            "symbol": "FIL",
+            "slug": "filecoin",
+            "num_market_pairs": 205,
+            "date_added": "2017-12-13T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "distributed-computing",
+                "filesharing",
+                "storage",
+                "polychain-capital-portfolio",
+                "blockchain-capital-portfolio",
+                "boostvc-portfolio",
+                "dcg-portfolio",
+                "hashkey-capital-portfolio",
+                "a16z-portfolio",
+                "winklevoss-capital-portfolio",
+                "pantera-capital-portfolio",
+                "web3",
+                "bnb-chain"
+            ],
+            "max_supply": null,
+            "circulating_supply": 212745072,
+            "total_supply": 212745072,
+            "platform": {
+                "id": 2502,
+                "name": "Huobi Token",
+                "symbol": "HT",
+                "slug": "huobi-token",
+                "token_address": "0xae3a768f9ab104c69a7cd6041fe16ffa235d1810"
+            },
+            "cmc_rank": 39,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 8.255558949006243,
+                    "volume_24h": 441263739.37996924,
+                    "volume_change_24h": 6.1194,
+                    "percent_change_1h": -0.72374549,
+                    "percent_change_24h": -7.57480872,
+                    "percent_change_7d": -2.27826359,
+                    "percent_change_30d": -56.0336425,
+                    "percent_change_60d": -55.86366256,
+                    "percent_change_90d": -56.66770465,
+                    "market_cap": 1756329483.0065775,
+                    "market_cap_dominance": 0.14,
+                    "fully_diluted_market_cap": 1756329483.01,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2087,
+            "name": "KuCoin Token",
+            "symbol": "KCS",
+            "slug": "kucoin-token",
+            "num_market_pairs": 38,
+            "date_added": "2017-10-24T00:00:00.000Z",
+            "tags": [
+                "marketplace",
+                "centralized-exchange",
+                "discount-token",
+                "algorand-ecosystem"
+            ],
+            "max_supply": 170118638,
+            "circulating_supply": 98379860.95,
+            "total_supply": 145879861,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x039b5649a59967e3e936d7471f9c3700100ee1ab"
+            },
+            "cmc_rank": 40,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 16.66838660565571,
+                    "volume_24h": 8395589.88376229,
+                    "volume_change_24h": -38.8749,
+                    "percent_change_1h": 0.33105019,
+                    "percent_change_24h": -0.41246644,
+                    "percent_change_7d": 14.26017846,
+                    "percent_change_30d": -15.62244156,
+                    "percent_change_60d": -11.45171941,
+                    "percent_change_90d": -12.96050867,
+                    "market_cap": 1639833556.5252512,
+                    "market_cap_dominance": 0.1307,
+                    "fully_diluted_market_cap": 2835603227.01,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 6210,
+            "name": "The Sandbox",
+            "symbol": "SAND",
+            "slug": "the-sandbox",
+            "num_market_pairs": 216,
+            "date_added": "2020-08-05T00:00:00.000Z",
+            "tags": [
+                "collectibles-nfts",
+                "content-creation",
+                "gaming",
+                "ethereum-ecosystem",
+                "binance-launchpad",
+                "metaverse",
+                "play-to-earn",
+                "animoca-brands-portfolio"
+            ],
+            "max_supply": 3000000000,
+            "circulating_supply": 1227664778.2233226,
+            "total_supply": 3000000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x3845badAde8e6dFF049820680d1F14bD3903a5d0"
+            },
+            "cmc_rank": 41,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.2720402991501312,
+                    "volume_24h": 371521726.8590981,
+                    "volume_change_24h": -15.9974,
+                    "percent_change_1h": 0.37980376,
+                    "percent_change_24h": -8.21467017,
+                    "percent_change_7d": -4.72651999,
+                    "percent_change_30d": -52.58904119,
+                    "percent_change_60d": -62.40018898,
+                    "percent_change_90d": -59.20024464,
+                    "market_cap": 1561639071.7472749,
+                    "market_cap_dominance": 0.1245,
+                    "fully_diluted_market_cap": 3816120897.45,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1437,
+            "name": "Zcash",
+            "symbol": "ZEC",
+            "slug": "zcash",
+            "num_market_pairs": 252,
+            "date_added": "2016-10-29T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "pow",
+                "equihash",
+                "medium-of-exchange",
+                "privacy",
+                "zero-knowledge-proofs",
+                "binance-chain",
+                "boostvc-portfolio",
+                "dcg-portfolio",
+                "electric-capital-portfolio",
+                "fenbushi-capital-portfolio",
+                "hashkey-capital-portfolio",
+                "winklevoss-capital-portfolio",
+                "placeholder-ventures-portfolio",
+                "pantera-capital-portfolio",
+                "bnb-chain"
+            ],
+            "max_supply": 21000000,
+            "circulating_supply": 14453831.25,
+            "total_supply": 14453831.25,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x1ba42e5193dfa8b03d15dd1b86a3113bbbef8eeb"
+            },
+            "cmc_rank": 42,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 98.61043251476329,
+                    "volume_24h": 193205992.45060965,
+                    "volume_change_24h": 50.2854,
+                    "percent_change_1h": 0.41494883,
+                    "percent_change_24h": -8.03576304,
+                    "percent_change_7d": -4.08492383,
+                    "percent_change_30d": -38.34238253,
+                    "percent_change_60d": -49.6955027,
+                    "percent_change_90d": -5.20923725,
+                    "market_cap": 1425298551.0579016,
+                    "market_cap_dominance": 0.1136,
+                    "fully_diluted_market_cap": 2070819082.81,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 7278,
+            "name": "Aave",
+            "symbol": "AAVE",
+            "slug": "aave",
+            "num_market_pairs": 332,
+            "date_added": "2020-10-02T00:00:00.000Z",
+            "tags": [
+                "defi",
+                "dao",
+                "yield-farming",
+                "three-arrows-capital-portfolio",
+                "governance",
+                "lending-borowing",
+                "blockchain-capital-portfolio",
+                "defiance-capital-portfolio",
+                "framework-ventures-portfolio",
+                "alameda-research-portfolio",
+                "pantera-capital-portfolio",
+                "parafi-capital",
+                "polygon-ecosystem",
+                "fantom-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": 16000000,
+            "circulating_supply": 13741437.67586742,
+            "total_supply": 16000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9"
+            },
+            "cmc_rank": 43,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 99.13987437505986,
+                    "volume_24h": 268108848.7745736,
+                    "volume_change_24h": -2.5959,
+                    "percent_change_1h": -0.6414305,
+                    "percent_change_24h": -5.86502028,
+                    "percent_change_7d": 11.71456531,
+                    "percent_change_30d": -40.32019115,
+                    "percent_change_60d": -39.1974262,
+                    "percent_change_90d": -28.3977465,
+                    "market_cap": 1362324404.9182105,
+                    "market_cap_dominance": 0.1088,
+                    "fully_diluted_market_cap": 1586237990,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1765,
+            "name": "EOS",
+            "symbol": "EOS",
+            "slug": "eos",
+            "num_market_pairs": 445,
+            "date_added": "2017-07-01T00:00:00.000Z",
+            "tags": [
+                "medium-of-exchange",
+                "enterprise-solutions",
+                "smart-contracts",
+                "binance-chain",
+                "fenbushi-capital-portfolio",
+                "galaxy-digital-portfolio",
+                "bnb-chain"
+            ],
+            "max_supply": null,
+            "circulating_supply": 990302195.8829,
+            "total_supply": 1055525901.3383,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x56b6fb708fc5732dec1afc8d8556423a2edccbd6"
+            },
+            "cmc_rank": 44,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.3169791441605816,
+                    "volume_24h": 361317993.86385936,
+                    "volume_change_24h": -1.298,
+                    "percent_change_1h": -0.16356669,
+                    "percent_change_24h": -5.10391612,
+                    "percent_change_7d": -2.75336004,
+                    "percent_change_30d": -44.11485349,
+                    "percent_change_60d": -46.56588241,
+                    "percent_change_90d": -39.55562669,
+                    "market_cap": 1304207338.3942063,
+                    "market_cap_dominance": 0.104,
+                    "fully_diluted_market_cap": 1390105598.18,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4256,
+            "name": "Klaytn",
+            "symbol": "KLAY",
+            "slug": "klaytn",
+            "num_market_pairs": 105,
+            "date_added": "2020-03-30T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "enterprise-solutions",
+                "injective-ecosystem"
+            ],
+            "max_supply": null,
+            "circulating_supply": 2840680616.2,
+            "total_supply": 10782297980.8,
+            "platform": {
+                "id": 4256,
+                "name": "Klaytn",
+                "symbol": "KLAY",
+                "slug": "klaytn",
+                "token_address": "0x0000000000000000000000000000000000000000"
+            },
+            "cmc_rank": 45,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.45260450605561864,
+                    "volume_24h": 79374181.04911675,
+                    "volume_change_24h": -18.2734,
+                    "percent_change_1h": 0.3241766,
+                    "percent_change_24h": -8.33358809,
+                    "percent_change_7d": 8.72981713,
+                    "percent_change_30d": -51.14841779,
+                    "percent_change_60d": -59.80518093,
+                    "percent_change_90d": -63.44078706,
+                    "market_cap": 1285704847.1569712,
+                    "market_cap_dominance": 0.1025,
+                    "fully_diluted_market_cap": 4880116651.74,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 6783,
+            "name": "Axie Infinity",
+            "symbol": "AXS",
+            "slug": "axie-infinity",
+            "num_market_pairs": 216,
+            "date_added": "2020-08-31T00:00:00.000Z",
+            "tags": [
+                "collectibles-nfts",
+                "gaming",
+                "binance-launchpad",
+                "metaverse",
+                "defiance-capital-portfolio",
+                "play-to-earn",
+                "animoca-brands-portfolio"
+            ],
+            "max_supply": 270000000,
+            "circulating_supply": 60907500,
+            "total_supply": 270000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b"
+            },
+            "cmc_rank": 46,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 20.617344889100007,
+                    "volume_24h": 188585086.03782916,
+                    "volume_change_24h": -32.1095,
+                    "percent_change_1h": -0.34557946,
+                    "percent_change_24h": -9.33125797,
+                    "percent_change_7d": -3.04935784,
+                    "percent_change_30d": -53.57085519,
+                    "percent_change_60d": -70.74642579,
+                    "percent_change_90d": -59.87098361,
+                    "market_cap": 1255750933.8328586,
+                    "market_cap_dominance": 0.1001,
+                    "fully_diluted_market_cap": 5566683120.06,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1518,
+            "name": "Maker",
+            "symbol": "MKR",
+            "slug": "maker",
+            "num_market_pairs": 254,
+            "date_added": "2017-01-29T00:00:00.000Z",
+            "tags": [
+                "store-of-value",
+                "defi",
+                "dao",
+                "polychain-capital-portfolio",
+                "governance",
+                "lending-borowing",
+                "dragonfly-capital-portfolio",
+                "electric-capital-portfolio",
+                "a16z-portfolio",
+                "1confirmation-portfolio",
+                "placeholder-ventures-portfolio",
+                "pantera-capital-portfolio",
+                "paradigm-portfolio",
+                "near-protocol-ecosystem",
+                "spartan-group",
+                "bnb-chain"
+            ],
+            "max_supply": 1005577,
+            "circulating_supply": 977631.03695089,
+            "total_supply": 977631.03695089,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2"
+            },
+            "cmc_rank": 47,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1270.2732055364347,
+                    "volume_24h": 119503225.76517448,
+                    "volume_change_24h": 19.7116,
+                    "percent_change_1h": -0.2852839,
+                    "percent_change_24h": -7.75873245,
+                    "percent_change_7d": -17.17400299,
+                    "percent_change_30d": -26.84710318,
+                    "percent_change_60d": -35.29237521,
+                    "percent_change_90d": -30.13146477,
+                    "market_cap": 1241858511.1395156,
+                    "market_cap_dominance": 0.099,
+                    "fully_diluted_market_cap": 1277357519.2,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2563,
+            "name": "TrueUSD",
+            "symbol": "TUSD",
+            "slug": "trueusd",
+            "num_market_pairs": 261,
+            "date_added": "2018-03-06T00:00:00.000Z",
+            "tags": [
+                "store-of-value",
+                "stablecoin",
+                "asset-backed-stablecoin",
+                "avalanche-ecosystem",
+                "arbitrum-ecosytem",
+                "bnb-chain",
+                "usd-stablecoin"
+            ],
+            "max_supply": null,
+            "circulating_supply": 1228827839.5940287,
+            "total_supply": 1228827839.5940287,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "TUSDB-888"
+            },
+            "cmc_rank": 48,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.0006868502483872,
+                    "volume_24h": 150530382.40867653,
+                    "volume_change_24h": 0.2897,
+                    "percent_change_1h": 0.0447291,
+                    "percent_change_24h": 0.02904556,
+                    "percent_change_7d": 0.01249555,
+                    "percent_change_30d": 0.07661848,
+                    "percent_change_60d": 0.0768771,
+                    "percent_change_90d": 0.07639848,
+                    "market_cap": 1229671860.300879,
+                    "market_cap_dominance": 0.098,
+                    "fully_diluted_market_cap": 1229671860.3,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2416,
+            "name": "Theta Network",
+            "symbol": "THETA",
+            "slug": "theta-network",
+            "num_market_pairs": 115,
+            "date_added": "2018-01-17T00:00:00.000Z",
+            "tags": [
+                "media",
+                "collectibles-nfts",
+                "content-creation",
+                "defi",
+                "video",
+                "metaverse",
+                "huobi-capital-portfolio",
+                "web3"
+            ],
+            "max_supply": 1000000000,
+            "circulating_supply": 1000000000,
+            "total_supply": 1000000000,
+            "platform": null,
+            "cmc_rank": 49,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.2270220311982698,
+                    "volume_24h": 87309504.61092056,
+                    "volume_change_24h": 7.3687,
+                    "percent_change_1h": -0.01077199,
+                    "percent_change_24h": -8.57854437,
+                    "percent_change_7d": -8.54394193,
+                    "percent_change_30d": -58.90578961,
+                    "percent_change_60d": -60.97622534,
+                    "percent_change_90d": -56.77525365,
+                    "market_cap": 1227022031.1982698,
+                    "market_cap_dominance": 0.0978,
+                    "fully_diluted_market_cap": 1227022031.2,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2502,
+            "name": "Huobi Token",
+            "symbol": "HT",
+            "slug": "huobi-token",
+            "num_market_pairs": 108,
+            "date_added": "2018-02-03T00:00:00.000Z",
+            "tags": [
+                "marketplace",
+                "centralized-exchange",
+                "discount-token",
+                "payments",
+                "algorand-ecosystem",
+                "kenetic-capital-portfolio",
+                "alameda-research-portfolio",
+                "multicoin-capital-portfolio"
+            ],
+            "max_supply": 500000000,
+            "circulating_supply": 154885159.25441208,
+            "total_supply": 500000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x6f259637dcd74c767781e37bc6133cd6a68aa161"
+            },
+            "cmc_rank": 50,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 6.994146800043993,
+                    "volume_24h": 46155801.59211107,
+                    "volume_change_24h": 39.5585,
+                    "percent_change_1h": 0.06906863,
+                    "percent_change_24h": 0.06435279,
+                    "percent_change_7d": 0.13002914,
+                    "percent_change_30d": -25.83339905,
+                    "percent_change_60d": -20.99751751,
+                    "percent_change_90d": -24.59703532,
+                    "market_cap": 1083289540.9735506,
+                    "market_cap_dominance": 0.0863,
+                    "fully_diluted_market_cap": 3497073400.02,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3513,
+            "name": "Fantom",
+            "symbol": "FTM",
+            "slug": "fantom",
+            "num_market_pairs": 315,
+            "date_added": "2018-10-29T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "enterprise-solutions",
+                "defi",
+                "research",
+                "scaling",
+                "smart-contracts",
+                "fantom-ecosystem",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": 3175000000,
+            "circulating_supply": 2545006273,
+            "total_supply": 2545006273,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x4e15361fd6b4bb609fa63c81a2be19d873717870"
+            },
+            "cmc_rank": 51,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.41273003224550237,
+                    "volume_24h": 551908483.6317949,
+                    "volume_change_24h": -23.6101,
+                    "percent_change_1h": 0.28540491,
+                    "percent_change_24h": -16.0109514,
+                    "percent_change_7d": 18.16420813,
+                    "percent_change_30d": -61.48120425,
+                    "percent_change_60d": -69.51767212,
+                    "percent_change_90d": -75.13855494,
+                    "market_cap": 1050400521.1202958,
+                    "market_cap_dominance": 0.0837,
+                    "fully_diluted_market_cap": 1310417852.38,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 6719,
+            "name": "The Graph",
+            "symbol": "GRT",
+            "slug": "the-graph",
+            "num_market_pairs": 206,
+            "date_added": "2020-12-17T00:00:00.000Z",
+            "tags": [
+                "ai-big-data",
+                "enterprise-solutions",
+                "defi",
+                "coinbase-ventures-portfolio",
+                "solana-ecosystem",
+                "analytics",
+                "coinfund-portfolio",
+                "dcg-portfolio",
+                "fabric-ventures-portfolio",
+                "framework-ventures-portfolio",
+                "ledgerprime-portfolio",
+                "multicoin-capital-portfolio",
+                "parafi-capital",
+                "polygon-ecosystem",
+                "fantom-ecosystem",
+                "web3",
+                "near-protocol-ecosystem",
+                "arbitrum-ecosytem",
+                "spartan-group",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": 10057044431,
+            "circulating_supply": 6900000000,
+            "total_supply": 10000000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xc944e90c64b2c07662a292be6244bdf05cda44a7"
+            },
+            "cmc_rank": 52,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.15158746778871662,
+                    "volume_24h": 98316765.51335405,
+                    "volume_change_24h": 40.8393,
+                    "percent_change_1h": -0.23145455,
+                    "percent_change_24h": -10.29866923,
+                    "percent_change_7d": -13.40275371,
+                    "percent_change_30d": -56.51620216,
+                    "percent_change_60d": -62.87926485,
+                    "percent_change_90d": -59.83463375,
+                    "market_cap": 1045953527.7421447,
+                    "market_cap_dominance": 0.0834,
+                    "fully_diluted_market_cap": 1524521898.73,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 16086,
+            "name": "BitTorrent-New",
+            "symbol": "BTT",
+            "slug": "bittorrent-new",
+            "num_market_pairs": 65,
+            "date_added": "2019-01-31T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "distributed-computing",
+                "filesharing",
+                "interoperability",
+                "staking",
+                "tron-ecosystem",
+                "storage",
+                "binance-launchpad",
+                "binance-labs-portfolio",
+                "web3",
+                "bnb-chain"
+            ],
+            "max_supply": null,
+            "circulating_supply": 929275160714000,
+            "total_supply": 990000000000000,
+            "platform": {
+                "id": 1958,
+                "name": "TRON",
+                "symbol": "TRX",
+                "slug": "tron",
+                "token_address": "TAFjULxiVgT4qWk6UZwjqwZXTSaGaqnVp4"
+            },
+            "cmc_rank": 53,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.0000011167945446557671,
+                    "volume_24h": 72815934.44014573,
+                    "volume_change_24h": -10.7912,
+                    "percent_change_1h": 0.09818734,
+                    "percent_change_24h": -2.66109522,
+                    "percent_change_7d": -0.67617015,
+                    "percent_change_30d": -38.94543964,
+                    "percent_change_60d": -41.76377774,
+                    "percent_change_90d": -42.644171,
+                    "market_cap": 1037809429.9695065,
+                    "market_cap_dominance": 0.0827,
+                    "fully_diluted_market_cap": 1105626599.21,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4157,
+            "name": "THORChain",
+            "symbol": "RUNE",
+            "slug": "thorchain",
+            "num_market_pairs": 89,
+            "date_added": "2019-07-23T00:00:00.000Z",
+            "tags": [
+                "cosmos-ecosystem",
+                "decentralized-exchange",
+                "defi",
+                "multicoin-capital-portfolio",
+                "exnetwork-capital-portfolio"
+            ],
+            "max_supply": 500000000,
+            "circulating_supply": 330688061.33445597,
+            "total_supply": 334937974.91478544,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "RUNE-B1A"
+            },
+            "cmc_rank": 54,
+            "self_reported_circulating_supply": 224410215,
+            "self_reported_market_cap": 663049348.3217313,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 2.9546308679474835,
+                    "volume_24h": 122551690.043833,
+                    "volume_change_24h": 19.5835,
+                    "percent_change_1h": -0.55181198,
+                    "percent_change_24h": -8.92936779,
+                    "percent_change_7d": -10.76710725,
+                    "percent_change_30d": -62.58676501,
+                    "percent_change_60d": -68.81096963,
+                    "percent_change_90d": -20.06766155,
+                    "market_cap": 977061153.6804943,
+                    "market_cap_dominance": 0.0779,
+                    "fully_diluted_market_cap": 1477315433.97,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3602,
+            "name": "Bitcoin SV",
+            "symbol": "BSV",
+            "slug": "bitcoin-sv",
+            "num_market_pairs": 173,
+            "date_added": "2018-11-09T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "pow",
+                "sha-256",
+                "medium-of-exchange",
+                "store-of-value",
+                "state-channel"
+            ],
+            "max_supply": 21000000,
+            "circulating_supply": 19067932.89423905,
+            "total_supply": 19067932.89423905,
+            "platform": null,
+            "cmc_rank": 55,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 50.83333761104847,
+                    "volume_24h": 132785568.20548907,
+                    "volume_change_24h": -14.124,
+                    "percent_change_1h": -0.16978233,
+                    "percent_change_24h": -3.41765648,
+                    "percent_change_7d": -7.8979088,
+                    "percent_change_30d": -36.05830331,
+                    "percent_change_60d": -43.39264144,
+                    "percent_change_90d": -39.76155937,
+                    "market_cap": 969286670.3576702,
+                    "market_cap_dominance": 0.0772,
+                    "fully_diluted_market_cap": 1067500089.83,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 10791,
+            "name": "eCash",
+            "symbol": "XEC",
+            "slug": "ecash",
+            "num_market_pairs": 50,
+            "date_added": "2021-07-08T00:00:00.000Z",
+            "tags": [],
+            "max_supply": 21000000000000,
+            "circulating_supply": 19068110923313,
+            "total_supply": 18899704673313,
+            "platform": null,
+            "cmc_rank": 56,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.00004958294088610824,
+                    "volume_24h": 38194068.13635491,
+                    "volume_change_24h": -49.2937,
+                    "percent_change_1h": 0.04195101,
+                    "percent_change_24h": -6.39922535,
+                    "percent_change_7d": 2.59796857,
+                    "percent_change_30d": -43.9534094,
+                    "percent_change_60d": -40.91708565,
+                    "percent_change_90d": -31.81839444,
+                    "market_cap": 945453016.7203833,
+                    "market_cap_dominance": 0.0754,
+                    "fully_diluted_market_cap": 1041241758.61,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3330,
+            "name": "Pax Dollar",
+            "symbol": "USDP",
+            "slug": "paxos-standard",
+            "num_market_pairs": 56,
+            "date_added": "2018-09-27T00:00:00.000Z",
+            "tags": [
+                "store-of-value",
+                "stablecoin",
+                "asset-backed-stablecoin",
+                "bnb-chain",
+                "usd-stablecoin"
+            ],
+            "max_supply": null,
+            "circulating_supply": 945642940.11,
+            "total_supply": 945642940.11,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x8e870d67f660d95d5be530380d0ec0bd388289e1"
+            },
+            "cmc_rank": 57,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.9984471250254545,
+                    "volume_24h": 12572813.47546421,
+                    "volume_change_24h": 15.9523,
+                    "percent_change_1h": 0.04837636,
+                    "percent_change_24h": -0.34785011,
+                    "percent_change_7d": -0.3749515,
+                    "percent_change_30d": -0.47825124,
+                    "percent_change_60d": -0.42626779,
+                    "percent_change_90d": -0.00523049,
+                    "market_cap": 944174474.8534476,
+                    "market_cap_dominance": 0.0753,
+                    "fully_diluted_market_cap": 944174474.85,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1720,
+            "name": "IOTA",
+            "symbol": "MIOTA",
+            "slug": "iota",
+            "num_market_pairs": 76,
+            "date_added": "2017-06-13T00:00:00.000Z",
+            "tags": [
+                "dag",
+                "medium-of-exchange",
+                "iot",
+                "sharing-economy",
+                "bnb-chain"
+            ],
+            "max_supply": 2779530283,
+            "circulating_supply": 2779530283,
+            "total_supply": 2779530283,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0xd944f1d1e9d5f9bb90b62f9d45e447d989580782"
+            },
+            "cmc_rank": 58,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.32943265671389876,
+                    "volume_24h": 21235501.21966532,
+                    "volume_change_24h": -3.6662,
+                    "percent_change_1h": 0.27597552,
+                    "percent_change_24h": -6.71781088,
+                    "percent_change_7d": -13.44051516,
+                    "percent_change_30d": -49.63509739,
+                    "percent_change_60d": -57.69794442,
+                    "percent_change_90d": -56.13163925,
+                    "market_cap": 915668045.5454249,
+                    "market_cap_dominance": 0.073,
+                    "fully_diluted_market_cap": 915668045.55,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 5665,
+            "name": "Helium",
+            "symbol": "HNT",
+            "slug": "helium",
+            "num_market_pairs": 51,
+            "date_added": "2020-06-05T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "enterprise-solutions",
+                "distributed-computing",
+                "iot",
+                "usv-portfolio",
+                "multicoin-capital-portfolio",
+                "web3"
+            ],
+            "max_supply": 223000000,
+            "circulating_supply": 118298444.68944718,
+            "total_supply": 223000000,
+            "platform": null,
+            "cmc_rank": 59,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 7.739634783752171,
+                    "volume_24h": 17616562.23410976,
+                    "volume_change_24h": -2.629,
+                    "percent_change_1h": -0.42793974,
+                    "percent_change_24h": -6.93065833,
+                    "percent_change_7d": -12.3243967,
+                    "percent_change_30d": -56.30268674,
+                    "percent_change_60d": -66.45450866,
+                    "percent_change_90d": -67.00285678,
+                    "market_cap": 915586757.3822277,
+                    "market_cap_dominance": 0.073,
+                    "fully_diluted_market_cap": 1725938556.78,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 7186,
+            "name": "PancakeSwap",
+            "symbol": "CAKE",
+            "slug": "pancakeswap",
+            "num_market_pairs": 250,
+            "date_added": "2020-09-25T00:00:00.000Z",
+            "tags": [
+                "collectibles-nfts",
+                "decentralized-exchange",
+                "defi",
+                "smart-contracts",
+                "yield-farming",
+                "binance-chain",
+                "amm",
+                "dex",
+                "governance",
+                "bnb-chain"
+            ],
+            "max_supply": 750000000,
+            "circulating_supply": 186629037.025504,
+            "total_supply": 297372372.5663021,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
+            },
+            "cmc_rank": 60,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 4.755250509307048,
+                    "volume_24h": 155980255.74136746,
+                    "volume_change_24h": -5.8266,
+                    "percent_change_1h": -0.24306074,
+                    "percent_change_24h": -5.51903773,
+                    "percent_change_7d": 3.01376263,
+                    "percent_change_30d": -48.9624286,
+                    "percent_change_60d": -32.55527862,
+                    "percent_change_90d": -32.88594038,
+                    "market_cap": 887467823.3670118,
+                    "market_cap_dominance": 0.0708,
+                    "fully_diluted_market_cap": 3566437881.98,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 5068,
+            "name": "Neutrino USD",
+            "symbol": "USDN",
+            "slug": "neutrino-usd",
+            "num_market_pairs": 44,
+            "date_added": "2020-01-30T00:00:00.000Z",
+            "tags": [
+                "defi",
+                "stablecoin",
+                "algorithmic-stablecoin",
+                "bnb-chain",
+                "usd-stablecoin"
+            ],
+            "max_supply": null,
+            "circulating_supply": 851079139.783729,
+            "total_supply": 851079738.600185,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x674C6Ad92Fd080e4004b2312b45f796a192D27a0"
+            },
+            "cmc_rank": 61,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.97413237385818,
+                    "volume_24h": 10258632.375628,
+                    "volume_change_24h": 4.5424,
+                    "percent_change_1h": -0.35069143,
+                    "percent_change_24h": -0.35255945,
+                    "percent_change_7d": 1.4852772,
+                    "percent_change_30d": 1.13427592,
+                    "percent_change_60d": -1.908297,
+                    "percent_change_90d": -1.89586469,
+                    "market_cap": 829063742.7787017,
+                    "market_cap_dominance": 0.0661,
+                    "fully_diluted_market_cap": 829064326.11,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 18069,
+            "name": "STEPN",
+            "symbol": "GMT",
+            "slug": "green-metaverse-token",
+            "num_market_pairs": 96,
+            "date_added": "2022-03-09T12:47:15.000Z",
+            "tags": [
+                "collectibles-nfts",
+                "gaming",
+                "binance-launchpad",
+                "solana-ecosystem",
+                "move-to-earn"
+            ],
+            "max_supply": 6000000000,
+            "circulating_supply": 600000000,
+            "total_supply": 6000000000,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0x3019BF2a2eF8040C242C9a4c5c4BD4C81678b2A1"
+            },
+            "cmc_rank": 62,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.3565525536164043,
+                    "volume_24h": 657484900.147951,
+                    "volume_change_24h": -8.0674,
+                    "percent_change_1h": -0.15647861,
+                    "percent_change_24h": -9.1508832,
+                    "percent_change_7d": -11.33338327,
+                    "percent_change_30d": -58.01994064,
+                    "percent_change_60d": 78.27504799,
+                    "percent_change_90d": 783.41632902,
+                    "market_cap": 813931532.1698426,
+                    "market_cap_dominance": 0.0649,
+                    "fully_diluted_market_cap": 8139315321.7,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3155,
+            "name": "Quant",
+            "symbol": "QNT",
+            "slug": "quant",
+            "num_market_pairs": 94,
+            "date_added": "2018-08-10T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "interoperability"
+            ],
+            "max_supply": 14612493,
+            "circulating_supply": 12072738,
+            "total_supply": 14612493.080826,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x4a220e6096b25eadb88358cb44068a3248254675"
+            },
+            "cmc_rank": 63,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 67.38601455532805,
+                    "volume_24h": 54020014.72643837,
+                    "volume_change_24h": 3.5144,
+                    "percent_change_1h": 0.12940531,
+                    "percent_change_24h": -4.32329409,
+                    "percent_change_7d": -7.43138164,
+                    "percent_change_30d": -37.910451,
+                    "percent_change_60d": -49.87357251,
+                    "percent_change_90d": -40.24555152,
+                    "market_cap": 813533698.590662,
+                    "market_cap_dominance": 0.0648,
+                    "fully_diluted_market_cap": 984677665.99,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 7129,
+            "name": "TerraUSD",
+            "symbol": "UST",
+            "slug": "terrausd",
+            "num_market_pairs": 571,
+            "date_added": "2020-09-21T00:00:00.000Z",
+            "tags": [
+                "cosmos-ecosystem",
+                "stablecoin",
+                "algorithmic-stablecoin",
+                "terra-ecosystem",
+                "injective-ecosystem",
+                "bnb-chain",
+                "usd-stablecoin"
+            ],
+            "max_supply": null,
+            "circulating_supply": 11278951456.020666,
+            "total_supply": 11278951456.020666,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xa47c8bf37f92aBed4A126BDA807A7b7498661acD"
+            },
+            "cmc_rank": 64,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.0692135496887137,
+                    "volume_24h": 77618210.58442715,
+                    "volume_change_24h": 9.8264,
+                    "percent_change_1h": -0.57545802,
+                    "percent_change_24h": -6.98683561,
+                    "percent_change_7d": -38.97644517,
+                    "percent_change_30d": -93.08590254,
+                    "percent_change_60d": -93.07566646,
+                    "percent_change_90d": -93.07933848,
+                    "market_cap": 780656267.037876,
+                    "market_cap_dominance": 0.0622,
+                    "fully_diluted_market_cap": 780656267.04,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1376,
+            "name": "Neo",
+            "symbol": "NEO",
+            "slug": "neo",
+            "num_market_pairs": 246,
+            "date_added": "2016-09-08T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "enterprise-solutions",
+                "smart-contracts"
+            ],
+            "max_supply": 100000000,
+            "circulating_supply": 70538831,
+            "total_supply": 100000000,
+            "platform": null,
+            "cmc_rank": 65,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 10.848597459135702,
+                    "volume_24h": 97516892.6898502,
+                    "volume_change_24h": -53.2206,
+                    "percent_change_1h": 0.21896478,
+                    "percent_change_24h": -10.40056163,
+                    "percent_change_7d": 1.68216634,
+                    "percent_change_30d": -46.41356406,
+                    "percent_change_60d": -54.25137091,
+                    "percent_change_90d": -46.76793063,
+                    "market_cap": 765247382.7570027,
+                    "market_cap_dominance": 0.0611,
+                    "fully_diluted_market_cap": 1084859745.91,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3897,
+            "name": "OKB",
+            "symbol": "OKB",
+            "slug": "okb",
+            "num_market_pairs": 67,
+            "date_added": "2019-04-30T00:00:00.000Z",
+            "tags": [
+                "marketplace",
+                "centralized-exchange",
+                "discount-token",
+                "alameda-research-portfolio"
+            ],
+            "max_supply": null,
+            "circulating_supply": 60000000,
+            "total_supply": 300000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x75231f58b43240c9718dd58b4967c5114342a86c"
+            },
+            "cmc_rank": 66,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 12.597729919570456,
+                    "volume_24h": 9228026.76336841,
+                    "volume_change_24h": 7.436,
+                    "percent_change_1h": 0.08806896,
+                    "percent_change_24h": -2.09957514,
+                    "percent_change_7d": -0.40586481,
+                    "percent_change_30d": -38.56420627,
+                    "percent_change_60d": -40.70888447,
+                    "percent_change_90d": -29.23396242,
+                    "market_cap": 755863795.1742274,
+                    "market_cap_dominance": 0.0602,
+                    "fully_diluted_market_cap": 3779318975.87,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4847,
+            "name": "Stacks",
+            "symbol": "STX",
+            "slug": "stacks",
+            "num_market_pairs": 50,
+            "date_added": "2019-10-28T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "platform",
+                "collectibles-nfts",
+                "defi",
+                "smart-contracts",
+                "metaverse",
+                "arrington-xrp-capital-portfolio",
+                "blockchain-capital-portfolio",
+                "dcg-portfolio",
+                "fabric-ventures-portfolio",
+                "hashkey-capital-portfolio",
+                "huobi-capital-portfolio",
+                "usv-portfolio",
+                "web3",
+                "injective-ecosystem"
+            ],
+            "max_supply": 1818000000,
+            "circulating_supply": 1314835015.682661,
+            "total_supply": 1352464600,
+            "platform": null,
+            "cmc_rank": 67,
+            "self_reported_circulating_supply": 1048765672.087772,
+            "self_reported_market_cap": 602565683.5207293,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.5745474890698941,
+                    "volume_24h": 56215287.38726136,
+                    "volume_change_24h": 269.9061,
+                    "percent_change_1h": 0.33142937,
+                    "percent_change_24h": 1.81041392,
+                    "percent_change_7d": 3.04080767,
+                    "percent_change_30d": -48.83591832,
+                    "percent_change_60d": -56.96462424,
+                    "percent_change_90d": -52.05827233,
+                    "market_cap": 755435156.8016477,
+                    "market_cap_dominance": 0.0602,
+                    "fully_diluted_market_cap": 1044527335.13,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2694,
+            "name": "Nexo",
+            "symbol": "NEXO",
+            "slug": "nexo",
+            "num_market_pairs": 73,
+            "date_added": "2018-05-01T00:00:00.000Z",
+            "tags": [
+                "services",
+                "payments",
+                "cardano-ecosystem"
+            ],
+            "max_supply": 1000000000,
+            "circulating_supply": 560000011,
+            "total_supply": 1000000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206"
+            },
+            "cmc_rank": 68,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.299295515390226,
+                    "volume_24h": 7981601.71657742,
+                    "volume_change_24h": -11.4641,
+                    "percent_change_1h": 0.38990087,
+                    "percent_change_24h": -1.81335477,
+                    "percent_change_7d": -4.54352321,
+                    "percent_change_30d": -42.85948067,
+                    "percent_change_60d": -43.13536167,
+                    "percent_change_90d": -33.02819953,
+                    "market_cap": 727605502.9107772,
+                    "market_cap_dominance": 0.058,
+                    "fully_diluted_market_cap": 1299295515.39,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1934,
+            "name": "Loopring",
+            "symbol": "LRC",
+            "slug": "loopring",
+            "num_market_pairs": 203,
+            "date_added": "2017-08-30T00:00:00.000Z",
+            "tags": [
+                "marketplace",
+                "decentralized-exchange",
+                "defi",
+                "scaling",
+                "rollups"
+            ],
+            "max_supply": 1374513896,
+            "circulating_supply": 1330082008.9382615,
+            "total_supply": 1373873439.4424574,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xbbbbca6a901c926f240b89eacb641d8aec7aeafd"
+            },
+            "cmc_rank": 69,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.5421814004363226,
+                    "volume_24h": 280200899.93828773,
+                    "volume_change_24h": -20.009,
+                    "percent_change_1h": 0.45164212,
+                    "percent_change_24h": -13.44752593,
+                    "percent_change_7d": 12.03423917,
+                    "percent_change_30d": -39.29043217,
+                    "percent_change_60d": -48.30051492,
+                    "percent_change_90d": -31.89109605,
+                    "market_cap": 721145726.301304,
+                    "market_cap_dominance": 0.0575,
+                    "fully_diluted_market_cap": 745235869.05,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4066,
+            "name": "Chiliz",
+            "symbol": "CHZ",
+            "slug": "chiliz",
+            "num_market_pairs": 243,
+            "date_added": "2019-07-01T00:00:00.000Z",
+            "tags": [
+                "sports",
+                "collectibles-nfts",
+                "content-creation",
+                "payments"
+            ],
+            "max_supply": 8888888888,
+            "circulating_supply": 6000378916.932685,
+            "total_supply": 8888888888,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x3506424f91fd33084466f402d5d97f05f8e3b4af"
+            },
+            "cmc_rank": 70,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.11557258594433659,
+                    "volume_24h": 80142372.23740612,
+                    "volume_change_24h": 0.0957,
+                    "percent_change_1h": 0.02573002,
+                    "percent_change_24h": -7.39206355,
+                    "percent_change_7d": -0.46009061,
+                    "percent_change_30d": -45.04525506,
+                    "percent_change_60d": -51.91986403,
+                    "percent_change_90d": -35.38684956,
+                    "market_cap": 693479308.075788,
+                    "market_cap_dominance": 0.0554,
+                    "fully_diluted_market_cap": 1027311874.96,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 5034,
+            "name": "Kusama",
+            "symbol": "KSM",
+            "slug": "kusama",
+            "num_market_pairs": 132,
+            "date_added": "2019-12-12T00:00:00.000Z",
+            "tags": [
+                "substrate",
+                "polkadot-ecosystem",
+                "cms-holdings-portfolio",
+                "kenetic-capital-portfolio",
+                "1confirmation-portfolio",
+                "vbc-ventures-portfolio"
+            ],
+            "max_supply": null,
+            "circulating_supply": 8470098.05726206,
+            "total_supply": 9651217.45126206,
+            "platform": null,
+            "cmc_rank": 71,
+            "self_reported_circulating_supply": 8597992,
+            "self_reported_market_cap": 679447572.4172516,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 79.02398285753831,
+                    "volume_24h": 94144043.27612196,
+                    "volume_change_24h": 15.8966,
+                    "percent_change_1h": 0.07543939,
+                    "percent_change_24h": -10.62354915,
+                    "percent_change_7d": -5.14566735,
+                    "percent_change_30d": -50.04796176,
+                    "percent_change_60d": -50.50860025,
+                    "percent_change_90d": -38.6883157,
+                    "market_cap": 669340883.6787455,
+                    "market_cap_dominance": 0.0533,
+                    "fully_diluted_market_cap": 762677642.42,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2469,
+            "name": "Zilliqa",
+            "symbol": "ZIL",
+            "slug": "zilliqa",
+            "num_market_pairs": 190,
+            "date_added": "2018-01-25T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "platform",
+                "payments",
+                "smart-contracts",
+                "polychain-capital-portfolio",
+                "kenetic-capital-portfolio",
+                "zilliqa-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": 21000000000,
+            "circulating_supply": 12824401001.094173,
+            "total_supply": 16115868154.094173,
+            "platform": {
+                "id": 1839,
+                "name": "BNB",
+                "symbol": "BNB",
+                "slug": "bnb",
+                "token_address": "0xb86abcb37c3a4b64f74f59301aff131a1becc787"
+            },
+            "cmc_rank": 72,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.0510092242589713,
+                    "volume_24h": 177918860.25546023,
+                    "volume_change_24h": -35.0649,
+                    "percent_change_1h": -0.04613517,
+                    "percent_change_24h": -9.45466116,
+                    "percent_change_7d": -1.05472366,
+                    "percent_change_30d": -52.05261993,
+                    "percent_change_60d": 7.2406866,
+                    "percent_change_90d": 24.8241726,
+                    "market_cap": 654162746.6517887,
+                    "market_cap_dominance": 0.0522,
+                    "fully_diluted_market_cap": 1071193709.44,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 131,
+            "name": "Dash",
+            "symbol": "DASH",
+            "slug": "dash",
+            "num_market_pairs": 338,
+            "date_added": "2014-02-14T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "hybrid-pow-pos",
+                "x11",
+                "medium-of-exchange",
+                "masternodes",
+                "dao",
+                "governance"
+            ],
+            "max_supply": 18900000,
+            "circulating_supply": 10738101.11657769,
+            "total_supply": 10738101.11657769,
+            "platform": null,
+            "cmc_rank": 73,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 60.59617816121465,
+                    "volume_24h": 134752590.9504333,
+                    "volume_change_24h": -10.9278,
+                    "percent_change_1h": -0.29597669,
+                    "percent_change_24h": -4.10120479,
+                    "percent_change_7d": 4.00096446,
+                    "percent_change_30d": -39.07668649,
+                    "percent_change_60d": -51.04799205,
+                    "percent_change_90d": -34.71654402,
+                    "market_cap": 650687888.3732797,
+                    "market_cap_dominance": 0.0519,
+                    "fully_diluted_market_cap": 1145267767.25,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 9903,
+            "name": "Convex Finance",
+            "symbol": "CVX",
+            "slug": "convex-finance",
+            "num_market_pairs": 111,
+            "date_added": "2021-05-18T00:00:00.000Z",
+            "tags": [
+                "defi",
+                "yield-aggregator"
+            ],
+            "max_supply": 100000000,
+            "circulating_supply": 61992984.45702579,
+            "total_supply": 90425557.9508307,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b"
+            },
+            "cmc_rank": 74,
+            "self_reported_circulating_supply": 2814665,
+            "self_reported_market_cap": 28745177.378451418,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 10.212646044361023,
+                    "volume_24h": 16466680.62445723,
+                    "volume_change_24h": -57.5004,
+                    "percent_change_1h": 0.14936223,
+                    "percent_change_24h": -3.73397151,
+                    "percent_change_7d": -11.69513689,
+                    "percent_change_30d": -59.9636298,
+                    "percent_change_60d": -57.98666624,
+                    "percent_change_90d": -52.09056478,
+                    "market_cap": 633112407.4931788,
+                    "market_cap_dominance": 0.0505,
+                    "fully_diluted_market_cap": 1021264604.44,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4705,
+            "name": "PAX Gold",
+            "symbol": "PAXG",
+            "slug": "pax-gold",
+            "num_market_pairs": 68,
+            "date_added": "2019-09-26T00:00:00.000Z",
+            "tags": [
+                "bnb-chain",
+                "tokenized-gold"
+            ],
+            "max_supply": null,
+            "circulating_supply": 333601.333,
+            "total_supply": 333601.333,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x45804880de22913dafe09f4980848ece6ecbaf78"
+            },
+            "cmc_rank": 75,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1869.5497373575326,
+                    "volume_24h": 22081344.9230101,
+                    "volume_change_24h": 6.7518,
+                    "percent_change_1h": -0.0539436,
+                    "percent_change_24h": 0.85241269,
+                    "percent_change_7d": 2.47250221,
+                    "percent_change_30d": -3.42606086,
+                    "percent_change_60d": -4.27852484,
+                    "percent_change_90d": -2.44244132,
+                    "market_cap": 623684284.4922727,
+                    "market_cap_dominance": 0.0497,
+                    "fully_diluted_market_cap": 623684284.49,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2130,
+            "name": "Enjin Coin",
+            "symbol": "ENJ",
+            "slug": "enjin-coin",
+            "num_market_pairs": 249,
+            "date_added": "2017-11-01T00:00:00.000Z",
+            "tags": [
+                "media",
+                "collectibles-nfts",
+                "gaming",
+                "ethereum-ecosystem",
+                "metaverse",
+                "arrington-xrp-capital-portfolio"
+            ],
+            "max_supply": 1000000000,
+            "circulating_supply": 889481955.567558,
+            "total_supply": 1000000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c"
+            },
+            "cmc_rank": 76,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.6644847521312204,
+                    "volume_24h": 84871245.00406738,
+                    "volume_change_24h": -6.2104,
+                    "percent_change_1h": -0.14021163,
+                    "percent_change_24h": -8.59557771,
+                    "percent_change_7d": -7.72620406,
+                    "percent_change_30d": -51.67298467,
+                    "percent_change_60d": -58.39880005,
+                    "percent_change_90d": -54.76386164,
+                    "market_cap": 591047196.770502,
+                    "market_cap_dominance": 0.0471,
+                    "fully_diluted_market_cap": 664484752.13,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1274,
+            "name": "Waves",
+            "symbol": "WAVES",
+            "slug": "waves",
+            "num_market_pairs": 179,
+            "date_added": "2016-06-02T00:00:00.000Z",
+            "tags": [
+                "lpos",
+                "platform",
+                "smart-contracts"
+            ],
+            "max_supply": null,
+            "circulating_supply": 108348946,
+            "total_supply": 108348946,
+            "platform": null,
+            "cmc_rank": 77,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 5.440785891487755,
+                    "volume_24h": 257243064.4020657,
+                    "volume_change_24h": -25.5583,
+                    "percent_change_1h": 0.68287242,
+                    "percent_change_24h": -12.14570457,
+                    "percent_change_7d": -18.38990948,
+                    "percent_change_30d": -68.93171783,
+                    "percent_change_60d": -82.18520347,
+                    "percent_change_90d": -45.12874975,
+                    "market_cap": 589503416.7543685,
+                    "market_cap_dominance": 0.047,
+                    "fully_diluted_market_cap": 589503416.75,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1697,
+            "name": "Basic Attention Token",
+            "symbol": "BAT",
+            "slug": "basic-attention-token",
+            "num_market_pairs": 307,
+            "date_added": "2017-06-01T00:00:00.000Z",
+            "tags": [
+                "marketing",
+                "content-creation",
+                "defi",
+                "payments",
+                "dcg-portfolio",
+                "1confirmation-portfolio",
+                "pantera-capital-portfolio",
+                "web3",
+                "bnb-chain"
+            ],
+            "max_supply": 1500000000,
+            "circulating_supply": 1497974025.8773506,
+            "total_supply": 1500000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x0d8775f648430679a709e98d2b0cb6250d2887ef"
+            },
+            "cmc_rank": 78,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.3847169092357537,
+                    "volume_24h": 93092267.40131237,
+                    "volume_change_24h": 26.661,
+                    "percent_change_1h": -0.4091421,
+                    "percent_change_24h": -7.04209616,
+                    "percent_change_7d": -3.849329,
+                    "percent_change_30d": -46.36991687,
+                    "percent_change_60d": -53.6843804,
+                    "percent_change_90d": -44.26741352,
+                    "market_cap": 576295937.3509732,
+                    "market_cap_dominance": 0.046,
+                    "fully_diluted_market_cap": 577075363.85,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 5567,
+            "name": "Celo",
+            "symbol": "CELO",
+            "slug": "celo",
+            "num_market_pairs": 111,
+            "date_added": "2020-05-22T00:00:00.000Z",
+            "tags": [
+                "pos",
+                "zero-knowledge-proofs",
+                "mobile",
+                "payments",
+                "smart-contracts",
+                "coinbase-ventures-portfolio",
+                "polychain-capital-portfolio",
+                "dragonfly-capital-portfolio",
+                "electric-capital-portfolio",
+                "a16z-portfolio",
+                "celo-ecosystem"
+            ],
+            "max_supply": 1000000000,
+            "circulating_supply": 439191694,
+            "total_supply": 1000000000,
+            "platform": {
+                "id": 5567,
+                "name": "Celo",
+                "symbol": "CELO",
+                "slug": "celo",
+                "token_address": "0x471ece3750da237f93b8e339c536989b8978a438"
+            },
+            "cmc_rank": 79,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.293668824139954,
+                    "volume_24h": 84091323.46711619,
+                    "volume_change_24h": 103.9235,
+                    "percent_change_1h": -0.02726768,
+                    "percent_change_24h": -5.69211271,
+                    "percent_change_7d": -7.72442909,
+                    "percent_change_30d": -55.05365081,
+                    "percent_change_60d": -57.55710978,
+                    "percent_change_90d": -48.66272367,
+                    "market_cap": 568168602.3490145,
+                    "market_cap_dominance": 0.0453,
+                    "fully_diluted_market_cap": 1293668824.14,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 7080,
+            "name": "Gala",
+            "symbol": "GALA",
+            "slug": "gala",
+            "num_market_pairs": 154,
+            "date_added": "2020-09-16T00:00:00.000Z",
+            "tags": [
+                "collectibles-nfts",
+                "gaming",
+                "binance-smart-chain",
+                "polygon-ecosystem",
+                "play-to-earn"
+            ],
+            "max_supply": null,
+            "circulating_supply": 6977205436,
+            "total_supply": 35240112493,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x15D4c048F83bd7e37d49eA4C83a07267Ec4203dA"
+            },
+            "cmc_rank": 80,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.08095897488459773,
+                    "volume_24h": 255816359.86067563,
+                    "volume_change_24h": -4.4954,
+                    "percent_change_1h": 0.51644888,
+                    "percent_change_24h": -6.47615199,
+                    "percent_change_7d": -6.36754607,
+                    "percent_change_30d": -56.34002878,
+                    "percent_change_60d": -67.27412954,
+                    "percent_change_90d": -65.14066769,
+                    "market_cap": 564867399.6578028,
+                    "market_cap_dominance": 0.045,
+                    "fully_diluted_market_cap": 2853003382.25,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 6538,
+            "name": "Curve DAO Token",
+            "symbol": "CRV",
+            "slug": "curve-dao-token",
+            "num_market_pairs": 280,
+            "date_added": "2020-08-14T00:00:00.000Z",
+            "tags": [
+                "decentralized-exchange",
+                "defi",
+                "dao",
+                "yield-farming",
+                "amm",
+                "governance",
+                "framework-ventures-portfolio",
+                "alameda-research-portfolio",
+                "polygon-ecosystem",
+                "fantom-ecosystem",
+                "arbitrum-ecosytem"
+            ],
+            "max_supply": 3303030299,
+            "circulating_supply": 458542798.40926045,
+            "total_supply": 1752174938.922447,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xD533a949740bb3306d119CC777fa900bA034cd52"
+            },
+            "cmc_rank": 81,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.2195883983699785,
+                    "volume_24h": 137293274.51588282,
+                    "volume_change_24h": -24.007,
+                    "percent_change_1h": -0.35465912,
+                    "percent_change_24h": -11.76879812,
+                    "percent_change_7d": -7.55965048,
+                    "percent_change_30d": -53.64597687,
+                    "percent_change_60d": -46.33409621,
+                    "percent_change_90d": -49.61465144,
+                    "market_cap": 559233477.0960379,
+                    "market_cap_dominance": 0.0446,
+                    "fully_diluted_market_cap": 4028337432.12,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 3945,
+            "name": "Harmony",
+            "symbol": "ONE",
+            "slug": "harmony",
+            "num_market_pairs": 91,
+            "date_added": "2019-06-01T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "enterprise-solutions",
+                "scaling",
+                "smart-contracts",
+                "binance-launchpad",
+                "binance-labs-portfolio",
+                "hashkey-capital-portfolio",
+                "harmony-ecosystem",
+                "injective-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": null,
+            "circulating_supply": 12075570250.000671,
+            "total_supply": 13467967250.000679,
+            "platform": null,
+            "cmc_rank": 82,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.04602841343869813,
+                    "volume_24h": 51157477.77863792,
+                    "volume_change_24h": -3.1153,
+                    "percent_change_1h": -0.111127,
+                    "percent_change_24h": -9.7318111,
+                    "percent_change_7d": -3.50843999,
+                    "percent_change_30d": -59.37633209,
+                    "percent_change_60d": -68.05167176,
+                    "percent_change_90d": -67.28265767,
+                    "market_cap": 555819339.9750743,
+                    "market_cap_dominance": 0.0443,
+                    "fully_diluted_market_cap": 619909164.76,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 6945,
+            "name": "Amp",
+            "symbol": "AMP",
+            "slug": "amp",
+            "num_market_pairs": 77,
+            "date_added": "2020-09-08T00:00:00.000Z",
+            "tags": [],
+            "max_supply": 92547638199,
+            "circulating_supply": 42227702186,
+            "total_supply": 99213408535,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xff20817765cb7f73d4bde2e66e067e58d11095c2"
+            },
+            "cmc_rank": 83,
+            "self_reported_circulating_supply": 36271610691,
+            "self_reported_market_cap": 477342134.664423,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.01316021333408458,
+                    "volume_24h": 22011005.63430481,
+                    "volume_change_24h": -11.109,
+                    "percent_change_1h": 0.76238961,
+                    "percent_change_24h": -2.65985461,
+                    "percent_change_7d": -4.91820566,
+                    "percent_change_30d": -39.33132871,
+                    "percent_change_60d": -49.7242594,
+                    "percent_change_90d": -51.65495089,
+                    "market_cap": 555725569.3759497,
+                    "market_cap_dominance": 0.0443,
+                    "fully_diluted_market_cap": 1217946662.26,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 19891,
+            "name": "USDD",
+            "symbol": "USDD",
+            "slug": "usdd",
+            "num_market_pairs": 31,
+            "date_added": "2022-05-02T08:07:12.000Z",
+            "tags": [
+                "stablecoin",
+                "algorithmic-stablecoin",
+                "usd-stablecoin"
+            ],
+            "max_supply": null,
+            "circulating_supply": 543897601.61,
+            "total_supply": 543897601.61,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x0c10bf8fcb7bf5412187a595ab97a3609160b5c6"
+            },
+            "cmc_rank": 84,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 1.0014871815142057,
+                    "volume_24h": 118808302.97511089,
+                    "volume_change_24h": -39.7896,
+                    "percent_change_1h": 0.23169944,
+                    "percent_change_24h": -0.04507249,
+                    "percent_change_7d": 0.05463666,
+                    "percent_change_30d": 0.43873337,
+                    "percent_change_60d": 0.43873337,
+                    "percent_change_90d": 0.43873337,
+                    "market_cap": 544706476.0687352,
+                    "market_cap_dominance": 0.0434,
+                    "fully_diluted_market_cap": 544706476.07,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1659,
+            "name": "Gnosis",
+            "symbol": "GNO",
+            "slug": "gnosis-gno",
+            "num_market_pairs": 68,
+            "date_added": "2017-05-01T00:00:00.000Z",
+            "tags": [
+                "services",
+                "decentralized-exchange",
+                "defi",
+                "prediction-markets",
+                "kenetic-capital-portfolio",
+                "arbitrum-ecosytem"
+            ],
+            "max_supply": 10000000,
+            "circulating_supply": 2579588,
+            "total_supply": 3000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x6810e776880c02933d47db1b9fc05908e5386b96"
+            },
+            "cmc_rank": 85,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 208.64062550126127,
+                    "volume_24h": 5221073.81279407,
+                    "volume_change_24h": 9.4677,
+                    "percent_change_1h": -0.33297943,
+                    "percent_change_24h": -5.28374013,
+                    "percent_change_7d": -8.01452561,
+                    "percent_change_30d": -36.18628143,
+                    "percent_change_60d": -38.19693172,
+                    "percent_change_90d": -36.59564544,
+                    "market_cap": 538206853.8555475,
+                    "market_cap_dominance": 0.043,
+                    "fully_diluted_market_cap": 2086406255.01,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1168,
+            "name": "Decred",
+            "symbol": "DCR",
+            "slug": "decred",
+            "num_market_pairs": 57,
+            "date_added": "2016-02-10T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "hybrid-pow-pos",
+                "blake256",
+                "medium-of-exchange",
+                "store-of-value",
+                "privacy",
+                "dao",
+                "placeholder-ventures-portfolio"
+            ],
+            "max_supply": 21000000,
+            "circulating_supply": 14044043.66486419,
+            "total_supply": 14044043.66486419,
+            "platform": null,
+            "cmc_rank": 86,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 36.615983586523406,
+                    "volume_24h": 1931993.35403486,
+                    "volume_change_24h": 15.8517,
+                    "percent_change_1h": 1.38714137,
+                    "percent_change_24h": -6.37729627,
+                    "percent_change_7d": -2.79031408,
+                    "percent_change_30d": -42.96123313,
+                    "percent_change_60d": -37.45071939,
+                    "percent_change_90d": -34.11311956,
+                    "market_cap": 514236472.3210852,
+                    "market_cap_dominance": 0.0411,
+                    "fully_diluted_market_cap": 768935655.32,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 8646,
+            "name": "Mina",
+            "symbol": "MINA",
+            "slug": "mina",
+            "num_market_pairs": 61,
+            "date_added": "2021-03-02T00:00:00.000Z",
+            "tags": [
+                "pos",
+                "zero-knowledge-proofs",
+                "staking",
+                "coinbase-ventures-portfolio",
+                "polychain-capital-portfolio"
+            ],
+            "max_supply": null,
+            "circulating_supply": 515604460.84003925,
+            "total_supply": 824104972,
+            "platform": null,
+            "cmc_rank": 87,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.9942971675957549,
+                    "volume_24h": 40457783.99397588,
+                    "volume_change_24h": 10.3238,
+                    "percent_change_1h": -0.45416308,
+                    "percent_change_24h": -4.15224079,
+                    "percent_change_7d": -7.93090069,
+                    "percent_change_30d": -54.2464999,
+                    "percent_change_60d": -59.81396427,
+                    "percent_change_90d": -55.12785704,
+                    "market_cap": 512664055.0129874,
+                    "market_cap_dominance": 0.0409,
+                    "fully_diluted_market_cap": 819405239.46,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2634,
+            "name": "XDC Network",
+            "symbol": "XDC",
+            "slug": "xinfin",
+            "num_market_pairs": 57,
+            "date_added": "2018-04-12T00:00:00.000Z",
+            "tags": [],
+            "max_supply": null,
+            "circulating_supply": 12305012698.75,
+            "total_supply": 37705012698.75,
+            "platform": null,
+            "cmc_rank": 88,
+            "self_reported_circulating_supply": 13752615847.95,
+            "self_reported_market_cap": 570922561.568315,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.04151374312207071,
+                    "volume_24h": 11577529.67154261,
+                    "volume_change_24h": -43.6251,
+                    "percent_change_1h": -0.03225201,
+                    "percent_change_24h": -1.58455461,
+                    "percent_change_7d": -8.54193041,
+                    "percent_change_30d": -27.76751276,
+                    "percent_change_60d": -27.37329817,
+                    "percent_change_90d": -23.06655053,
+                    "market_cap": 510827136.2897256,
+                    "market_cap_dominance": 0.0407,
+                    "fully_diluted_market_cap": 1565276211.59,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4846,
+            "name": "Kava",
+            "symbol": "KAVA",
+            "slug": "kava",
+            "num_market_pairs": 81,
+            "date_added": "2019-10-25T00:00:00.000Z",
+            "tags": [
+                "cosmos-ecosystem",
+                "defi",
+                "binance-launchpad",
+                "binance-labs-portfolio",
+                "lending-borowing",
+                "arrington-xrp-capital-portfolio",
+                "framework-ventures-portfolio",
+                "hashkey-capital-portfolio",
+                "injective-ecosystem"
+            ],
+            "max_supply": null,
+            "circulating_supply": 196769431,
+            "total_supply": 173657543,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x0C356B7fD36a5357E5A017EF11887ba100C9AB76"
+            },
+            "cmc_rank": 89,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 2.552739157590144,
+                    "volume_24h": 88995970.53386731,
+                    "volume_change_24h": 16.3342,
+                    "percent_change_1h": -0.0208007,
+                    "percent_change_24h": -7.40710588,
+                    "percent_change_7d": 0.80482393,
+                    "percent_change_30d": -50.09887628,
+                    "percent_change_60d": -31.18896743,
+                    "percent_change_90d": -17.07471281,
+                    "market_cap": 502301031.5304319,
+                    "market_cap_dominance": 0.04,
+                    "fully_diluted_market_cap": 443302410.03,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 5692,
+            "name": "Compound",
+            "symbol": "COMP",
+            "slug": "compound",
+            "num_market_pairs": 265,
+            "date_added": "2020-06-16T00:00:00.000Z",
+            "tags": [
+                "defi",
+                "dao",
+                "yield-farming",
+                "polkadot-ecosystem",
+                "coinbase-ventures-portfolio",
+                "three-arrows-capital-portfolio",
+                "polychain-capital-portfolio",
+                "lending-borowing",
+                "dragonfly-capital-portfolio",
+                "alameda-research-portfolio",
+                "a16z-portfolio",
+                "pantera-capital-portfolio",
+                "paradigm-portfolio",
+                "bnb-chain"
+            ],
+            "max_supply": 10000000,
+            "circulating_supply": 7123590.64764589,
+            "total_supply": 10000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xc00e94cb662c3520282e6f5717214004a7f26888"
+            },
+            "cmc_rank": 90,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 67.36205567746929,
+                    "volume_24h": 72207341.11355236,
+                    "volume_change_24h": 1.4927,
+                    "percent_change_1h": -0.84384551,
+                    "percent_change_24h": -8.02268767,
+                    "percent_change_7d": -3.47351275,
+                    "percent_change_30d": -47.89813846,
+                    "percent_change_60d": -41.27576005,
+                    "percent_change_90d": -41.31576562,
+                    "market_cap": 479859709.8302219,
+                    "market_cap_dominance": 0.0382,
+                    "fully_diluted_market_cap": 673620556.77,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 5632,
+            "name": "Arweave",
+            "symbol": "AR",
+            "slug": "arweave",
+            "num_market_pairs": 56,
+            "date_added": "2020-05-27T00:00:00.000Z",
+            "tags": [
+                "distributed-computing",
+                "filesharing",
+                "storage",
+                "coinbase-ventures-portfolio",
+                "solana-ecosystem",
+                "arrington-xrp-capital-portfolio",
+                "blockchain-capital-portfolio",
+                "a16z-portfolio",
+                "multicoin-capital-portfolio",
+                "web3"
+            ],
+            "max_supply": 66000000,
+            "circulating_supply": 33394701,
+            "total_supply": 63190435,
+            "platform": null,
+            "cmc_rank": 91,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 14.196120922695858,
+                    "volume_24h": 43139427.98988459,
+                    "volume_change_24h": 24.3587,
+                    "percent_change_1h": -0.53539098,
+                    "percent_change_24h": -10.23468614,
+                    "percent_change_7d": -7.49330042,
+                    "percent_change_30d": -47.82634146,
+                    "percent_change_60d": -56.87089841,
+                    "percent_change_90d": -48.62474397,
+                    "market_cap": 474075213.5732723,
+                    "market_cap_dominance": 0.0378,
+                    "fully_diluted_market_cap": 936943980.9,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 873,
+            "name": "NEM",
+            "symbol": "XEM",
+            "slug": "nem",
+            "num_market_pairs": 124,
+            "date_added": "2015-04-01T00:00:00.000Z",
+            "tags": [
+                "poi",
+                "medium-of-exchange",
+                "payments",
+                "smart-contracts",
+                "fantom-ecosystem"
+            ],
+            "max_supply": 8999999999,
+            "circulating_supply": 8999999999,
+            "total_supply": 8999999999,
+            "platform": null,
+            "cmc_rank": 92,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.05267085033533883,
+                    "volume_24h": 16410571.76324894,
+                    "volume_change_24h": -13.4688,
+                    "percent_change_1h": -1.14589781,
+                    "percent_change_24h": -8.17172073,
+                    "percent_change_7d": -12.87596266,
+                    "percent_change_30d": -44.3257957,
+                    "percent_change_60d": -50.73224436,
+                    "percent_change_90d": -46.75527777,
+                    "market_cap": 474037652.96537864,
+                    "market_cap_dominance": 0.0378,
+                    "fully_diluted_market_cap": 474037652.97,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2682,
+            "name": "Holo",
+            "symbol": "HOT",
+            "slug": "holo",
+            "num_market_pairs": 115,
+            "date_added": "2018-04-29T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "distributed-computing",
+                "filesharing",
+                "storage"
+            ],
+            "max_supply": null,
+            "circulating_supply": 173323139334.91345,
+            "total_supply": 177619433541.14133,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x6c6ee5e31d828de241282b9606c8e98ea48526e2"
+            },
+            "cmc_rank": 93,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.0025498225915056264,
+                    "volume_24h": 31996274.05623751,
+                    "volume_change_24h": -0.8475,
+                    "percent_change_1h": 0.28512361,
+                    "percent_change_24h": -4.30433094,
+                    "percent_change_7d": -4.4094574,
+                    "percent_change_30d": -45.07391802,
+                    "percent_change_60d": -49.09161961,
+                    "percent_change_90d": -41.76321659,
+                    "market_cap": 441943256.30683976,
+                    "market_cap_dominance": 0.0352,
+                    "fully_diluted_market_cap": 452898044.33,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 4269,
+            "name": "GateToken",
+            "symbol": "GT",
+            "slug": "gatetoken",
+            "num_market_pairs": 23,
+            "date_added": "2019-08-20T00:00:00.000Z",
+            "tags": [
+                "marketplace",
+                "centralized-exchange",
+                "discount-token",
+                "algorand-ecosystem"
+            ],
+            "max_supply": null,
+            "circulating_supply": 78342964.64308143,
+            "total_supply": 300000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xe66747a101bff2dba3697199dcce5b743b454759"
+            },
+            "cmc_rank": 94,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 5.5713182132253465,
+                    "volume_24h": 8681224.40497671,
+                    "volume_change_24h": 47.5359,
+                    "percent_change_1h": 0.68519252,
+                    "percent_change_24h": -3.97434471,
+                    "percent_change_7d": 0.3283483,
+                    "percent_change_30d": -13.75753842,
+                    "percent_change_60d": -14.12512043,
+                    "percent_change_90d": -10.94284822,
+                    "market_cap": 436473585.79406893,
+                    "market_cap_dominance": 0.0348,
+                    "fully_diluted_market_cap": 1671395463.97,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 5647,
+            "name": "Kadena",
+            "symbol": "KDA",
+            "slug": "kadena",
+            "num_market_pairs": 30,
+            "date_added": "2020-05-31T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "pow",
+                "blake2s",
+                "platform",
+                "cosmos-ecosystem",
+                "smart-contracts",
+                "coinfund-portfolio",
+                "multicoin-capital-portfolio"
+            ],
+            "max_supply": 1000000000,
+            "circulating_supply": 184647926.71775,
+            "total_supply": 1000000000,
+            "platform": null,
+            "cmc_rank": 95,
+            "self_reported_circulating_supply": 184647926.71775,
+            "self_reported_market_cap": 429939990.694095,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 2.3284311843441095,
+                    "volume_24h": 33440518.64155856,
+                    "volume_change_24h": 40.2433,
+                    "percent_change_1h": -0.80303059,
+                    "percent_change_24h": -11.32888378,
+                    "percent_change_7d": -21.37152048,
+                    "percent_change_30d": -51.79841519,
+                    "percent_change_60d": -65.41414505,
+                    "percent_change_90d": -64.03338084,
+                    "market_cap": 429939990.694095,
+                    "market_cap_dominance": 0.0343,
+                    "fully_diluted_market_cap": 2328431184.34,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2083,
+            "name": "Bitcoin Gold",
+            "symbol": "BTG",
+            "slug": "bitcoin-gold",
+            "num_market_pairs": 67,
+            "date_added": "2017-10-23T00:00:00.000Z",
+            "tags": [
+                "mineable",
+                "medium-of-exchange",
+                "payments"
+            ],
+            "max_supply": 21000000,
+            "circulating_supply": 17513923.589,
+            "total_supply": 17513923.589,
+            "platform": null,
+            "cmc_rank": 96,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 24.259461992708864,
+                    "volume_24h": 170347903.08381045,
+                    "volume_change_24h": -9.9646,
+                    "percent_change_1h": -0.91531826,
+                    "percent_change_24h": -4.64270277,
+                    "percent_change_7d": 24.49903764,
+                    "percent_change_30d": -26.12975889,
+                    "percent_change_60d": -44.63356772,
+                    "percent_change_90d": -14.84828322,
+                    "market_cap": 424878363.65055275,
+                    "market_cap_dominance": 0.0339,
+                    "fully_diluted_market_cap": 509448701.85,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 8642,
+            "name": "Fei USD",
+            "symbol": "FEI",
+            "slug": "fei-usd",
+            "num_market_pairs": 51,
+            "date_added": "2021-03-02T00:00:00.000Z",
+            "tags": [
+                "defi",
+                "stablecoin",
+                "algorithmic-stablecoin"
+            ],
+            "max_supply": null,
+            "circulating_supply": 424996177.78890556,
+            "total_supply": 426116732.6917724,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x956F47F50A910163D8BF957Cf5846D573E7f87CA"
+            },
+            "cmc_rank": 97,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:02:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.9944981506537823,
+                    "volume_24h": 12322924.89128769,
+                    "volume_change_24h": 162.9582,
+                    "percent_change_1h": -0.00986135,
+                    "percent_change_24h": 0.28115131,
+                    "percent_change_7d": 0.09080366,
+                    "percent_change_30d": 0.9161484,
+                    "percent_change_60d": 0.59933247,
+                    "percent_change_90d": 0.57178967,
+                    "market_cap": 422657912.8459927,
+                    "market_cap_dominance": 0.0337,
+                    "fully_diluted_market_cap": 423772302.62,
+                    "last_updated": "2022-05-24T18:02:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 1684,
+            "name": "Qtum",
+            "symbol": "QTUM",
+            "slug": "qtum",
+            "num_market_pairs": 187,
+            "date_added": "2017-05-24T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "smart-contracts",
+                "kenetic-capital-portfolio"
+            ],
+            "max_supply": 107822406,
+            "circulating_supply": 104176700.5,
+            "total_supply": 103944501,
+            "platform": null,
+            "cmc_rank": 98,
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 3.9616259158824976,
+                    "volume_24h": 91994384.82737693,
+                    "volume_change_24h": -33.4049,
+                    "percent_change_1h": -0.05611614,
+                    "percent_change_24h": -10.14030891,
+                    "percent_change_7d": -3.16461899,
+                    "percent_change_30d": -37.19434487,
+                    "percent_change_60d": -51.43130621,
+                    "percent_change_90d": -34.85027336,
+                    "market_cap": 412709116.53192914,
+                    "market_cap_dominance": 0.0329,
+                    "fully_diluted_market_cap": 427152037.92,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 8104,
+            "name": "1inch Network",
+            "symbol": "1INCH",
+            "slug": "1inch",
+            "num_market_pairs": 231,
+            "date_added": "2020-12-25T00:00:00.000Z",
+            "tags": [
+                "decentralized-exchange",
+                "defi",
+                "amm",
+                "binance-labs-portfolio",
+                "blockchain-capital-portfolio",
+                "dragonfly-capital-portfolio",
+                "fabric-ventures-portfolio",
+                "alameda-research-portfolio",
+                "parafi-capital",
+                "spartan-group",
+                "bnb-chain"
+            ],
+            "max_supply": null,
+            "circulating_supply": 415087973.9694255,
+            "total_supply": 1500000000,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x111111111117dc0aa78b770fa6a738034120c302"
+            },
+            "cmc_rank": 99,
+            "self_reported_circulating_supply": 415087973.9694255,
+            "self_reported_market_cap": 405170559.2153576,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.9761076798751139,
+                    "volume_24h": 64626099.24153629,
+                    "volume_change_24h": 11.7332,
+                    "percent_change_1h": -0.97067861,
+                    "percent_change_24h": -5.5105635,
+                    "percent_change_7d": 4.29737908,
+                    "percent_change_30d": -31.01343648,
+                    "percent_change_60d": -37.65623477,
+                    "percent_change_90d": -32.63852044,
+                    "market_cap": 405170559.2153576,
+                    "market_cap_dominance": 0.0323,
+                    "fully_diluted_market_cap": 1464161519.81,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        },
+        {
+            "id": 2777,
+            "name": "IoTeX",
+            "symbol": "IOTX",
+            "slug": "iotex",
+            "num_market_pairs": 89,
+            "date_added": "2018-05-25T00:00:00.000Z",
+            "tags": [
+                "platform",
+                "iot",
+                "hashkey-capital-portfolio",
+                "kenetic-capital-portfolio",
+                "iotex-ecosystem",
+                "bnb-chain"
+            ],
+            "max_supply": 10000000000,
+            "circulating_supply": 9540779324.30788,
+            "total_supply": 9626124332.32,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0x6fb3e0a217407efff7ca062d46c26e5d60a14d69"
+            },
+            "cmc_rank": 100,
+            "self_reported_circulating_supply": 6116124331.505642,
+            "self_reported_market_cap": 241235489.01295432,
+            "last_updated": "2022-05-24T18:01:00.000Z",
+            "quote": {
+                "USD": {
+                    "price": 0.03944254170411346,
+                    "volume_24h": 47675645.30625886,
+                    "volume_change_24h": -22.7904,
+                    "percent_change_1h": -0.11601028,
+                    "percent_change_24h": -2.32726587,
+                    "percent_change_7d": 29.00644187,
+                    "percent_change_30d": -43.88214836,
+                    "percent_change_60d": -55.44067254,
+                    "percent_change_90d": -48.22015263,
+                    "market_cap": 376312586.388757,
+                    "market_cap_dominance": 0.03,
+                    "fully_diluted_market_cap": 394425417.04,
+                    "last_updated": "2022-05-24T18:01:00.000Z"
+                }
+            }
+        }
+    ]
+}
