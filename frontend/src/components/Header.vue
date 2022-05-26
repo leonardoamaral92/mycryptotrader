@@ -7,7 +7,7 @@
         <v-toolbar-items>
             <v-btn text to="/">Início</v-btn>
             <v-btn text to="/portfolio">Portfólio</v-btn>
-            <v-btn text to="/stocks">Ações</v-btn>
+            <v-btn text to="/cryptocurrencies">Ações</v-btn>
         </v-toolbar-items>
 
         <v-spacer></v-spacer>

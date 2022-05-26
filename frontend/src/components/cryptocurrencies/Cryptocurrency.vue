@@ -2,7 +2,7 @@
     <v-flex class="pr-3 pb-3 mt-2" xs12 md6 lg4>
         <v-card class="green darken-3 white--text">
             <v-card-title class="headline">
-                <strong>{{stock.name}} <small>(Preço: {{stock.quote.USD.price | currency}})</small></strong>
+                <strong>{{cryptocurrency.name}} <small>(Preço: {{cryptocurrency.quote.USD.price | currency}})</small></strong>
             </v-card-title>
         </v-card>
         <v-card>
@@ -12,7 +12,7 @@
                     v-model.number="quantity"/>
                 <v-btn class="ml-2 green darken-3 white--text" 
                     :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(quantity)"
-                    @click="buyStock">{{ insufficientFunds ? 'Insuficiente' : 'Comprar'  }}</v-btn>
+                    @click="buycryptocurrency">{{ insufficientFunds ? 'Insuficiente' : 'Comprar'  }}</v-btn>
             </v-container>
         </v-card>
     </v-flex>
@@ -20,8 +20,8 @@
 
 <script>
 export default {
-    name: 'StockApp',
-    props: ['stock'],
+    name: 'CryptocurrencyApp',
+    props: ['cryptocurrency'],
     data(){
         return {
             quantity: 0
@@ -32,18 +32,18 @@ export default {
             return this.$store.getters.funds
         },
         insufficientFunds(){
-            return this.quantity * this.stock.price > this.funds
+            return this.quantity * this.cryptocurrency.price > this.funds
         }
     },
     methods: {
-        buyStock(){
+        buycryptocurrency(){
             const order = {
-                stockId: this.stock.id,
-                stockPrice: this.stock.quote.USD.price,
+                cryptocurrencyId: this.cryptocurrency.id,
+                cryptocurrencyPrice: this.cryptocurrency.quote.USD.price,
                 quantity: this.quantity
             }
 
-            this.$store.dispatch('buyStock', order)
+            this.$store.dispatch('buyCryptocurrency', order)
             this.quantity = 0
         }
     }
