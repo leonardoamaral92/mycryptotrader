@@ -9,4 +9,5 @@ import lombok.Setter;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CMCCurrency {
     private Double price;
+    private Double market_cap;
 }

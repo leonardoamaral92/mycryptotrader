@@ -13,5 +13,6 @@ public class CMCCoin {
     private String name;
     private String symbol;
     private CMCQuote quote;
+    private Integer cmc_rank;
 
 }
