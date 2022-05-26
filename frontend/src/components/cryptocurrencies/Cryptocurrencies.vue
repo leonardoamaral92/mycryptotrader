@@ -1,7 +1,13 @@
 <template>
-    <v-layout row wrap>
-        <Cryptocurrency v-for="cryptocurrency in cryptocurrencies" :key="cryptocurrency.id" :cryptocurrency="cryptocurrency" />
-    </v-layout>
+    <v-container>
+        <v-row class="coinHeader">
+            <v-col><strong>CMCRanking</strong></v-col>
+            <v-col><strong>Coin</strong></v-col>            
+            <v-col><strong>Price</strong></v-col>
+            <v-col><strong>MarketCap</strong></v-col>
+        </v-row>        
+        <Cryptocurrency v-for="cryptocurrency in cryptocurrencies" :key="cryptocurrency.id" :cryptocurrency="cryptocurrency" />        
+    </v-container>
 </template>
 
 <script>
@@ -19,5 +25,7 @@ export default {
 </script>
 
 <style scoped>
-
+.coinHeader{
+    border-bottom: 1px solid #000;
+}
 </style>

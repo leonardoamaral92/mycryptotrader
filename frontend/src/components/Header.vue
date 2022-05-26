@@ -7,12 +7,14 @@
         <v-toolbar-items>
             <v-btn text to="/">Início</v-btn>
             <v-btn text to="/portfolio">Portfólio</v-btn>
-            <v-btn text to="/cryptocurrencies">Ações</v-btn>
+            <v-btn text to="/cryptocurrencies">Moedas</v-btn>
         </v-toolbar-items>
 
         <v-spacer></v-spacer>
 
         <v-toolbar-items>            
+            <Form text="Buy" classAtr="green" />
+            <Form text="Sell" classAtr="red" />
             <v-menu offset-y>
                 <template v-slot:activator="{ on }">
                     <v-btn text v-on="on">Salvar & Carregar</v-btn>
@@ -37,24 +39,26 @@
 
 <script>
 import { mapActions } from 'vuex'
+import Form from './Form.vue'
 
 export default {
-    name: 'HeaderApp',   
+    name: "HeaderApp",
     computed: {
-        funds(){
-            return this.$store.getters.funds
+        funds() {
+            return this.$store.getters.funds;
         }
     },
     methods: {
-        ...mapActions(['randomizeStocks', 'loadPortfolio']),        
-        saveData(){
-            const { funds, stockPortfolio, stocks } = this.$store.getters
-            this.$http.put('data.json', { funds, stockPortfolio, stocks })
+        ...mapActions(["randomizeStocks", "loadPortfolio"]),
+        saveData() {
+            const { funds, stockPortfolio, stocks } = this.$store.getters;
+            this.$http.put("data.json", { funds, stockPortfolio, stocks });
         },
-        loadData(){
-            this.loadPortfolio()
+        loadData() {
+            this.loadPortfolio();
         }
-    }
+    },
+    components: { Form }
 }
 </script>
 
