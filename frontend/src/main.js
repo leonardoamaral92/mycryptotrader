@@ -10,7 +10,11 @@ import './plugins/axios'
 Vue.config.productionTip = false
 
 Vue.filter('currency', value => {
-	return '$' + value.toLocaleString()
+	var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    });
+    return formatter.format(value)
 })
 
 new Vue({
