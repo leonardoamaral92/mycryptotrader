@@ -8,13 +8,16 @@ export default {
         }
     },
     actions: {
-        buyStock({ commit }, order ){
-            commit('buyCryptocurrencies', order)
+        buyCrypto({ commit }, order ){
+            commit('buyCrypto', order)
         }               
     },
     getters: {
         cryptocurrencies(state){
             return state.cryptocurrencies
+        },
+        getPriceById: (state) => (cryptoId) => {
+            return state.cryptocurrencies.find(coin => coin.id == cryptoId).quote.USD.price
         }
     }
 }

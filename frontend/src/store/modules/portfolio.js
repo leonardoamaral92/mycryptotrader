@@ -1,21 +1,29 @@
 export default {
     state: {
         funds: 10000,
-        cryptocurrencies: []
+        portfolio: []
     },
     mutations: {
-        buyStock(state, { stockId, quantity, stockPrice }) {
-            const record = state.cryptocurrencies.find(element => element.id == stockId)
-            if (record)
-                record.quantity += quantity
-            else
-                state.cryptocurrencies.push({
-                    id: stockId,
-                    quantity: quantity
+        buyCrypto(state, coin) {
+            console.log('Portfolio: ' + state.portfolio)
+            const record = state.portfolio.find(element => element.id == coin.id) || null
+            const total = coin.quantity * coin.price
+            if (record){
+                record.quantity += coin.quantity
+                record.totalSpent += total
+            }
+            else{                
+                state.portfolio.push({
+                    id: coin.id,            
+                    name: coin.name,
+                    symbol: coin.symbol,
+                    quantity: coin.quantity,                    
+                    totalSpent: total
                 })
-            state.funds -= stockPrice * quantity
+            }
+            state.funds -= total
         },
-        sellStock(state, { stockId, quantity, stockPrice }) {
+        sellCrypto(state, { stockId, quantity, stockPrice }) {
             const record = state.cryptocurrencies.find(element => element.id == stockId)
             if (record.quantity > quantity)
                 record.quantity -= quantity
@@ -29,23 +37,13 @@ export default {
         }
     },
     actions: {
-        sellStock({ commit }, order) {
-            commit('sellStock', order)
+        sellCrypto({ commit }, order) {
+            commit('sellCrypto', order)
         }        
     },
-    getters: {
-        //A lista de ações do portfólio será a mesma da lista de ações para comprar, acrescido da quantidade        
-        stockPortfolio(state, getters) {
-            return state.cryptocurrencies.map(stock => {
-                //neste estado só temos id e quantidade, vamos procurar o resto das informações dentro do estado de cryptocurrencies
-                const record = getters.cryptocurrencies.find(element => element.id == stock.id)
-                return {
-                    id: stock.id,
-                    quantity: stock.quantity,
-                    name: record.name,
-                    price: record.price
-                }
-            })
+    getters: {        
+        portfolio(state) {
+            return state.portfolio
         },
         funds(state){
             return state.funds
