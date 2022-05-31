@@ -23,4 +23,6 @@ public class Investor {
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    private Double funds;
 }

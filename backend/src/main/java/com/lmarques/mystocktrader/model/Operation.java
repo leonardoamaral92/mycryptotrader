@@ -1,6 +1,6 @@
 package com.lmarques.mystocktrader.model;
 
-import lombok.Builder;
+import com.lmarques.mystocktrader.model.dto.Order;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +10,6 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
-@Builder
 @Table(name = "ct_operation")
 public class Operation {
 
@@ -18,7 +17,7 @@ public class Operation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "portfolio_id", nullable = false)
+    @JoinColumn(name = "portfolio_id")
     private Portfolio portfolio;
     private Long coinId;
     private String coinName;
@@ -29,4 +28,17 @@ public class Operation {
     private Double qtdCoin;
     private Double totalValue;
 
+    public Operation() { }
+
+    public Operation(Order order, Portfolio portfolio, OperationType type) {
+        this.portfolio = portfolio;
+        coinId = order.getCoinId();
+        coinName = order.getCoinName();
+        coinSymbol = order.getCoinSymbol();
+        coinPrice = order.getCoinPrice();
+        date = order.getDate();
+        this.type = type;
+        qtdCoin = order.getQtdCoin();
+        totalValue = order.getTotalValue();
+    }
 }
