@@ -1,13 +1,10 @@
 package com.lmarques.mystocktrader.model;
 
 import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
-
 @Getter
-@Setter
 @Entity
 @Table(name = "ct_portfolio")
 public class Portfolio {
@@ -24,5 +21,11 @@ public class Portfolio {
     @ManyToOne
     @JoinColumn(name = "investor_id")
     private Investor investor;
+
+    public Portfolio(){ }
+    public Portfolio(String name, Investor investor){
+        this.name = name;
+        this.investor = investor;
+    }
 
 }

@@ -2,10 +2,8 @@ package com.lmarques.mystocktrader.services;
 
 import com.lmarques.mystocktrader.model.Investor;
 import com.lmarques.mystocktrader.model.Operation;
-import com.lmarques.mystocktrader.model.OperationType;
 import com.lmarques.mystocktrader.model.Portfolio;
-import com.lmarques.mystocktrader.model.dto.OperationResume;
-import com.lmarques.mystocktrader.model.dto.PortfolioResume;
+import com.lmarques.mystocktrader.model.dto.*;
 import com.lmarques.mystocktrader.repository.InvestorRepository;
 import com.lmarques.mystocktrader.repository.PortfolioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -94,5 +92,37 @@ public class PortfolioService {
         });
 
         return groupedOperations;
+    }
+
+    @Transactional
+    public APIResponse create(PortfolioRequest request) {
+        Investor investor = investorRepository.findByUserId(request.getUserId()).get();
+        Portfolio portfolioSaved = portfolioRepository.save(new Portfolio(request.getName(), investor));
+        PortfolioDTO portfolioDTO = PortfolioDTO.builder()
+                .id(portfolioSaved.getId())
+                .name(portfolioSaved.getName())
+                .build();
+
+        return APIResponse.builder()
+                .status(StatusResponse.SUCCESS)
+                .data(Collections.singletonList(portfolioDTO))
+                .build();
+    }
+
+    @Transactional
+    public APIResponse findAll(Long userId) {
+        Investor investor = investorRepository.findByUserId(userId).get();
+        Set<Portfolio> portfolios = investor.getPortfolioSet();
+        List<PortfolioDTO> portfoliosDTO = new ArrayList<>();
+
+        portfolios.forEach(portfolio -> portfoliosDTO.add(PortfolioDTO.builder()
+                        .id(portfolio.getId())
+                        .name(portfolio.getName())
+                        .build()) );
+
+        return APIResponse.builder()
+                .status(StatusResponse.SUCCESS)
+                .data(Collections.singletonList(portfoliosDTO))
+                .build();
     }
 }
