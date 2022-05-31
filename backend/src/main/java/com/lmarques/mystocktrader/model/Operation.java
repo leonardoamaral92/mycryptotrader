@@ -41,4 +41,12 @@ public class Operation {
         qtdCoin = order.getQtdCoin();
         totalValue = order.getTotalValue();
     }
+
+    public Double getQtdByOperationType(){
+        return OperationType.BUY.equals(type) ? qtdCoin : -qtdCoin;
+    }
+
+    public Double getValueByOperationType(){
+        return OperationType.BUY.equals(type) ? totalValue : -totalValue;
+    }
 }

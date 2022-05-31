@@ -2,6 +2,7 @@ package com.lmarques.mystocktrader.services;
 
 import com.lmarques.mystocktrader.model.Investor;
 import com.lmarques.mystocktrader.model.Operation;
+import com.lmarques.mystocktrader.model.OperationType;
 import com.lmarques.mystocktrader.model.Portfolio;
 import com.lmarques.mystocktrader.model.dto.OperationResume;
 import com.lmarques.mystocktrader.model.dto.PortfolioResume;
@@ -60,11 +61,9 @@ public class PortfolioService {
     }
 
     private OperationResume generateResumeCoin(List<Operation> operations){
-        Double sumValue = operations.stream().reduce(0.0, (subtotal, operation) -> subtotal + operation.getTotalValue(), Double::sum);
-        Double sumQtdCoin = operations.stream().reduce(0.0, (subtotal, operation) -> subtotal + operation.getQtdCoin(), Double::sum);
-        Double coinPrice = cryptocurrencyService.getCryptocurrencyPrice(operations.get(0).getCoinId());
-        System.out.println(operations.get(0).getCoinId() + " / coinPrice: ".concat(operations.get(0).getCoinName()) + coinPrice);
-        Double balance = coinPrice * sumQtdCoin;
+        Double sumValue = operations.stream().reduce(0.0, (subtotal, operation) -> subtotal + operation.getValueByOperationType(), Double::sum);
+        Double sumQtdCoin = operations.stream().reduce(0.0, (subtotal, operation) -> subtotal + operation.getQtdByOperationType(), Double::sum);
+        Double balance = cryptocurrencyService.getCryptocurrencyPrice(operations.get(0).getCoinId()) * sumQtdCoin;
         Double profitsCash = balance - sumValue;
 
         return OperationResume.builder()
@@ -79,7 +78,6 @@ public class PortfolioService {
                 .profitsPercent( (profitsCash / sumValue) * 100 )
                 .build();
     }
-
     private HashMap<Long, List<Operation>> operationsGroupByCoinId( Set<Operation> operations ){
 
         HashMap<Long, List<Operation>> groupedOperations = new HashMap<>();
