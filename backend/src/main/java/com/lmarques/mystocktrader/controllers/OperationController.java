@@ -1,8 +1,8 @@
 package com.lmarques.mystocktrader.controllers;
 
+import com.lmarques.mystocktrader.model.OperationType;
 import com.lmarques.mystocktrader.model.dto.Order;
 import com.lmarques.mystocktrader.services.OperationService;
-import com.lmarques.mystocktrader.services.PortfolioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,6 +18,11 @@ public class OperationController {
 
     @PostMapping("/buy")
     public void buyCryptocurrency(@RequestBody Order order){
-        operationService.buyCrypto(order);
+        operationService.createOperation(order, OperationType.BUY);
+    }
+
+    @PostMapping("/sell")
+    public void sellCryptocurrency(@RequestBody Order order){
+        operationService.createOperation(order, OperationType.SELL);
     }
 }
