@@ -3,9 +3,10 @@
         <v-row>
             <StatsCardVue v-for="stat in resumeStats" :key="stat.name"  :stat="stat" />
         </v-row>
-        <v-row class="coinHeader">
+        <v-row class="coinHeader mt-10">
             <v-col><strong>Coin</strong></v-col>
             <v-col><strong>Price</strong></v-col>
+            <v-col><strong>Average Price</strong></v-col>
             <v-col><strong>Quantity</strong></v-col>
             <v-col><strong>Total Spent</strong></v-col>
             <v-col><strong>Balance </strong></v-col>
@@ -36,6 +37,7 @@ export default {
 
 <style scoped>
 .coinHeader{
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #000;    
+    background-color: #ddd;
 }
 </style>

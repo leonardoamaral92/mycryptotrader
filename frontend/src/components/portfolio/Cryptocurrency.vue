@@ -1,17 +1,18 @@
 <template>
-    <v-row class="coinLine">
+    <v-row class="coinLine grey lighten-4">
         <v-col>{{ coin.coinName }} | <small>{{ coin.coinSymbol }}</small> </v-col>
         <v-col> {{ price | currency }} </v-col>
-        <v-col>{{ coin.qtdTotalCoin }}</v-col>
+        <v-col class="orange--text"> {{ coin.averagePrice | currency }} </v-col>
+        <v-col>{{ coin.qtdTotalCoin.toFixed(4) }}</v-col>
         <v-col>{{ coin.totalValue | currency }}</v-col>
         <v-col>{{ coin.balance | currency }}</v-col>
-        <v-col>
-            {{ coin.profitsPercent }}%
-            <v-icon :class="isProfit ? 'profit' : 'loss'">{{ isProfit ? 'mdi-arrow-up' : 'mdi-arrow-down' }}</v-icon>
+        <v-col :class="colorByProfit">
+            {{ coin.profitsPercent.toFixed(2) }}%
+            <v-icon :class="colorByProfit">{{ isProfit ? 'mdi-arrow-up' : 'mdi-arrow-down'  }}</v-icon>
         </v-col>
-        <v-col>
+        <v-col :class="colorByProfit">
             {{ coin.profitsCash | currency }}
-            <v-icon :class="isProfit ? 'profit' : 'loss'">{{ isProfit ? 'mdi-arrow-up' : 'mdi-arrow-down' }}</v-icon>
+            <v-icon :class="colorByProfit">{{ isProfit ? 'mdi-arrow-up' : 'mdi-arrow-down' }}</v-icon>
         </v-col>
     </v-row>
 </template>
@@ -33,6 +34,9 @@ export default {
         },
         isProfit() {
             return this.coin.profitsCash > 0
+        },
+        colorByProfit(){
+            return this.isProfit ? 'green--text' : 'red--text'
         }
     }
 }
@@ -41,13 +45,5 @@ export default {
 <style scoped>
 .coinLine {
     border-bottom: 1px solid #ddd;
-}
-
-.profit {
-    color: green;
-}
-
-.loss {
-    color: red;
 }
 </style>

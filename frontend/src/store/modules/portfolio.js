@@ -24,10 +24,10 @@ export default {
             state.portfolioResumeCoins = resume.operationList
             console.log(state.portfolioResumeCoins)
             const resumeStats  = [
-                { name: 'Total Balance', value: resume.totalBalance },
-                { name: 'Total Operations', value: resume.valueAllOperations },
-                { name: 'Profits $', value: resume.profitsCash },
-                { name: 'Profits %', value: resume.profitsPercent }
+                { name: 'Balance', value: resume.totalBalance, isCurrency: true },
+                { name: 'Operations', value: resume.valueAllOperations, isCurrency: true },
+                { name: 'Profits $', value: resume.profitsCash, isCurrency: true },
+                { name: 'Profits %', value: resume.profitsPercent, isCurrency: false }
             ]
             state.portfolioResumeStats = resumeStats
         }
