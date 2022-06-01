@@ -2,11 +2,11 @@ package com.lmarques.mystocktrader.controllers;
 
 import com.lmarques.mystocktrader.model.dto.APIResponse;
 import com.lmarques.mystocktrader.model.dto.PortfolioRequest;
-import com.lmarques.mystocktrader.model.dto.PortfolioResume;
 import com.lmarques.mystocktrader.services.PortfolioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 @RequestMapping("api/portfolios")
 public class PortfolioController {

@@ -26,7 +26,16 @@ public class InvestorService {
 
         return APIResponse.builder()
                 .status(StatusResponse.SUCCESS)
-                .data(Collections.singletonList(depositDTO))
+                .data(depositDTO)
+                .build();
+    }
+
+    public APIResponse getFunds(Long userId) {
+        Investor investor = investorRepository.findByUserId(userId).get();
+
+        return APIResponse.builder()
+                .status(StatusResponse.SUCCESS)
+                .data(investor.getFunds())
                 .build();
     }
 }
