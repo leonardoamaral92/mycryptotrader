@@ -6,13 +6,14 @@
         </v-toolbar-title>
         <v-toolbar-items>
             <v-btn text to="/">Home</v-btn>
-            <v-btn text to="/portfolio">Portfolio</v-btn>
-            <v-btn text to="/cryptocurrencies">Cryptocurrencies</v-btn>
+            <v-btn text to="/portfolios/resume">Resume</v-btn>
+            <v-btn text to="/cryptocurrencies">Coins</v-btn>
         </v-toolbar-items>
 
         <v-spacer></v-spacer>
 
         <v-toolbar-items>            
+            <v-btn text to="/portfolios">Portfolios</v-btn>
             <Form text="Buy" classAtr="green" :coinNames="coinsToBuy"  operation="buyCrypto"/>
             <Form text="Sell" classAtr="red"  :coinNames="coinsToSell" operation="sellCrypto" />
             <v-menu offset-y>
@@ -48,13 +49,13 @@ export default {
             return this.$store.getters.cryptocurrencies.map(coin => coin.name)
         },
         coinsToSell(){
-            return this.$store.getters.portfolio.map(coin => coin.name)
+            return [] //this.$store.getters.portfolioResumeCoins.map(coin => coin.name)
         }
     },
     methods: {
-        ...mapActions(["loadPortfolio"]),        
+        ...mapActions(["loadCoinList"]),        
         loadData() {
-            this.loadPortfolio();
+            this.loadCoinList();
         }
     },
     components: { Form }

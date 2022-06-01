@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="dialog" persistent max-width="600px">
     <template v-slot:activator="{ on, attrs }">
-      <v-btn v-bind="attrs" v-on="on" :class="`ml-2 darken-3 white--text ${classAtr}`">
+      <v-btn v-bind="attrs" v-on="on" :class="`darken-3 white--text ${classAtr}`" x-large>
         {{ text }}
       </v-btn>
     </template>
