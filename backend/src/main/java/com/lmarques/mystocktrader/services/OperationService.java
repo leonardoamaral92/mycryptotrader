@@ -43,7 +43,7 @@ public class OperationService {
 
         return APIResponse.builder()
                 .status(StatusResponse.SUCCESS)
-                .data(Collections.singletonList(responseOrder))
+                .data(responseOrder)
                 .build();
     }
 }

@@ -57,7 +57,7 @@ public class PortfolioService {
 
         return APIResponse.builder()
                 .status(StatusResponse.SUCCESS)
-                .data(Collections.singletonList(resume))
+                .data(resume)
                 .build();
     }
 
@@ -108,7 +108,7 @@ public class PortfolioService {
 
         return APIResponse.builder()
                 .status(StatusResponse.SUCCESS)
-                .data(Collections.singletonList(portfolioDTO))
+                .data(portfolioDTO)
                 .build();
     }
 
@@ -125,7 +125,7 @@ public class PortfolioService {
 
         return APIResponse.builder()
                 .status(StatusResponse.SUCCESS)
-                .data(Collections.singletonList(portfoliosDTO))
+                .data(portfoliosDTO)
                 .build();
     }
 }

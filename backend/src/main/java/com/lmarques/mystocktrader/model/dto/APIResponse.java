@@ -14,6 +14,6 @@ public class APIResponse{
     private StatusResponse status;
     private String typeError;
     private String message;
-    private List<Object> data;
+    private Object data;
 
 }
