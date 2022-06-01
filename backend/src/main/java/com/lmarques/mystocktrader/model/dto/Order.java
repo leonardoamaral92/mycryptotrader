@@ -1,6 +1,7 @@
 package com.lmarques.mystocktrader.model.dto;
 
 import com.lmarques.mystocktrader.model.OperationType;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,10 +9,8 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
+@Builder
 public class Order {
-
-    private Long userId;
-    private OrderStatus status;
     private Long coinId;
     private Long portfolioId;
     private String coinName;

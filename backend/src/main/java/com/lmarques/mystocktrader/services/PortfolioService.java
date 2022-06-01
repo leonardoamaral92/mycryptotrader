@@ -27,7 +27,7 @@ public class PortfolioService {
 
     @Transactional
     @Cacheable( cacheNames = "portfolioResume", key = "#root.method.name")
-    public PortfolioResume generateResume(Long userId) {
+    public APIResponse generateResume(Long userId) {
         System.out.println("Construindo resumo do portfolio do usuario...");
 
         Investor investor = investorRepository.findByUserId(userId).get();
@@ -55,7 +55,10 @@ public class PortfolioService {
                 .operationList(opResume)
                 .build();
 
-        return resume;
+        return APIResponse.builder()
+                .status(StatusResponse.SUCCESS)
+                .data(Collections.singletonList(resume))
+                .build();
     }
 
     private OperationResume generateResumeCoin(List<Operation> operations){

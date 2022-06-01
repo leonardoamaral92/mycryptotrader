@@ -15,7 +15,7 @@ public class PortfolioController {
     PortfolioService portfolioService;
 
     @GetMapping("/{userId}/resume")
-    public PortfolioResume resumePortfolio(@PathVariable Long userId){
+    public APIResponse resumePortfolio(@PathVariable Long userId){
         return portfolioService.generateResume(userId);
     }
 

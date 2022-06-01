@@ -1,6 +1,7 @@
 package com.lmarques.mystocktrader.controllers;
 
-import com.lmarques.mystocktrader.model.dto.DepositRequest;
+import com.lmarques.mystocktrader.model.dto.APIResponse;
+import com.lmarques.mystocktrader.model.dto.DepositDTO;
 import com.lmarques.mystocktrader.services.InvestorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,7 @@ public class InvestorController {
     InvestorService investorService;
 
     @PostMapping("/deposit")
-    public void deposit(@RequestBody DepositRequest depositRequest){
-        investorService.deposit(depositRequest);
+    public APIResponse deposit(@RequestBody DepositDTO depositRequest){
+        return investorService.deposit(depositRequest);
     }
 }
