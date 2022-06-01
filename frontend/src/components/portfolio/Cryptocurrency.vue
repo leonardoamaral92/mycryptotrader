@@ -1,16 +1,16 @@
 <template>
     <v-row class="coinLine">
-        <v-col>{{ cryptocurrency.name }} | <small>{{ cryptocurrency.symbol }}</small> </v-col>
+        <v-col>{{ coin.coinName }} | <small>{{ coin.coinSymbol }}</small> </v-col>
         <v-col> {{ price | currency }} </v-col>
-        <v-col>{{ cryptocurrency.quantity }}</v-col>
-        <v-col>{{ cryptocurrency.totalSpent | currency }}</v-col>
-        <v-col>{{ balance | currency }}</v-col>
+        <v-col>{{ coin.qtdTotalCoin }}</v-col>
+        <v-col>{{ coin.totalValue | currency }}</v-col>
+        <v-col>{{ coin.balance | currency }}</v-col>
         <v-col>
-            {{ profitPercent }}
+            {{ coin.profitsPercent }}%
             <v-icon :class="isProfit ? 'profit' : 'loss'">{{ isProfit ? 'mdi-arrow-up' : 'mdi-arrow-down' }}</v-icon>
         </v-col>
         <v-col>
-            {{ profitCash | currency }}
+            {{ coin.profitsCash | currency }}
             <v-icon :class="isProfit ? 'profit' : 'loss'">{{ isProfit ? 'mdi-arrow-up' : 'mdi-arrow-down' }}</v-icon>
         </v-col>
     </v-row>
@@ -19,7 +19,7 @@
 <script>
 export default {
     name: 'cryptocurrencyApp',
-    props: ['cryptocurrency'],
+    props: ['coin'],
     created() {
     },
     data() {
@@ -29,19 +29,10 @@ export default {
     },
     computed: {
         price() {
-            return this.$store.getters.getPriceById(this.cryptocurrency.id)
-        },
-        balance() {
-            return this.price * this.cryptocurrency.quantity
-        },
-        profitPercent() {
-            return `${((this.profitCash / this.cryptocurrency.totalSpent) * 100).toFixed(2)}%`
-        },
-        profitCash() {
-            return this.balance - this.cryptocurrency.totalSpent
+            return 0; //this.$store.getters.getPriceById(this.cryptocurrency.id)
         },
         isProfit() {
-            return this.profitCash > 0
+            return this.coin.profitsCash > 0
         }
     }
 }
@@ -49,7 +40,7 @@ export default {
 
 <style scoped>
 .coinLine {
-    border-bottom: 1px solid #ddd;    
+    border-bottom: 1px solid #ddd;
 }
 
 .profit {

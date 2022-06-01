@@ -4,7 +4,7 @@ import Vue from 'vue'
 então não pertence a nenhum dos dois, sendo melhor isolar. */
 
 export default {
-    loadPortfolio({ commit }) {
+    loadCoinList({ commit }) {
         // Vue.prototype.$http('data.json').then(response => {
         //     const data = response.data
         //     if (data) {
@@ -25,6 +25,15 @@ export default {
                 else
                     alert(cmcResponse.status.error_message)
             }
+        });
+
+        Vue.prototype.$http('/portfolios/1/resume').then(response => {
+            const apiResponse = response.data;
+            if(apiResponse.status === "SUCCESS"){
+                commit('setPortfolio', apiResponse.data)
+            }
+            else
+                alert(apiResponse.status.message)            
         });
 
     }
