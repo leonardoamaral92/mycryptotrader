@@ -1,7 +1,9 @@
+import Vue from 'vue'
+
 export default {
     state: {
         funds: 0,
-        portfolioNames: [],
+        portfolios: [],
         portfolioResumeCoins: [],
         portfolioResumeStats: [],
         totalBalance: 0,
@@ -18,11 +20,9 @@ export default {
             //TODO REFAZER
             console.log('coinToSell:' + order)            
         },
-        setPortfolio(state, resume){
-            console.log(resume)
+        setPortfolioResume(state, resume){
             state.funds = resume.funds
-            state.portfolioResumeCoins = resume.operationList
-            console.log(state.portfolioResumeCoins)
+            state.portfolioResumeCoins = resume.operationList            
             const resumeStats  = [
                 { name: 'Balance', value: resume.totalBalance, isCurrency: true },
                 { name: 'Operations', value: resume.valueAllOperations, isCurrency: true },
@@ -30,16 +30,51 @@ export default {
                 { name: 'Profits %', value: resume.profitsPercent, isCurrency: false }
             ]
             state.portfolioResumeStats = resumeStats
-        }
+        },
+        setPortfolio(state, portfolios){
+            console.log('Carregando portfolios')
+            state.portfolios = portfolios;
+        },
+        deletePortfolio(state, portfolio){            
+            console.log('deletando portfolio' + portfolio.id + '/' + portfolio.name);            
+            const index = state.portfolios.indexOf(portfolio);
+            state.portfolios.splice(index)
+        },
+        editPortfolioName(state, portfolio){  
+            console.log('editando portfolio' + portfolio.id + '/' + portfolio.name);
+        }  
     },
     actions: {
+        loadPortfolios({ commit }){
+            Vue.prototype.$http('/portfolios/1').then(response => {
+                const apiResponse = response.data;
+                if(apiResponse.status === "SUCCESS"){                    
+                    commit('setPortfolio', apiResponse.data)
+                }
+                else
+                    alert(apiResponse.message)            
+            });
+        },
         sellCrypto({ commit }, order) {
             commit('sellCrypto', order)
-        }        
+        },
+        deletePortfolio({ commit }, portfolio){
+            Vue.prototype.$http
+            .delete(`/portfolios/${portfolio.id}`)
+            .then(response => {
+                if(response.status === 204)
+                    commit('deletePortfolio', portfolio)                
+                else
+                    alert('Não foi possível deletar o portfólio.')
+            });
+        },
+        editPortfolioName({ commit }, portfolio){              
+            commit('editPortfolioName', portfolio)
+        }    
     },
     getters: {        
-        portfolio(state) {
-            return state.portfolio
+        portfolios(state) {
+            return state.portfolios
         },
         portfolioResumeCoins(state){
             return state.portfolioResumeCoins

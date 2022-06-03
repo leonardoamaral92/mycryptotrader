@@ -1,7 +1,7 @@
 <template>
     <v-row class="coinLine grey lighten-4">
         <v-col>{{ coin.coinName }} | <small>{{ coin.coinSymbol }}</small> </v-col>
-        <v-col> {{ price | currency }} </v-col>
+        <v-col> {{ coin.currentPrice | currency }} </v-col>
         <v-col class="orange--text"> {{ coin.averagePrice | currency }} </v-col>
         <v-col>{{ coin.qtdTotalCoin.toFixed(4) }}</v-col>
         <v-col>{{ coin.totalValue | currency }}</v-col>

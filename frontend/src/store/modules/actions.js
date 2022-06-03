@@ -1,21 +1,8 @@
 import Vue from 'vue'
 
-/*Este arquivo foi criado pois essa funcionalidade aciona tanto a mutations das stocks, quanto do portfolio, 
-então não pertence a nenhum dos dois, sendo melhor isolar. */
 
 export default {
-    loadCoinList({ commit }) {
-        // Vue.prototype.$http('data.json').then(response => {
-        //     const data = response.data
-        //     if (data) {
-        //         commit('setStocks', data.stocks)
-        //         commit('setPortfolio', {
-        //             funds: data.funds,
-        //             stockPortfolio: data.stockPortfolio
-        //         })
-        //     }
-        // })
-
+    loadCoinList({ commit }) {   
         Vue.prototype.$http('/cryptocurrencies').then(response => {
             const cmcResponse = response.data;
             if (cmcResponse ){
@@ -30,10 +17,10 @@ export default {
         Vue.prototype.$http('/portfolios/1/resume').then(response => {
             const apiResponse = response.data;
             if(apiResponse.status === "SUCCESS"){
-                commit('setPortfolio', apiResponse.data)
+                commit('setPortfolioResume', apiResponse.data)
             }
             else
-                alert(apiResponse.status.message)            
+                alert(apiResponse.message)            
         });
 
     }

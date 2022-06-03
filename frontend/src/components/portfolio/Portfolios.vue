@@ -1,16 +1,38 @@
 <template>
     <v-container>
-        <v-row>Portfolios</v-row>
-        <v-row></v-row>
-    </v-container>    
+        <v-row class="d-flex justify-center mt-2">
+            <v-col lg="6" class="d-flex justify-space-between lighten-2 rounded-lg pt-5 pb-5 text-h4">
+                <h4>Portfolios</h4>
+                <v-btn color="primary">Add Portfolio</v-btn>
+            </v-col>
+        </v-row>
+        <PortfolioCard v-for="portfolio in portfolios" :key="portfolio.id" :portfolio="portfolio" />
+    </v-container>
 </template>
 
 <script>
+import PortfolioCard from './PortfolioCard.vue';
+
 export default {
-    name: 'PortfoliosApp'
+    name: 'PortfoliosApp',
+    components: {
+        PortfolioCard
+    },
+    created() {
+        this.$store.dispatch('loadPortfolios')
+    },
+    computed: {
+        portfolios() {
+            return this.$store.getters.portfolios;
+        }
+    },
+    methods: {
+        deleteButton(){
+
+        }
+    }
 }
 </script>
 
 <style scoped>
-
 </style>
