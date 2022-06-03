@@ -15,6 +15,7 @@ public class OperationResume {
     private Double balance;
     private Double qtdTotalCoin;
     private Double totalValue;
+    private Double currentPrice;
     private Double averagePrice;
     private Double profitsCash;
     private Double profitsPercent;

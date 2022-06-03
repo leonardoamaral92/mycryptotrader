@@ -24,6 +24,59 @@ public class PortfolioService {
     @Autowired
     CryptocurrencyService cryptocurrencyService;
 
+    @Transactional
+    public APIResponse create(PortfolioDTO request) {
+        Investor investor = investorRepository.findByUserId(request.getUserId()).get();
+        Portfolio portfolioSaved = portfolioRepository.save(new Portfolio(request.getName(), investor));
+        PortfolioDTO portfolioDTO = PortfolioDTO.builder()
+                .id(portfolioSaved.getId())
+                .name(portfolioSaved.getName())
+                .build();
+
+        return APIResponse.builder()
+                .status(StatusResponse.SUCCESS)
+                .data(portfolioDTO)
+                .build();
+    }
+
+    @Transactional
+    public APIResponse findAll(Long userId) {
+        Investor investor = investorRepository.findByUserId(userId).get();
+        Set<Portfolio> portfolios = investor.getPortfolioSet();
+        List<PortfolioDTO> portfoliosDTO = new ArrayList<>();
+
+        portfolios.forEach(portfolio -> portfoliosDTO.add(PortfolioDTO.builder()
+                .id(portfolio.getId())
+                .name(portfolio.getName())
+                .build()) );
+
+        return APIResponse.builder()
+                .status(StatusResponse.SUCCESS)
+                .data(portfoliosDTO)
+                .build();
+    }
+
+    public APIResponse alterName(PortfolioDTO request) {
+
+        Portfolio portfolio = portfolioRepository.findById(request.getId()).get();
+        portfolio.setName(request.getName());
+
+        Portfolio altearedPortfolio = portfolioRepository.save(portfolio);
+        PortfolioDTO portfolioDTO = PortfolioDTO.builder()
+                .id(altearedPortfolio.getId())
+                .name(portfolio.getName())
+                .build();
+
+        return APIResponse.builder()
+                .status(StatusResponse.SUCCESS)
+                .data(portfolioDTO)
+                .build();
+    }
+    public void delete(Long id){
+        Portfolio portfolio = portfolioRepository.findById(id).get();
+        //TODO Verificar se todas as operacões foram deletadas em cascata
+        portfolioRepository.delete(portfolio);
+    }
 
     @Transactional
     @Cacheable( cacheNames = "portfolioResume", key = "#root.method.name")
@@ -64,8 +117,10 @@ public class PortfolioService {
     private OperationResume generateResumeCoin(List<Operation> operations){
         Double sumValue = operations.stream().reduce(0.0, (subtotal, operation) -> subtotal + operation.getValueByOperationType(), Double::sum);
         Double sumQtdCoin = operations.stream().reduce(0.0, (subtotal, operation) -> subtotal + operation.getQtdByOperationType(), Double::sum);
-        Double balance = cryptocurrencyService.getCryptocurrencyPrice(operations.get(0).getCoinId()) * sumQtdCoin;
+        Double currentPrice = cryptocurrencyService.getCryptocurrencyPrice(operations.get(0).getCoinId());
+        Double balance = currentPrice * sumQtdCoin;
         Double profitsCash = balance - sumValue;
+        Double profitsPercent = (profitsCash / sumValue) * 100;
 
         return OperationResume.builder()
                 .coinId(operations.get(0).getCoinId())
@@ -74,9 +129,10 @@ public class PortfolioService {
                 .balance(balance)
                 .qtdTotalCoin(sumQtdCoin)
                 .totalValue(sumValue)
+                .currentPrice(currentPrice)
                 .averagePrice(sumValue/sumQtdCoin)
                 .profitsCash(profitsCash)
-                .profitsPercent( (profitsCash / sumValue) * 100 )
+                .profitsPercent(profitsPercent)
                 .build();
     }
     private HashMap<Long, List<Operation>> operationsGroupByCoinId( Set<Operation> operations ){
@@ -97,35 +153,5 @@ public class PortfolioService {
         return groupedOperations;
     }
 
-    @Transactional
-    public APIResponse create(PortfolioRequest request) {
-        Investor investor = investorRepository.findByUserId(request.getUserId()).get();
-        Portfolio portfolioSaved = portfolioRepository.save(new Portfolio(request.getName(), investor));
-        PortfolioDTO portfolioDTO = PortfolioDTO.builder()
-                .id(portfolioSaved.getId())
-                .name(portfolioSaved.getName())
-                .build();
 
-        return APIResponse.builder()
-                .status(StatusResponse.SUCCESS)
-                .data(portfolioDTO)
-                .build();
-    }
-
-    @Transactional
-    public APIResponse findAll(Long userId) {
-        Investor investor = investorRepository.findByUserId(userId).get();
-        Set<Portfolio> portfolios = investor.getPortfolioSet();
-        List<PortfolioDTO> portfoliosDTO = new ArrayList<>();
-
-        portfolios.forEach(portfolio -> portfoliosDTO.add(PortfolioDTO.builder()
-                        .id(portfolio.getId())
-                        .name(portfolio.getName())
-                        .build()) );
-
-        return APIResponse.builder()
-                .status(StatusResponse.SUCCESS)
-                .data(portfoliosDTO)
-                .build();
-    }
 }
