@@ -40,12 +40,13 @@ export default {
             state.portfolios = portfolios;
         },
         deletePortfolio(state, portfolio){            
-            console.log('deletando portfolio' + portfolio.id + '/' + portfolio.name);            
+            console.log('deletando portfolio' + portfolio.id + '/' + portfolio.name);
             const index = state.portfolios.indexOf(portfolio);
             state.portfolios.splice(index)
         },
         editPortfolioName(state, portfolio){  
-            console.log('editando portfolio' + portfolio.id + '/' + portfolio.name);
+            const portIndex = state.portfolios.findIndex(p => p.id == portfolio.id)
+            state.portfolios[portIndex].name = portfolio.name
         }  
     },
     actions: {
@@ -88,8 +89,19 @@ export default {
                     alert('Não foi possível deletar o portfólio.')
             });
         },
-        editPortfolioName({ commit }, portfolio){              
-            commit('editPortfolioName', portfolio)
+        editPortfolioName({ commit }, portfolio){
+            Vue.prototype.$http
+            .put("/portfolios", {
+                id: portfolio.id,
+                name: portfolio.name
+            })
+            .then(response => {
+                const apiResponse = response.data;
+                if(apiResponse.status === "SUCCESS")
+                    commit('editPortfolioName', apiResponse.data)
+                else
+                    alert(apiResponse.message)
+            });
         }    
     },
     getters: {        

@@ -2,25 +2,51 @@
     <v-container>
         <v-row class="d-flex justify-center mt-2">
             <v-col lg="6" class="d-flex justify-space-between lighten-2 rounded-lg pt-5 pb-5 text-h4">
-                <h4>Portfolios</h4>                
-                <DialogAddUpdate headerText="Add Portfolio" btnText="Add Portfolio" actionName="addPortfolio" />
+                <h4>Portfolios</h4>
+                <v-btn color="primary" @click="dialog = true">Add Portfolio</v-btn>
             </v-col>
         </v-row>
         <PortfolioCard v-for="portfolio in portfolios" :key="portfolio.id" :portfolio="portfolio" />
+
+        <!--Dialog Add Portfolio -->
+        <v-dialog v-model="dialog" persistent max-width="600px">
+            <v-card>
+                <v-card-title>
+                    <span class="text-h5">Add portfolio</span>
+                </v-card-title>
+                <v-card-text>
+                    <v-text-field label="Name" v-model="newName" />
+                </v-card-text>
+                <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="blue darken-1" text @click="closeModal">
+                        Close
+                    </v-btn>
+                    <v-btn color="primary" text @click="addPortfolio">
+                        Add portfolio
+                    </v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-dialog>
     </v-container>
 </template>
 
 <script>
 import PortfolioCard from './PortfolioCard.vue';
-import DialogAddUpdate from './DialogAddUpdate.vue';
 
 export default {
     name: 'PortfoliosApp',
     components: {
-        PortfolioCard, DialogAddUpdate
+        PortfolioCard
     },
     created() {
         this.$store.dispatch('loadPortfolios')
+    },
+    data() {
+        return {
+            dialog: false,
+            newName: ''
+        }
     },
     computed: {
         portfolios() {
@@ -28,8 +54,12 @@ export default {
         }
     },
     methods: {
-        deleteButton(){
-
+        closeModal() {
+            this.dialog = false
+        },
+        addPortfolio() {
+            this.$store.dispatch('addPortfolio', this.newName);
+            this.dialog = false;
         }
     }
 }
