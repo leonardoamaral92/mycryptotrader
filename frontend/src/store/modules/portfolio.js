@@ -31,6 +31,10 @@ export default {
             ]
             state.portfolioResumeStats = resumeStats
         },
+        addPortfolio(state, portfolio){
+            console.log(`Criando portfolio -> ${portfolio.id} / ${portfolio.name}`)
+            state.portfolios.push(portfolio);
+        },
         setPortfolio(state, portfolios){
             console.log('Carregando portfolios')
             state.portfolios = portfolios;
@@ -58,12 +62,28 @@ export default {
         sellCrypto({ commit }, order) {
             commit('sellCrypto', order)
         },
+        addPortfolio({ commit }, portfolioName){
+            Vue.prototype.$http
+            .post("/portfolios", {
+                userId: 1,
+                name: portfolioName
+            })
+            .then(response => {
+                const apiResponse = response.data;
+                if(apiResponse.status === "SUCCESS"){  
+                    const portfolio = apiResponse.data;
+                    commit('addPortfolio', portfolio)
+                }
+                else
+                    alert('Não foi possível deletar o portfólio.')
+            });            
+        },
         deletePortfolio({ commit }, portfolio){
             Vue.prototype.$http
             .delete(`/portfolios/${portfolio.id}`)
             .then(response => {
                 if(response.status === 204)
-                    commit('deletePortfolio', portfolio)                
+                    commit('deletePortfolio', portfolio)
                 else
                     alert('Não foi possível deletar o portfólio.')
             });
