@@ -1,19 +1,42 @@
+import Vue from 'vue'
+
 export default {
     state: {
         cryptocurrencies: []
     },
     mutations: {
-        setCryptocurrencies(state, cryptocurrencies){
+        setCryptocurrencies(state, cryptocurrencies) {
             state.cryptocurrencies = JSON.parse(JSON.stringify(cryptocurrencies))
         }
     },
     actions: {
-        buyCrypto({ commit }, order ){
-            commit('buyCrypto', order)
-        }               
+        buyCrypto({ commit }, order) {
+            console.log("Entrei na action buy...")
+            return new Promise((resolve, reject) => {
+                Vue.prototype.$http
+                    .post("/operations/buy", order)
+                    .then(response => {
+                        const apiResponse = response.data;
+                        if (apiResponse.status === "SUCCESS") {
+                            commit('buyCrypto', apiResponse.data)
+                            console.log("Sucesso na compra...")
+                            const responseModal = {
+                                status: apiResponse.status,
+                                message: 'Purchase made successfully.'
+                            }
+                            resolve(responseModal)
+                        }
+                        else
+                            alert('Não foi possível realizar a compra.')
+                    }, error => {
+                        console.log(error)
+                        reject(error);
+                    });
+            });
+        }
     },
     getters: {
-        cryptocurrencies(state){
+        cryptocurrencies(state) {
             return state.cryptocurrencies
         },
         getPriceById: (state) => (cryptoId) => {

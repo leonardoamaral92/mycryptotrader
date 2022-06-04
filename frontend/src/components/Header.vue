@@ -14,8 +14,7 @@
 
         <v-toolbar-items>            
             <v-btn text to="/portfolios">Portfolios</v-btn>
-            <Form text="Buy" classAtr="green" :coinNames="coinsToBuy"  operation="buyCrypto"/>
-            <Form text="Sell" classAtr="red"  :coinNames="coinsToSell" operation="sellCrypto" />
+            <DialogBuy />            
             <v-menu offset-y>
                 <template v-slot:activator="{ on }">
                     <v-btn text v-on="on">CoinMarketCap</v-btn>
@@ -37,19 +36,13 @@
 
 <script>
 import { mapActions } from 'vuex'
-import Form from './Form.vue'
+import DialogBuy from './DialogBuy.vue'
 
 export default {
     name: "HeaderApp",
     computed: {
         funds() {
             return this.$store.getters.funds;
-        },
-        coinsToBuy(){
-            return this.$store.getters.cryptocurrencies.map(coin => coin.name)
-        },
-        coinsToSell(){
-            return [] //this.$store.getters.portfolioResumeCoins.map(coin => coin.name)
         }
     },
     methods: {
@@ -58,7 +51,7 @@ export default {
             this.loadCoinList();
         }
     },
-    components: { Form }
+    components: { DialogBuy }
 }
 </script>
 

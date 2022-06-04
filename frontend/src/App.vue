@@ -20,6 +20,7 @@ export default {
 	},
 	created() {
 		this.$store.dispatch('loadCoinList')
+		this.$store.dispatch('loadPortfolios')
 	}
 }
 </script>
