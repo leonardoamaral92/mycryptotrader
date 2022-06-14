@@ -5,15 +5,12 @@ import com.lmarques.mystocktrader.model.OperationType;
 import com.lmarques.mystocktrader.model.Portfolio;
 import com.lmarques.mystocktrader.model.dto.APIResponse;
 import com.lmarques.mystocktrader.model.dto.Order;
-import com.lmarques.mystocktrader.model.dto.OrderStatus;
 import com.lmarques.mystocktrader.model.dto.StatusResponse;
 import com.lmarques.mystocktrader.repository.OperationRepository;
 import com.lmarques.mystocktrader.repository.PortfolioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
-
-import java.util.Collections;
 
 @Service
 public class OperationService {
