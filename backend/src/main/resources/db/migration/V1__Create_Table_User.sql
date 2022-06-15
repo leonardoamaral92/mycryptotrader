@@ -7,5 +7,6 @@ create table if not exists ct_user (
     account_non_locked bit(1),
     credentials_non_expired bit(1),
     enabled bit(1),
-    primary key (id)
+    primary key (id),
+    unique(login)
  );

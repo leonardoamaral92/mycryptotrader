@@ -9,5 +9,6 @@ create table if not exists ct_operation (
     total_value float8,
     type int4,
     portfolio_id int8,
-    primary key (id)
+    primary key (id),
+    constraint FKgf51r7ufrjlgr2a43lr5j86y8 foreign key (portfolio_id) references ct_portfolio on delete cascade
 );
