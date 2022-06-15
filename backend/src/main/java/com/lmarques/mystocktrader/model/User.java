@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -30,6 +31,12 @@ public class User implements UserDetails, Serializable {
     @JoinTable(name = "user_permission", joinColumns = { @JoinColumn(name = "id_user") },
         inverseJoinColumns = { @JoinColumn(name = "id_permission") } )
     private List<Permission> permissions;
+
+    public List<String> getRoles(){
+        List<String> roles = new ArrayList<>();
+        permissions.forEach(permission -> roles.add(permission.getDescription()));
+        return roles;
+    }
 
     @OneToOne(mappedBy = "user")
     private Investor investor;
