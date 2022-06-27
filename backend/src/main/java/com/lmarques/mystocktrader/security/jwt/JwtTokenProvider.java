@@ -1,11 +1,12 @@
 package com.lmarques.mystocktrader.security.jwt;
 
 import com.lmarques.mystocktrader.exception.InvalidJwtAuthenticactionException;
-import com.lmarques.mystocktrader.model.authentication.Permission;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.io.Encoders;
+import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -15,16 +16,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import javax.crypto.SecretKey;
 import javax.servlet.http.HttpServletRequest;
-import java.util.Base64;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class JwtTokenProvider {
 
-    @Value("${security.jwt.token.secret-key:secret}")
-    private String secretKey = "secret";
+    private SecretKey SECRET_KEY;
+    private String base64Key;
 
     @Value("${security.jwt.token.expire-lenght:3600000}")
     private long validityInMilliseconds = 3600000; //1h
@@ -34,21 +34,20 @@ public class JwtTokenProvider {
 
     @PostConstruct
     public void init(){
-        secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
+        //creates a spec-compliant secure-random key:
+        SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS256);
     }
 
     public String createToken(String login, List<String> roles){
-        Claims claims = Jwts.claims().setSubject(login);
-        claims.put("roles", roles);
 
-        Date now = new Date();
-        Date validity = new Date(now.getTime() + validityInMilliseconds);
+        System.out.println(roles);
 
         return Jwts.builder()
-                .setClaims(claims)
-                .setIssuedAt(now)
-                .setExpiration(validity)
-                .signWith(SignatureAlgorithm.HS256, secretKey)
+                .setSubject(login)
+                .claim("roles", roles)
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + validityInMilliseconds))
+                .signWith(SECRET_KEY)
                 .compact();
     }
 
@@ -59,7 +58,7 @@ public class JwtTokenProvider {
 
     private String getUsername(String token) {
         return Jwts.parserBuilder()
-                .setSigningKey(secretKey)
+                .setSigningKey(SECRET_KEY)
                 .build()
                     .parseClaimsJws(token)
                     .getBody()
@@ -77,7 +76,7 @@ public class JwtTokenProvider {
     public boolean validateToken(String token){
         try {
             Jws<Claims> claimsJws = Jwts.parserBuilder()
-                    .setSigningKey(secretKey)
+                    .setSigningKey(SECRET_KEY)
                     .build()
                     .parseClaimsJws(token);
 

@@ -1,11 +1,14 @@
 package com.lmarques.mystocktrader.services;
 
+import com.lmarques.mystocktrader.model.User;
 import com.lmarques.mystocktrader.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class UserService implements UserDetailsService {
@@ -15,9 +18,9 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        var user = userRepository.findByLogin(username);
-        if(user != null)
-            return user;
+        Optional<User> user = userRepository.findByLogin(username);
+        if(user.isPresent())
+            return user.get();
         else
             throw new UsernameNotFoundException("Login " + username + "not found");
     }
