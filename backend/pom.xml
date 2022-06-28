@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lmarques</groupId>
-	<artifactId>mystocktrader</artifactId>
+	<artifactId>mycryptotrader</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mystocktrader</name>
+	<name>mycryptotrader</name>
 	<description>Gerenciador de portfólio de investimentos em criptomoedas</description>
 	<properties>
 		<java.version>11</java.version>
