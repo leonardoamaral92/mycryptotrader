@@ -19,7 +19,6 @@ import java.util.Optional;
 
 import static org.springframework.http.ResponseEntity.ok;
 
-@CrossOrigin
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
