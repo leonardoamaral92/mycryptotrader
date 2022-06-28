@@ -19,8 +19,8 @@ export default {
 		Header
 	},
 	created() {
-		this.$store.dispatch('loadCoinList')
-		this.$store.dispatch('loadPortfolios')
+		//this.$store.dispatch('loadCoinList')
+		//this.$store.dispatch('loadPortfolios')
 	}
 }
 </script>
