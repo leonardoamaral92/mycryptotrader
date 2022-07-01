@@ -5,8 +5,8 @@
             <hr>
             <div class="auth-title">{{showSignup ? 'Cadastro' : 'Login' }}</div>
             
-            <input type="text" placeholder="Usuário" v-model="login" />
-            <input type="text" placeholder="Senha" v-model="password"/>
+            <input type="text" placeholder="Usuário" v-model="user.login" />
+            <input type="password" placeholder="Senha" v-model="user.password"/>
             
             <v-btn color="primary" @click="signin">Login</v-btn>
         </div>        
@@ -21,22 +21,20 @@ export default {
     data() {
         return {
             showSignup: false,
-            user: {},
-            login: null,
-            password: null,
+            user: {}
         }
     },
     methods: {
         signin(){
 
-            if(!this.login || !this.password){
+            if(!this.user.login || !this.user.password){
                 alert('Login ou senha não preenchidos')
                 return;
             }
 
             axios.post(`${baseApiUrl}/auth/signin`, {
-                login: this.login,
-                password: this.password
+                login: this.user.login,
+                password: this.user.password
             })
             .then(response => {                            
                 console.log(response.data)                          
