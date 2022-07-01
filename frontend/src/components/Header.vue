@@ -17,11 +17,14 @@
             <DialogBuy />            
             <v-menu offset-y>
                 <template v-slot:activator="{ on }">
-                    <v-btn text v-on="on">CoinMarketCap</v-btn>
+                    <v-btn text v-on="on">Config</v-btn>
                 </template>
                 <v-list>                    
                     <v-list-item class="mst-item-button">
-                        <v-list-item-title @click="loadData">Load Data</v-list-item-title>
+                        <v-list-item-title @click="loadData">Load Data from CMC</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item class="mst-item-button">
+                        <v-list-item-title @click.prevent="logout">Logout</v-list-item-title>
                     </v-list-item>
                 </v-list>
             </v-menu>
@@ -37,6 +40,7 @@
 <script>
 import { mapActions } from 'vuex'
 import DialogBuy from './DialogBuy.vue'
+import { userKey } from '@/global';
 
 export default {
     name: "HeaderApp",
@@ -49,6 +53,11 @@ export default {
         ...mapActions(["loadCoinList"]),        
         loadData() {
             this.loadCoinList();
+        },
+        logout(){
+            localStorage.removeItem(userKey)
+            this.$store.commit('setUser', null)
+            this.$router.push({name: 'home'})
         }
     },
     components: { DialogBuy }

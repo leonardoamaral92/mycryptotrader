@@ -1,6 +1,6 @@
 <template>
 	<v-app>
-		<Header />
+		<Header v-if="user"/>
 		<v-main>
 			<v-container>
 				<transition name="slide" mode="out-in">
@@ -12,16 +12,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import Header from './components/Header.vue'
 
 export default {
 	components: {
 		Header
 	},
-	created() {
-		//this.$store.dispatch('loadCoinList')
-		//this.$store.dispatch('loadPortfolios')
-	}
+	computed: mapState(['user'])
 }
 </script>
 

@@ -31,6 +31,10 @@ export default {
             resumeCoins: 'portfolioResumeCoins',
             resumeStats: 'portfolioResumeStats'
         })
+    },
+    created() {
+        this.$store.dispatch('loadCoinList')
+		this.$store.dispatch('loadPortfolios')
     }
 }
 </script>
