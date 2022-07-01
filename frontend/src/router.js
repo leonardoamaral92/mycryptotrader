@@ -5,15 +5,17 @@ import Home from './components/Home'
 import PortfolioResume from './components/portfolio/PortfolioResume'
 import Portfolios from './components/portfolio/Portfolios'
 import Cryptocurrencies from './components/cryptocurrencies/Cryptocurrencies'
+import Auth from './components/auth/AuthPage'
 
 Vue.use(Router)
 
 export default new Router({
     mode: 'history',
     routes: [
-        { path: '/', component: Home },
-        { path: '/portfolios', component: Portfolios },
-        { path: '/portfolios/resume', component: PortfolioResume },
-        { path: '/cryptocurrencies', component: Cryptocurrencies },
+        { name:'home',    path: '/', component: Home },
+        { name:'auth',    path: '/login', component: Auth },
+        { name: 'portfolios', path: '/portfolios', component: Portfolios },
+        { name: 'resume',     path: '/portfolios/resume', component: PortfolioResume },
+        { name:'coinlist',    path: '/cryptocurrencies', component: Cryptocurrencies },
     ]
 })
