@@ -1,6 +1,5 @@
 package com.lmarques.mycryptotrader.config;
 
-import com.lmarques.mycryptotrader.security.CustomAccessDeniedHandler;
 import com.lmarques.mycryptotrader.security.jwt.JwtConfigurer;
 import com.lmarques.mycryptotrader.security.jwt.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,14 +24,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity
                 .httpBasic().disable()
                 .csrf().disable()
+                .cors()
+                .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
                 .antMatchers("/auth/signin", "/api-docs/**", "swagger-ui.html**").permitAll()
                 .antMatchers("/api/**").authenticated()
                 .antMatchers("/users").denyAll()
-                .and()
-                .exceptionHandling().accessDeniedHandler(accessDeniedHandler())
                 .and()
                 .apply(new JwtConfigurer(jwtTokenProvider));
     }
@@ -45,9 +44,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
-    }
-    @Bean
-    public AccessDeniedHandler accessDeniedHandler() {
-        return new CustomAccessDeniedHandler();
     }
 }
