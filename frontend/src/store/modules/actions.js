@@ -1,9 +1,10 @@
-import Vue from 'vue'
+import axios from "axios";
+import { baseApiUrl } from "@/global";
 
 
 export default {
     loadCoinList({ commit }) {   
-        Vue.prototype.$http('/cryptocurrencies').then(response => {
+        axios(`${baseApiUrl}/cmc/cryptocurrencies`).then(response => {
             const cmcResponse = response.data;
             if (cmcResponse ){
                 if(!cmcResponse.status.error_code){
@@ -14,7 +15,7 @@ export default {
             }
         });
 
-        Vue.prototype.$http('/portfolios/1/resume').then(response => {
+        axios(`${baseApiUrl}/portfolios/1/resume`).then(response => {
             const apiResponse = response.data;
             if(apiResponse.status === "SUCCESS"){
                 commit('setPortfolioResume', apiResponse.data)

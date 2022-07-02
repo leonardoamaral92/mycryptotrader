@@ -13,7 +13,7 @@ export default new Router({
     mode: 'history',
     routes: [
         { name:'home',    path: '/', component: Home },
-        { name:'auth',    path: '/login', component: Auth },
+        { name:'auth',    path: '/auth', component: Auth },
         { name: 'portfolios', path: '/portfolios', component: Portfolios },
         { name: 'resume',     path: '/portfolios/resume', component: PortfolioResume },
         { name:'coinlist',    path: '/cryptocurrencies', component: Cryptocurrencies },

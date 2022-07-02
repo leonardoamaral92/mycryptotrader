@@ -21,11 +21,11 @@
         </v-sheet>
         <v-sheet v-if="!user" :elevation="3" class="mt-3 pa-2 primary">
             <span class="headline white--text font-weight-light">
-                Se você já possui cadastro, faça o login <v-btn to="/login" color="warning">AQUI</v-btn></span>
+                Se você já possui cadastro, faça o login <v-btn to="/auth" color="warning">AQUI</v-btn></span>
         </v-sheet>
         <v-sheet v-if="!user" :elevation="3" class="mt-3 pa-2 primary">
             <span class="headline white--text font-weight-light">
-                Se você não possui cadastro, <v-btn to="/login" color="warning">CADASTRE-SE</v-btn></span>
+                Se você não possui cadastro, <v-btn to="/auth/register" color="warning">CADASTRE-SE</v-btn></span>
         </v-sheet>
     </div>
 </template>

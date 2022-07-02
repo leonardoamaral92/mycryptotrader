@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import axios from "axios";
 
 export default {
     state: {
@@ -13,8 +13,7 @@ export default {
         buyCrypto({ commit }, order) {
             console.log("Entrei na action buy...")
             return new Promise((resolve, reject) => {
-                Vue.prototype.$http
-                    .post("/operations/buy", order)
+                axios.post("/operations/buy", order)
                     .then(response => {
                         const apiResponse = response.data;
                         if (apiResponse.status === "SUCCESS") {

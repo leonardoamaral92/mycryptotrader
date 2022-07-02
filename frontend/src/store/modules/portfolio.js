@@ -1,4 +1,5 @@
-import Vue from 'vue'
+import axios from "axios"
+import { baseApiUrl } from "@/global"
 
 export default {
     state: {
@@ -51,7 +52,7 @@ export default {
     },
     actions: {
         loadPortfolios({ commit }){
-            Vue.prototype.$http('/portfolios/1').then(response => {
+            axios(`${baseApiUrl}/portfolios/1`).then(response => {
                 const apiResponse = response.data;
                 if(apiResponse.status === "SUCCESS"){                    
                     commit('setPortfolio', apiResponse.data)
@@ -64,8 +65,7 @@ export default {
             commit('sellCrypto', order)
         },
         addPortfolio({ commit }, portfolioName){
-            Vue.prototype.$http
-            .post("/portfolios", {
+            axios.post(`${baseApiUrl}/portfolios`, {
                 userId: 1,
                 name: portfolioName
             })
@@ -80,8 +80,7 @@ export default {
             });            
         },
         deletePortfolio({ commit }, portfolio){
-            Vue.prototype.$http
-            .delete(`/portfolios/${portfolio.id}`)
+            axios.delete(`${baseApiUrl}/portfolios/${portfolio.id}`)
             .then(response => {
                 if(response.status === 204)
                     commit('deletePortfolio', portfolio)
@@ -90,8 +89,7 @@ export default {
             });
         },
         editPortfolioName({ commit }, portfolio){
-            Vue.prototype.$http
-            .put("/portfolios", {
+            axios.put(`${baseApiUrl}/portfolios`, {
                 id: portfolio.id,
                 name: portfolio.name
             })

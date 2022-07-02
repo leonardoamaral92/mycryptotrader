@@ -1,13 +1,12 @@
-import Vue from 'vue'
 import axios from 'axios'
 
-Vue.use({
-    install(Vue){
-        // Vue.prototype.$http = axios.create({
-        //     baseURL: 'https://stock-trader-4bfff-default-rtdb.firebaseio.com/'
-        // })
-        Vue.prototype.$http = axios.create({
-            baseURL: 'http://localhost:8080/api/'
-        })
+const success = res => res
+const error = err => {
+    if (401 === err.response.status){
+        window.location = '/auth'
+    } else {
+        return Promise.reject(err)
     }
-})
+}
+
+axios.interceptors.response.use(success, error)
