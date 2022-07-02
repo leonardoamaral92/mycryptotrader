@@ -58,6 +58,7 @@ export default {
             localStorage.removeItem(userKey)
             this.$store.commit('setUser', null)
             this.$router.push({name: 'home'})
+            this.$toasted.global.defaultSuccess()
         }
     },
     components: { DialogBuy }

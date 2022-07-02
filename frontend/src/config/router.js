@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from './components/Home'
-import PortfolioResume from './components/portfolio/PortfolioResume'
-import Portfolios from './components/portfolio/Portfolios'
-import Cryptocurrencies from './components/cryptocurrencies/Cryptocurrencies'
-import Auth from './components/auth/AuthPage'
+import Home from '@/components/Home'
+import PortfolioResume from '@/components/portfolio/PortfolioResume'
+import Portfolios from '@/components/portfolio/Portfolios'
+import Cryptocurrencies from '@/components/cryptocurrencies/Cryptocurrencies'
+import Auth from '@/components/auth/AuthPage'
 
 Vue.use(Router)
 

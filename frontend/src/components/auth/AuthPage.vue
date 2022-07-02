@@ -15,7 +15,7 @@
 
 <script>
 import axios from 'axios'
-import { baseApiUrl, userKey } from '@/global';
+import { baseApiUrl, userKey, showError } from '@/global';
 
 export default {
     data() {
@@ -28,7 +28,7 @@ export default {
         signin(){
 
             if(!this.user.login || !this.user.password){
-                alert('Login ou senha não preenchidos')
+                showError('Login ou senha não preenchidos')
                 return;
             }
 
@@ -40,8 +40,8 @@ export default {
                 console.log(response.data)                          
                 this.$store.commit('setUser', response.data)
                 localStorage.setItem(userKey, JSON.stringify(response.data))
-                this.$router.push({name: 'resume' })
-                
+                this.$router.push({name: 'resume' })          
+                this.$toasted.global.defaultSuccess()
             });
         }
     }

@@ -1,8 +1,10 @@
+import 'font-awesome/css/font-awesome.css'
 import Vue from 'vue'
 import vuetify from './plugins/vuetify'
 import App from './App.vue'
 
-import router from './router'
+import './config/msgs'
+import router from './config/router'
 import store from './store/store'
 
 import './plugins/axios'
