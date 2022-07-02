@@ -6,9 +6,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.BAD_REQUEST)
-public class InvalidJwtAuthenticactionException extends AuthenticationException {
+public class InvalidJwtAuthenticationException extends AuthenticationException {
 
-    public InvalidJwtAuthenticactionException(String exception){
+    public InvalidJwtAuthenticationException(String exception){
         super(exception);
     }
 }

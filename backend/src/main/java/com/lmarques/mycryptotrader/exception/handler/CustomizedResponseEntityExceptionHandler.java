@@ -1,7 +1,7 @@
 package com.lmarques.mycryptotrader.exception.handler;
 
 import com.lmarques.mycryptotrader.exception.ExceptionResponse;
-import com.lmarques.mycryptotrader.exception.InvalidJwtAuthenticactionException;
+import com.lmarques.mycryptotrader.exception.InvalidJwtAuthenticationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -12,7 +12,7 @@ import java.util.Date;
 
 public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(InvalidJwtAuthenticactionException.class)
+    @ExceptionHandler(InvalidJwtAuthenticationException.class)
     public final ResponseEntity<ExceptionResponse> invalidAuthenticationException(Exception ex, WebRequest request){
         ExceptionResponse exceptionResponse = ExceptionResponse.builder()
                 .timestamp(new Date())
