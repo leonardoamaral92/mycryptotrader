@@ -26,7 +26,7 @@ public class JwtTokenProvider {
     @Value("${security.jwt.token.secret-key:secret}")
     private String secretKey;
     @Value("${security.jwt.token.expire-lenght:3600000}")
-    private long validityInMilliseconds = 3600000; //1h
+    private long validityInMilliseconds; //1h
     Algorithm algorithm = null;
 
     private final String BEARER_PREFIX = "Bearer ";
@@ -101,10 +101,11 @@ public class JwtTokenProvider {
         return null;
     }
 
-    public boolean validateToken(String token){
-        DecodedJWT decodedJWT = decodedToken(token);
+    public boolean validateToken(String token) {
+        DecodedJWT decodedJWT;
         try {
-            return decodedJWT.getExpiresAt().before(new Date());
+            decodedJWT = decodedToken(token);
+            return !decodedJWT.getExpiresAt().before(new Date());
         } catch (Exception e) {
             throw new InvalidJwtAuthenticationException("Expired or invalid JWT token!");
         }
