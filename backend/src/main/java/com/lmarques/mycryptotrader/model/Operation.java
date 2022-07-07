@@ -2,6 +2,7 @@ package com.lmarques.mycryptotrader.model;
 
 import com.lmarques.mycryptotrader.model.dto.Order;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
 @Table(name = "ct_operation")
 public class Operation {
 
@@ -27,8 +29,6 @@ public class Operation {
     private OperationType type;
     private Double qtdCoin;
     private Double totalValue;
-
-    public Operation() { }
 
     public Operation(Order order, Portfolio portfolio, OperationType type) {
         this.portfolio = portfolio;

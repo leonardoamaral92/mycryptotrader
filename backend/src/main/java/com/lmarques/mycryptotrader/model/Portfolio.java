@@ -1,12 +1,14 @@
 package com.lmarques.mycryptotrader.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.util.Set;
 @Getter
+@NoArgsConstructor
 @Entity
 @Table(name = "ct_portfolio")
 public class Portfolio {
@@ -24,8 +26,6 @@ public class Portfolio {
     @ManyToOne
     @JoinColumn(name = "investor_id")
     private Investor investor;
-
-    public Portfolio(){ }
     public Portfolio(String name, Investor investor){
         this.name = name;
         this.investor = investor;

@@ -2,6 +2,7 @@ package com.lmarques.mycryptotrader.model;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
 @Table(name = "ct_investor")
 public class Investor {
 
@@ -25,4 +27,6 @@ public class Investor {
     private User user;
 
     private Double funds;
+
+
 }
