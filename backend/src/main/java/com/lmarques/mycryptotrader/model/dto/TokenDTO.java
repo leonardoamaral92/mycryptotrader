@@ -1,6 +1,5 @@
 package com.lmarques.mycryptotrader.model.dto;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 

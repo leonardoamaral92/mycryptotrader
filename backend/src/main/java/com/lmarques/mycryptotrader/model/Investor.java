@@ -26,7 +26,7 @@ public class Investor {
     @JoinColumn(name = "user_id")
     private User user;
 
-    private Double funds;
+    private Double funds = 0.0;
 
 
 }
