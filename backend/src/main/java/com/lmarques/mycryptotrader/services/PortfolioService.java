@@ -26,7 +26,7 @@ public class PortfolioService {
 
     @Transactional
     public APIResponse create(PortfolioDTO request) {
-        Investor investor = investorRepository.findByUserId(request.getUserId()).get();
+        Investor investor = investorRepository.findById(request.getInvestorId()).get();
         Portfolio portfolioSaved = portfolioRepository.save(new Portfolio(request.getName(), investor));
         PortfolioDTO portfolioDTO = PortfolioDTO.builder()
                 .id(portfolioSaved.getId())
@@ -40,8 +40,8 @@ public class PortfolioService {
     }
 
     @Transactional
-    public APIResponse findAll(Long userId) {
-        Investor investor = investorRepository.findByUserId(userId).get();
+    public APIResponse findAll(Long investorId) {
+        Investor investor = investorRepository.findById(investorId).get();
         Set<Portfolio> portfolios = investor.getPortfolioSet();
         List<PortfolioDTO> portfoliosDTO = new ArrayList<>();
 
@@ -74,16 +74,15 @@ public class PortfolioService {
     }
     public void delete(Long id){
         Portfolio portfolio = portfolioRepository.findById(id).get();
-        //TODO Verificar se todas as operacões foram deletadas em cascata
         portfolioRepository.delete(portfolio);
     }
 
     @Transactional
     @Cacheable( cacheNames = "portfolioResume", key = "#root.method.name")
-    public APIResponse generateResume(Long userId) {
+    public APIResponse generateResume(Long investorId) {
         System.out.println("Construindo resumo do portfolio do usuario...");
 
-        Investor investor = investorRepository.findByUserId(userId).get();
+        Investor investor = investorRepository.findById(investorId).get();
 
         List<Portfolio> portfolios = portfolioRepository.findByInvestorId(investor.getId());
 
@@ -98,12 +97,13 @@ public class PortfolioService {
         Double sumAllOperations = opResume.stream().reduce(0.0, (subtotal, op) -> subtotal + op.getTotalValue(), Double::sum);
         Double totalBalance = opResume.stream().reduce(0.0, (subtotal, op) -> subtotal + op.getBalance(), Double::sum);
         Double profitsCash = totalBalance - sumAllOperations;
+        Double profitsPercent = profitsCash != 0.0 ? (profitsCash / sumAllOperations) * 100 : 0.0;
 
         PortfolioResume resume = PortfolioResume.builder()
                 .totalBalance(totalBalance)
                 .valueAllOperations(sumAllOperations)
                 .profitsCash(profitsCash)
-                .profitsPercent( (profitsCash / sumAllOperations) * 100 )
+                .profitsPercent(profitsPercent)
                 .funds(investor.getFunds())
                 .operationList(opResume)
                 .build();
@@ -152,6 +152,4 @@ public class PortfolioService {
 
         return groupedOperations;
     }
-
-
 }

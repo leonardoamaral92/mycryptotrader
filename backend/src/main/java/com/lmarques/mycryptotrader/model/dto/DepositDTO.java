@@ -9,7 +9,7 @@ import lombok.Setter;
 @Builder
 public class DepositDTO {
 
-    private Long userId;
+    private Long investorId;
     private Double depositValue;
     private Double newFunds;
 }

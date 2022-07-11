@@ -14,9 +14,9 @@ public class PortfolioController {
     @Autowired
     PortfolioService portfolioService;
 
-    @GetMapping("/{userId}/resume")
-    public APIResponse resumePortfolio(@PathVariable Long userId){
-        return portfolioService.generateResume(userId);
+    @GetMapping("/{investorId}/resume")
+    public APIResponse resumePortfolio(@PathVariable Long investorId){
+        return portfolioService.generateResume(investorId);
     }
 
     @PostMapping
@@ -25,9 +25,9 @@ public class PortfolioController {
         return portfolioService.create(request);
     }
 
-    @GetMapping("/{userId}")
-    public APIResponse findAll(@PathVariable Long userId){
-        return portfolioService.findAll(userId);
+    @GetMapping("/{investorId}")
+    public APIResponse findAll(@PathVariable Long investorId){
+        return portfolioService.findAll(investorId);
     }
 
     @PutMapping

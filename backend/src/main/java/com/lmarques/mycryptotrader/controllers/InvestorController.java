@@ -18,8 +18,8 @@ public class InvestorController {
         return investorService.deposit(depositRequest);
     }
 
-    @GetMapping("/funds/{userId}")
-    public APIResponse getFunds(@PathVariable Long userId){
-        return investorService.getFunds(userId);
+    @GetMapping("/funds/{id}")
+    public APIResponse getFunds(@PathVariable Long id){
+        return investorService.getFunds(id);
     }
 }

@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @Builder
 public class PortfolioDTO{
-    private Long userId;
+    private Long investorId;
     private Long id;
     private String name;
 }

@@ -1,5 +1,6 @@
 package com.lmarques.mycryptotrader.services;
 
+import com.lmarques.mycryptotrader.model.Investor;
 import com.lmarques.mycryptotrader.model.Roles;
 import com.lmarques.mycryptotrader.model.User;
 import com.lmarques.mycryptotrader.model.authentication.Permission;
@@ -11,6 +12,7 @@ import com.lmarques.mycryptotrader.repository.UserRepository;
 import com.lmarques.mycryptotrader.security.AccountCredentialsDTO;
 import com.lmarques.mycryptotrader.security.jwt.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -23,7 +25,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
-import java.util.Set;
 
 import static org.springframework.http.ResponseEntity.ok;
 
@@ -44,6 +45,7 @@ public class AuthService {
     PasswordEncoder passwordEncoder = new Pbkdf2PasswordEncoder();
 
 
+    @CacheEvict(cacheNames = "portfolioResume", allEntries = true)
     public ResponseEntity signin(AccountCredentialsDTO account){
         try {
             var username = account.getLogin();
@@ -56,6 +58,9 @@ public class AuthService {
 
             if(user.isPresent()){
                 tokenResponse = jwtTokenProvider.createAccessToken(username, user.get().getRoles());
+
+                Investor investor = investorRepository.findByUserId(user.get().getId()).get();
+                tokenResponse.setInvestorId(investor.getId());
             } else {
                 throw new UsernameNotFoundException("Username"  + username + "not found!");
             }
@@ -66,6 +71,7 @@ public class AuthService {
         }
     }
 
+    @CacheEvict(cacheNames = "portfolioResume", allEntries = true)
     @Transactional
     public User signup(AccountDTO accountDTO) {
         User newUser = new User(accountDTO.getFullName(), accountDTO.getEmail(), passwordEncoder.encode(accountDTO.getPassword()));

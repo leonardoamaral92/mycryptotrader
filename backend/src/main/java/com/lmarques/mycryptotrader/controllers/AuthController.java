@@ -32,7 +32,7 @@ public class AuthController {
     @PostMapping("/signin")
     @Operation(summary = "Authenticates a user and returns a token")
     public ResponseEntity signin(@RequestBody AccountCredentialsDTO account){
-        if(!isNotValidParams(account))
+        if(isNotValidParams(account))
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(MSG_INVALID_REQUEST);
 
         var token = authService.signin(account);
@@ -53,8 +53,6 @@ public class AuthController {
 
         User user = authService.signup(account);
         investorService.create(user);
-
-        //TODO Enviar email de confirmação
 
         return ResponseEntity.ok(account);
     }

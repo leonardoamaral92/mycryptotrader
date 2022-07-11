@@ -1,18 +1,18 @@
 package com.lmarques.mycryptotrader.model.dto;
 
 import lombok.Getter;
-import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Date;
 
 @Getter
-@Setter
 public class TokenDTO implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
 	private String username;
+
+	private Long investorId;
 	private Boolean authenticated;
 	private Date created;
 	private Date expiration;
@@ -34,5 +34,9 @@ public class TokenDTO implements Serializable{
 		this.expiration = expiration;
 		this.accessToken = accessToken;
 		this.refreshToken = refreshToken;
+	}
+
+	public void setInvestorId(Long investorId){
+		this.investorId = investorId;
 	}
 }
