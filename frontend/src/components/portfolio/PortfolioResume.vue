@@ -32,9 +32,10 @@ export default {
             resumeStats: 'portfolioResumeStats'
         })
     },
-    created() {
+    mounted() {
+        this.$store.dispatch('loadPortfolioResume', this.$store.state.user.investorId)
+        this.$store.dispatch('loadPortfolios', this.$store.state.user.investorId)
         this.$store.dispatch('loadCoinList')
-		this.$store.dispatch('loadPortfolios')
     }
 }
 </script>

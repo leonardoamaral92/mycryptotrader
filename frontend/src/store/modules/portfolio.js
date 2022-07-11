@@ -51,8 +51,18 @@ export default {
         }  
     },
     actions: {
-        loadPortfolios({ commit }){
-            axios(`${baseApiUrl}/portfolios/1`).then(response => {
+        loadPortfolioResume({ commit }, investorId){
+            axios(`${baseApiUrl}/portfolios/${investorId}/resume`).then(response => {
+                const apiResponse = response.data;
+                if(apiResponse.status === "SUCCESS"){
+                    commit('setPortfolioResume', apiResponse.data)
+                }
+                else
+                    alert(apiResponse.message)
+            });
+        },
+        loadPortfolios({ commit }, investorId){
+            axios(`${baseApiUrl}/portfolios/${investorId}`).then(response => {
                 const apiResponse = response.data;
                 if(apiResponse.status === "SUCCESS"){                    
                     commit('setPortfolio', apiResponse.data)
