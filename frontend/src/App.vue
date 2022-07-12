@@ -1,6 +1,6 @@
 <template>
 	<v-app>
-		<Header v-if="user"/>
+		<Header v-if="autenticated"/>
 		<v-main>
 			<v-container>
 				<transition name="slide" mode="out-in">
@@ -12,14 +12,36 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { userKey } from "./global"
 import Header from './components/Header.vue'
 
 export default {
 	components: {
 		Header
 	},
-	computed: mapState(['user'])
+	computed: {
+		autenticated(){
+			return localStorage.getItem(userKey) && this.$store.state.user
+		}
+	},
+	methods: {
+		async getLoggedUser(){
+			const json = localStorage.getItem(userKey)
+			const userData = JSON.parse(json)
+			this.$store.commit('setUser', null)
+
+			if(!userData){
+				this.validateToken = false
+				//O return é apenas porque quero sair do método
+				return this.$router.push({ name: 'auth'})
+			}
+			
+			this.$store.commit('setUser', userData)
+		}
+	},
+	created() {
+		this.getLoggedUser()
+	}
 }
 </script>
 

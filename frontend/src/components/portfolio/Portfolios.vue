@@ -40,7 +40,8 @@ export default {
         PortfolioCard
     },
     created() {
-        this.$store.dispatch('loadPortfolios', this.$store.state.user.investorId)
+        if(this.$store.state.user)
+            this.$store.dispatch('loadPortfolios', this.$store.state.user.investorId)
     },
     data() {
         return {

@@ -33,8 +33,10 @@ export default {
         })
     },
     mounted() {
-        this.$store.dispatch('loadPortfolioResume', this.$store.state.user.investorId)
-        this.$store.dispatch('loadPortfolios', this.$store.state.user.investorId)
+        if(this.$store.state.user){
+            this.$store.dispatch('loadPortfolioResume', this.$store.state.user.investorId)
+            this.$store.dispatch('loadPortfolios', this.$store.state.user.investorId)
+        }
         this.$store.dispatch('loadCoinList')
     }
 }

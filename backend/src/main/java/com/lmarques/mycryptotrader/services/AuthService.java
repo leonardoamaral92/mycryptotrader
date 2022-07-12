@@ -88,6 +88,9 @@ public class AuthService {
 
         if(user.isPresent()){
             tokenResponse = jwtTokenProvider.refreshToken(refreshToken);
+
+            Investor investor = investorRepository.findByUserId(user.get().getId()).get();
+            tokenResponse.setInvestorId(investor.getId());
         } else {
             throw new UsernameNotFoundException("Username"  + username + "not found!");
         }

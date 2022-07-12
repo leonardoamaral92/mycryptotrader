@@ -1,5 +1,5 @@
 import axios from "axios"
-import { baseApiUrl } from "@/global"
+import { baseApiUrl, showError } from "@/global"
 
 export default {
     state: {
@@ -52,46 +52,51 @@ export default {
     },
     actions: {
         loadPortfolioResume({ commit }, investorId){
-            axios(`${baseApiUrl}/portfolios/${investorId}/resume`).then(response => {
+            axios(`${baseApiUrl}/api/portfolios/${investorId}/resume`).then(response => {
                 const apiResponse = response.data;
+                //TODO MUDAR TRATAMENTO PARA O CASO DE 401, REFAZER REQUISIÇÃO
                 if(apiResponse.status === "SUCCESS"){
                     commit('setPortfolioResume', apiResponse.data)
                 }
                 else
-                    alert(apiResponse.message)
+                    showError(apiResponse)
             });
         },
         loadPortfolios({ commit }, investorId){
-            axios(`${baseApiUrl}/portfolios/${investorId}`).then(response => {
+            axios(`${baseApiUrl}/api/portfolios/${investorId}`).then(response => {                
                 const apiResponse = response.data;
+                //TODO MUDAR TRATAMENTO PARA O CASO DE 401, REFAZER REQUISIÇÃO
+                console.log(response);
                 if(apiResponse.status === "SUCCESS"){                    
                     commit('setPortfolio', apiResponse.data)
                 }
                 else
-                    alert(apiResponse.message)            
+                    showError(apiResponse)
             });
         },
         sellCrypto({ commit }, order) {
             commit('sellCrypto', order)
         },
         addPortfolio({ commit }, portfolioName){
-            axios.post(`${baseApiUrl}/portfolios`, {
+            axios.post(`${baseApiUrl}/api/portfolios`, {
                 userId: 1,
                 name: portfolioName
             })
             .then(response => {
                 const apiResponse = response.data;
+                //TODO MUDAR TRATAMENTO PARA O CASO DE 401, REFAZER REQUISIÇÃO
                 if(apiResponse.status === "SUCCESS"){  
                     const portfolio = apiResponse.data;
                     commit('addPortfolio', portfolio)
                 }
                 else
-                    alert('Não foi possível deletar o portfólio.')
+                    alert('Não foi possível criar o portfólio.')
             });            
         },
         deletePortfolio({ commit }, portfolio){
-            axios.delete(`${baseApiUrl}/portfolios/${portfolio.id}`)
+            axios.delete(`${baseApiUrl}/api/portfolios/${portfolio.id}`)
             .then(response => {
+                //TODO MUDAR TRATAMENTO PARA O CASO DE 401, REFAZER REQUISIÇÃO
                 if(response.status === 204)
                     commit('deletePortfolio', portfolio)
                 else
@@ -99,16 +104,17 @@ export default {
             });
         },
         editPortfolioName({ commit }, portfolio){
-            axios.put(`${baseApiUrl}/portfolios`, {
+            axios.put(`${baseApiUrl}/api/portfolios`, {
                 id: portfolio.id,
                 name: portfolio.name
             })
             .then(response => {
                 const apiResponse = response.data;
+                //TODO MUDAR TRATAMENTO PARA O CASO DE 401, REFAZER REQUISIÇÃO
                 if(apiResponse.status === "SUCCESS")
                     commit('editPortfolioName', apiResponse.data)
                 else
-                    alert(apiResponse.message)
+                    showError(apiResponse)
             });
         }    
     },

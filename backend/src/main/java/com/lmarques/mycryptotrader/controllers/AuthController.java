@@ -15,7 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("auth")
 @Tag(name = "Authentication Endpoint")
 public class AuthController {
 
@@ -59,8 +59,8 @@ public class AuthController {
 
     @PostMapping("/refresh/{username}")
     @Operation(summary = "Refresh token for authenticated user and returns a token")
-    public ResponseEntity refreshToken(@PathVariable String username, @RequestHeader("Authorization") String refreshToken){
-        if(!isNotValidParams(username, refreshToken))
+    public ResponseEntity refreshToken(@PathVariable String username, @RequestBody String refreshToken){
+        if(isNotValidParams(username, refreshToken))
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(MSG_INVALID_REQUEST);
         var token = authService.refreshToken(username, refreshToken);
         if(token == null)
