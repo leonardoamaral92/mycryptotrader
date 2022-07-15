@@ -13,6 +13,7 @@ import java.time.LocalDate;
 public class Order {
     private Long coinId;
     private Long portfolioId;
+    private Long investorId;
     private String coinName;
     private String coinSymbol;
     private Double coinPrice;

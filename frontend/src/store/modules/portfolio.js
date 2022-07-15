@@ -11,15 +11,7 @@ export default {
         profitsCash: 0,
         profitsPercent: 0
     },
-    mutations: {
-        buyCrypto(state, order) {
-            //TODO REFAZER
-            console.log('coinToBuy:' + order)           
-        },
-        sellCrypto(state, order) {
-            //TODO REFAZER
-            console.log('coinToSell:' + order)            
-        },
+    mutations: {        
         setPortfolioResume(state, resume){            
             state.portfolioResumeCoins = resume.operationList            
             const resumeStats  = [

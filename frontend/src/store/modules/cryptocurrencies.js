@@ -1,3 +1,4 @@
+import { baseApiUrl } from "@/global";
 import axios from "axios";
 
 export default {
@@ -10,15 +11,14 @@ export default {
         }
     },
     actions: {
+        // eslint-disable-next-line no-unused-vars
         buyCrypto({ commit }, order) {
             console.log("Entrei na action buy...")
             return new Promise((resolve, reject) => {
-                axios.post("/operations/buy", order)
+                axios.post(`${baseApiUrl}/api/operations/buy`, order)
                     .then(response => {
                         const apiResponse = response.data;
-                        if (apiResponse.status === "SUCCESS") {
-                            commit('buyCrypto', apiResponse.data)
-                            console.log("Sucesso na compra...")
+                        if (apiResponse.status === "SUCCESS") {                            
                             const responseModal = {
                                 status: apiResponse.status,
                                 message: 'Purchase made successfully.'

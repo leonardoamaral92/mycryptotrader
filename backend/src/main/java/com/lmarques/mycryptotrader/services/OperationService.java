@@ -1,11 +1,13 @@
 package com.lmarques.mycryptotrader.services;
 
+import com.lmarques.mycryptotrader.model.Investor;
 import com.lmarques.mycryptotrader.model.Operation;
 import com.lmarques.mycryptotrader.model.OperationType;
 import com.lmarques.mycryptotrader.model.Portfolio;
 import com.lmarques.mycryptotrader.model.dto.APIResponse;
 import com.lmarques.mycryptotrader.model.dto.Order;
 import com.lmarques.mycryptotrader.model.dto.StatusResponse;
+import com.lmarques.mycryptotrader.repository.InvestorRepository;
 import com.lmarques.mycryptotrader.repository.OperationRepository;
 import com.lmarques.mycryptotrader.repository.PortfolioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,27 +22,36 @@ public class OperationService {
     @Autowired
     OperationRepository operationRepository;
 
-    @CacheEvict(cacheNames = "portfolioResume", allEntries = true)
-    public APIResponse createOperation(Order order, OperationType typeOp) {
-        Portfolio portfolio = portfolioRepository.findById(order.getPortfolioId()).get();
-        Operation operation = new Operation(order, portfolio, typeOp);
+    @Autowired
+    InvestorRepository investorRepository;
 
-        Operation operationSaved = operationRepository.save(operation);
-        Order responseOrder = Order.builder()
-                .coinId(operationSaved.getCoinId())
-                .coinName(operationSaved.getCoinName())
-                .coinPrice(operationSaved.getCoinPrice())
-                .coinSymbol(operationSaved.getCoinSymbol())
-                .date(operationSaved.getDate())
-                .portfolioId(operationSaved.getPortfolio().getId())
-                .qtdCoin(operationSaved.getQtdCoin())
-                .totalValue(operationSaved.getTotalValue())
-                .type(operationSaved.getType())
-                .build();
+    @CacheEvict(cacheNames = "portfolioResume", allEntries = true)
+    public APIResponse buyCrypto(Order order) {
+        Investor investor = investorRepository.findById(order.getInvestorId()).get();
+
+        if(order.getTotalValue() > investor.getFunds())
+            return APIResponse.builder()
+                    .status(StatusResponse.FAILED)
+                    .message("Investidor não possui saldo suficiente para a operação.")
+                    .data(order)
+                    .build();
+
+        Portfolio portfolio = portfolioRepository.findById(order.getPortfolioId()).get();
+        Operation operation = new Operation(order, portfolio, OperationType.BUY);
+        operationRepository.save(operation);
+
+        investor.setFunds(investor.getFunds() - order.getTotalValue());
+        investorRepository.save(investor);
 
         return APIResponse.builder()
                 .status(StatusResponse.SUCCESS)
-                .data(responseOrder)
+                .build();
+    }
+
+    public APIResponse sellCrypto(Order order) {
+        return APIResponse.builder()
+                .status(StatusResponse.SUCCESS)
+                .data(order)
                 .build();
     }
 }

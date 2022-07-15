@@ -63,6 +63,7 @@
 </template>
 
 <script>
+import { showError } from '@/global';
 const StatusBuy = Object.freeze({
   DOING: 'doing',
   PENDING: 'pending',
@@ -126,6 +127,7 @@ export default {
       const order = {
         coinId: this.coinSelected.id,
         portfolioId: this.selectedPortfolio.id,
+        investorId: this.$store.state.user.investorId,
         coinName: this.coinSelected.name,
         coinSymbol: this.coinSelected.symbol,
         coinPrice: this.price,
@@ -134,12 +136,14 @@ export default {
         totalValue: this.opTotal
       }
 
-      console.log(order)
-      this.$store.dispatch('buyCrypto', order).then(response => {
-        this.headerModalText = response.status
-        this.currentStatusBuy = response.status.toLowerCase();
-        this.messageBuy = response.message;        
-      })
+      this.$store.dispatch('buyCrypto', order)
+        .then(() => {
+          this.closeModal()
+          this.$toasted.global.defaultSuccess()
+        })
+        .catch(err => {
+          showError(err)
+        })
     },
     closeModal() {
       this.coinSelected = null
