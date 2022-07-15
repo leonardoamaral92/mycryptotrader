@@ -80,7 +80,7 @@ export default {
                 name: this.newName
             }
             this.$store.dispatch('editPortfolioName', newPortfolio)
-            this.dialogdit = false
+            this.closeModal('dialogEdit')
         }
     }
 }

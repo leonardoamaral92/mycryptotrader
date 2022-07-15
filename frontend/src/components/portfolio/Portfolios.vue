@@ -59,7 +59,11 @@ export default {
             this.dialog = false
         },
         addPortfolio() {
-            this.$store.dispatch('addPortfolio', this.newName);
+            const request = { 
+                investorId: this.$store.state.user.investorId, 
+                name: this.newName 
+            };
+            this.$store.dispatch('addPortfolio', request).then;
             this.dialog = false;
         }
     }

@@ -50,7 +50,7 @@ export default {
             axios.post(`${baseApiUrl}/auth/signin`, this.user)
             .then(response => {                            
                 console.log(response.data)
-                this.$store.commit('setUser', response.data)
+                this.$store.dispatch('authenticate', response.data)
                 localStorage.setItem(userKey, JSON.stringify(response.data))
                 this.$router.push({name: 'resume' })          
                 this.$toasted.global.defaultSuccess()

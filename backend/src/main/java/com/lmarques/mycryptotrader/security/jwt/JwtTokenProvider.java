@@ -46,7 +46,7 @@ public class JwtTokenProvider {
         var accessToken = getAccessToken(login, roles, now, validity);
         var refreshToken = getRefreshToken(login, roles, now);
 
-        return new TokenDTO(login, true, now, validity, accessToken, refreshToken);
+        return new TokenDTO(login, accessToken, refreshToken);
     }
 
     public TokenDTO refreshToken(String refreshToken){

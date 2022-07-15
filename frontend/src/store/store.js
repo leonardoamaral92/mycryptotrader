@@ -9,22 +9,32 @@ import axios from 'axios'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+    modules: {
+        cryptocurrencies,
+        portfolio        
+    },
     state: {        
         user: null
     },
     mutations: {
         setUser(state, user){
-            state.user = user
             if(user) {
+                state.user = { username: '', investorId: 0, funds: 0}
+                state.user.username = user.username
+                state.user.investorId = user.investorId                                                
                 axios.defaults.headers.common['Authorization'] = `Bearer ${user.accessToken}`
             }
             else
                 delete axios.defaults.headers.common['Authorization']
+        },
+        setFunds(state, newFunds){            
+            state.user.funds = newFunds
         }
     },
     actions,
-    modules: {
-        cryptocurrencies,
-        portfolio        
-    }
+    getters: {
+        funds(state){
+            return state.user.funds
+        }
+    }    
 })
