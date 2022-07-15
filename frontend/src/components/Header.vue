@@ -15,7 +15,8 @@
 
         <v-toolbar-items>            
             <v-btn text to="/portfolios">Portfolios</v-btn>
-            <DialogBuy />                        
+            <DialogBuy /> 
+            <DialogSell />
             <v-menu offset-y>
                 <template v-slot:activator="{ on }">
                     <v-btn text v-on="on">Config</v-btn>
@@ -65,10 +66,12 @@
 <script>
 import { mapActions } from 'vuex'
 import DialogBuy from './DialogBuy.vue'
+import DialogSell from './DialogSell.vue'
 import { userKey } from '@/global';
 
 export default {
     name: "HeaderApp",
+    components: { DialogBuy, DialogSell },
     data(){
         return {
             qtdFunds: 0,
@@ -103,8 +106,7 @@ export default {
             this.qtdFunds = 0
             this.closeFundsModal()
         }
-    },
-    components: { DialogBuy }
+    }    
 }
 </script>
 

@@ -63,9 +63,6 @@ export default {
                     showError(defaultMsgError)
             });
         },
-        sellCrypto({ commit }, order) {
-            commit('sellCrypto', order)
-        },
         addPortfolio({ commit }, request){
             axios.post(`${baseApiUrl}/api/portfolios`, request)
             .then(response => {

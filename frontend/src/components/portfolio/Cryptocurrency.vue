@@ -1,5 +1,5 @@
 <template>
-    <v-row class="coinLine grey lighten-4">
+    <v-row class="coinLine grey lighten-4" v-if="coin.qtdTotalCoin > 0">
         <v-col>{{ coin.coinName }} | <small>{{ coin.coinSymbol }}</small> </v-col>
         <v-col> {{ coin.currentPrice | currency }} </v-col>
         <v-col class="orange--text"> {{ coin.averagePrice | currency }} </v-col>

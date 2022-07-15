@@ -1,13 +1,13 @@
 <template>
   <v-dialog v-model="dialog" persistent max-width="600px">
     <template v-slot:activator="{ on, attrs }">
-      <v-btn v-bind="attrs" v-on="on" :class="`darken-3 white--text deep-orange`" x-large>Buy</v-btn>
+      <v-btn v-bind="attrs" v-on="on" :class="`darken-3 white--text green`" x-large>Sell</v-btn>
     </template>
     <v-card>
       <v-card-title>
         <span class="text-h5">{{ headerModalText }}</span>
       </v-card-title>
-      <template v-if="currentStatusBuy === StatusBuy.DOING">
+      <template v-if="currentStatusSell === StatusSell.DOING">
         <v-card-text>
           <v-container>
             <v-row>
@@ -21,7 +21,7 @@
                 <v-text-field label="Quantity Coin*" v-model="qtdCoin" required />
               </v-col>
               <v-col cols="12" sm="6">
-                <v-text-field label="Total" :value="opTotal" disabled :color="`${insufficientFunds ? 'red' : ''}`"/>
+                <v-text-field label="Total" :value="opTotal" disabled/>
               </v-col>
               <v-col cols="12" sm="6">
                 <v-text-field label="Date*" v-model="opDate" />
@@ -35,21 +35,20 @@
         </v-card-text>
       </template>
 
-      <v-progress-circular v-if="currentStatusBuy === StatusBuy.PENDING" indeterminate color="deep-orange">
+      <v-progress-circular v-if="currentStatusSell === StatusSell.PENDING" indeterminate color="green">
       </v-progress-circular>
 
-      <v-card-text v-if="currentStatusBuy === StatusBuy.SUCCESS || currentStatusBuy === StatusBuy.FAILED"
-        class="text-h3">{{messageBuy}}</v-card-text>
+      <v-card-text v-if="currentStatusSell === StatusSell.SUCCESS || currentStatusSell === StatusSell.FAILED"
+        class="text-h3">{{msgSell}}</v-card-text>
 
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn color="blue darken-1" text @click="closeModal">
           Close
         </v-btn>
-        <v-btn v-if="currentStatusBuy === StatusBuy.DOING"          
-          :class="insufficientFunds ? 'grey lighten-2' : 'deep-orange darken-1 white--text'"
-          @click="operateCrypto" text width="40%"
-          :disabled="insufficientFunds">{{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
+        <v-btn v-if="currentStatusSell === StatusSell.DOING"
+          class="green darken-1 white--text"
+          @click="operateCrypto" text width="40%">Sell
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -64,7 +63,7 @@
 
 <script>
 import { showError } from '@/global';
-const StatusBuy = Object.freeze({
+const StatusSell = Object.freeze({
   DOING: 'doing',
   PENDING: 'pending',
   SUCCESS: 'success',
@@ -81,22 +80,19 @@ export default {
     },
     dataPortfolio() {
       return this.$store.getters.portfolios.map(portfolio => ({ text: portfolio.name, value: portfolio.id }))
-    },
-    insufficientFunds(){
-      return this.$store.getters.funds < this.opTotal
-    }
+    }    
   },
   data() {
     return {
-      StatusBuy,
+      StatusSell,
       dialog: false,
       coinSelected: null,
       selectedPortfolio: null,
       qtdCoin: 0,
       price: 0,
-      currentStatusBuy: StatusBuy.DOING,
+      currentStatusSell: StatusSell.DOING,
       opDate: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-      headerModalText: 'Buy Coin'
+      headerModalText: 'Sell Coin'
     }
   },
   methods: {
@@ -115,13 +111,10 @@ export default {
     },
     operateCrypto() {
 
-      if(this.insufficientFunds){
-        this.StatusBuy = StatusBuy.FAILED;
-        this.messageBuy = "Insufficient Funds"
+      if(!this.isValidOperation())
         return
-      }        
 
-      this.currentStatusBuy = StatusBuy.PENDING
+      this.currentStatusSell = StatusSell.PENDING
       this.headerModalText = 'Pending'
       //REFATORAR passando só os parâmetros necessários -> buscar o resto no servidor
       const order = {
@@ -136,7 +129,7 @@ export default {
         totalValue: this.opTotal
       }
 
-      this.$store.dispatch('buyCrypto', order)
+      this.$store.dispatch('sellCrypto', order)
         .then(() => {
           this.closeModal()
           this.$toasted.global.defaultSuccess()
@@ -150,8 +143,30 @@ export default {
       this.qtdCoin = 0
       this.price = 0
       this.dialog = false
-      this.headerModalText= 'Buy Coin'
-      this.currentStatusBuy =  StatusBuy.DOING
+      this.headerModalText= 'Sell Coin'
+      this.currentStatusSell =  StatusSell.DOING
+    },
+    isValidOperation(){
+        if(!this.coinSelected || !this.selectedPortfolio || this.qtdCoin <= 0){
+          showError('Verifique os campos obrigatórios.')
+          return false
+        }
+
+        console.log('Validando operação...')
+        const listCoins = this.$store.getters.portfolioResumeCoins
+        const filteredCoin = listCoins.find(coin => this.coinSelected.id === coin.coinId)      
+
+        if(!filteredCoin){
+          showError('Verifique se possui saldo na moeda selecionada.')
+          return false
+        }
+
+        if(filteredCoin.qtdTotalCoin < this.qtdCoin){
+          showError(`Quantidade maior do que possui: ${filteredCoin.qtdTotalCoin}`)
+          return false
+        }
+
+        return true
     }
   }
 }

@@ -32,6 +32,28 @@ export default {
                         reject(error);
                     });
             });
+        },
+        // eslint-disable-next-line no-unused-vars
+        sellCrypto({commit}, order){
+            console.log("Entrei na action sell...")
+            return new Promise((resolve, reject) => {
+                axios.post(`${baseApiUrl}/api/operations/sell`, order)
+                    .then(response => {
+                        const apiResponse = response.data;
+                        if (apiResponse.status === "SUCCESS") {                            
+                            const responseModal = {
+                                status: apiResponse.status,
+                                message: 'Sell made successfully.'
+                            }
+                            resolve(responseModal)
+                        }
+                        else
+                            alert('Não foi possível realizar a venda.')
+                    }, error => {
+                        console.log(error)
+                        reject(error);
+                    });
+            });
         }
     },
     getters: {
